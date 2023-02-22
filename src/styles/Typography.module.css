@@ -1,0 +1,30 @@
+.title_1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.text_underline {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+.text_underline::before {
+  content: " ";
+  width: 50%;
+  background-color: #555;
+  height: 1px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.title_2 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.paragraph_1 {
+  font-size: 1rem;
+}
