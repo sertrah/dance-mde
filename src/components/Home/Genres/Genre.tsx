@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import { PrimaryTitle } from "@/components/UI-shared/Typography";
-import styles from "../../styles/Home.module.css";
+import styles from "../../../styles/Home.module.css";
 
 const Genre: FC<{
   isOpposite?: boolean;

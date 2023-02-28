@@ -5,7 +5,8 @@
   place-content: flex-end;
   place-items: flex-start;
   min-height: 50vh;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
+  overflow: hidden;
 }
 
 .banner .cover {
@@ -28,6 +29,14 @@
 }
 .banner_item h1{
   font-size: 3rem;
+}
+.banner_dancers,  .banner img:nth-child(2){
+  width: 50% !important;
+  height: auto !important;
+  top: initial !important;
+  bottom: -90px !important;
+  margin: 0 auto;
+  left: initial !important;
 }
 .genre_container h1 {
   font-family: var(--roboto-font);
@@ -61,6 +70,11 @@
   transform: translateY(10px) scale(1.2);
 }
 /* -------- EVENTS ------- */
+.events {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.8rem;
+}
 
 .events h1 {
   text-align: center;
@@ -109,6 +123,11 @@
 
 .events .event img {
   position: relative;
+}
+
+.events_btn{
+  margin-top: 3rem;
+  align-self: center;
 }
 
 /* -------- EVENTS END ------- */

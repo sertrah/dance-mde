@@ -21,10 +21,20 @@ export default function Banner() {
         alt="Vercel Logo"
         priority
         fill
-        style={{objectFit:"cover"}}
+        style={{ objectFit: "cover" }}
         sizes="(max-width: 768px) 80vw,
                 (max-width: 1200px) 70vw,
                 100vw"
+      />
+      <Image
+        src="/yy.png"
+        alt="Dancers"
+        priority
+        fill
+        sizes="(max-width: 768px) 80vw,
+                (max-width: 1200px) 70vw,
+                100vw"
+        className={styles.banner_dancers}
       />
       <div className={styles.cover}></div>
     </section>

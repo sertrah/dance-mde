@@ -48,7 +48,7 @@ const Form = () => {
         )}
       />
       <Button type="submit" variant="contained">
-        Contained
+        Send
       </Button>
     </form>
   );

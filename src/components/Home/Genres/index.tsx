@@ -1,7 +1,7 @@
 import { PrimaryTitle } from "@/components/UI-shared/Typography";
 import { GridContainer } from "@/components/UI-shared/Container";
 import Genre from "./Genre";
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 
 export default function Genres() {
   return (
