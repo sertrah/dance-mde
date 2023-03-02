@@ -27,6 +27,15 @@ export default function Banner({ title }: any) {
                 100vw"
       />
       <Image
+        src="/ivan.png"
+        alt="Dancers"
+        priority
+        fill
+        sizes="(max-width: 768px) 80vw,
+                (max-width: 1200px) 70vw,
+                100vw"
+        className={styles.banner_dancers_3} />
+      <Image
         src="/yy.png"
         alt="Dancers"
         priority
@@ -35,6 +44,16 @@ export default function Banner({ title }: any) {
                 (max-width: 1200px) 70vw,
                 100vw"
         className={styles.banner_dancers}
+      />
+      <Image
+        src="/salsa1.png"
+        alt="Dancers"
+        priority
+        fill
+        sizes="(max-width: 768px) 80vw,
+                (max-width: 1200px) 70vw,
+                100vw"
+        className={styles.banner_dancers_2}
       />
       <div className={styles.cover}></div>
     </section>

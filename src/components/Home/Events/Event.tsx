@@ -17,7 +17,7 @@ const Event: FC<{
     <div className={styles.event}>
       <div className={styles.detail}>
         <SubTitle>{dayMemo.format('MMMM D')}</SubTitle>
-        <Paragraph>{`${title}, ${location}`}</Paragraph>
+        <Paragraph><b>{title}</b>{`, ${location}`}</Paragraph>
       </div>
       <Image src={image.url} alt="Vercel Logo" fill
         style={{ objectFit: "cover" }}
