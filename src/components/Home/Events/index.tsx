@@ -9,13 +9,14 @@ export default function Events({sliceItems, primary}: any) {
     <section className={styles.events}>
       <Typography richContent={primary.title} hasUnderline />
       <div className={styles.events_container}>
-        {sliceItems.map(({ title, image, date, location }: any, index: number ) => (
+        {sliceItems.map(({ title, image, date, location, linkto }: any, index: number ) => (
           <Event
             key={`event-${index}`}
             title={title}
             image={image}
             date={date}
             location={location}
+            linkto={linkto}
           />
         ))}
       </div>

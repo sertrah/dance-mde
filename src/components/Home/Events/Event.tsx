@@ -11,10 +11,15 @@ const Event: FC<{
   date: any,
   title: any,
   location: any,
-}> = ({ image, date, title, location }) => {
+  linkto: any,
+}> = ({ image, date, title, location, linkto }) => {
   const dayMemo: Dayjs | null = useMemo(() => dayjs(date), [date]);
+  const handleOnClickEvent = () => {
+    window.open(
+      linkto.url, "_blank");
+  }
   return (
-    <div className={styles.event}>
+    <div className={styles.event} onClick={handleOnClickEvent}>
       <div className={styles.detail}>
         <SubTitle>{dayMemo.format('MMMM D')}</SubTitle>
         <Paragraph><b>{title}</b>{`, ${location}`}</Paragraph>

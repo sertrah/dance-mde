@@ -21,9 +21,14 @@ const Genre: FC<{
   location?: any;
   description?: any;
   title?: any;
-}> = ({ title, date, location, description, imageUrl }) => {
+  showmore?: any;
+}> = ({ title, date, location, description, imageUrl, showmore }) => {
+  const handleOnClickEvent = () => {
+    window.open(
+      showmore?.url, "_blank");
+  }
   return (
-    <div className={styles.event_card}>
+    <div className={styles.event_card} onClick={handleOnClickEvent}>
       <div className={styles.event_card_container_img}>
         <Image
           src={imageUrl}

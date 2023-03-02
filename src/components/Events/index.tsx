@@ -13,13 +13,14 @@ export default function Events({ page }: any) {
   const handleChange = (event: ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
+  console.log(page.data.slices)
   return (
     <section className={styles.event_page}>
       <Typography richContent={page.data.title} hasUnderline />
       <Stack spacing={7}>
         <div className={styles.events}>
           {page?.data?.slices?.[currentPage - 1]?.items && page.data.slices[currentPage - 1 ].items.map(
-            ({ image, date, location, title, description }: any) => (
+            ({ image, date, location, title, description, showmore }: any) => (
               <EventCard
                 key={`event-card-${title[0].text}`}
                 imageName="/event2.jpg"
@@ -28,6 +29,7 @@ export default function Events({ page }: any) {
                 location={location}
                 description={description}
                 title={title}
+                showmore={showmore}
               />
             )
           )}
