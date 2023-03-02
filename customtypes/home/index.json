@@ -1,0 +1,40 @@
+{
+  "id": "home",
+  "label": "home",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "multi": "paragraph,heading1"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "home_genre": {
+              "type": "SharedSlice"
+            },
+            "home_events": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

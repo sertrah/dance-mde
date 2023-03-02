@@ -1,14 +1,15 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { PrimaryTitle } from "@/components/UI-shared/Typography";
 import styles from "../../../styles/Home.module.css";
+import Typography from "@/helpers/prismic";
 
 const Genre: FC<{
   isOpposite?: boolean;
   bgColor?: "--radial-primary" | "--radial-secondary" | "--radial-ternary";
-  title: string;
+  title: any;
   imageName?: string;
-}> = ({ isOpposite = false, bgColor = "--radial-primary", title, imageName="/dancers.png" }) => {
+  image?: any;
+}> = ({ isOpposite = false, bgColor = "--radial-primary", title, image }) => {
   return (
     <div
       style={{
@@ -16,12 +17,12 @@ const Genre: FC<{
       }}
       className={`${styles.genre} ${isOpposite && styles.genre_right}`}
     >
-      <PrimaryTitle> {title} </PrimaryTitle>
+      <Typography richContent={title} />
       <Image
-        src={imageName}
+        src={image.url}
         alt="Dancers"
         fill
-        style={{objectFit:"contain"}}
+        style={{ objectFit: "contain" }}
       />
     </div>
   );

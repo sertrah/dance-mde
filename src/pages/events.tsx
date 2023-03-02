@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Events from '@/components/Events'
+import { createClient } from '../prismicio'
 
-export default function Home() {
+export default function EventsPage(props: any) {
   return (
     <>
       <Head>
@@ -11,8 +12,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
-        <Events />
+        <Events page={props?.page} />
       </main>
     </>
   )
+}
+
+export async function getStaticProps({ previewData }: any) {
+  const client = createClient({ previewData })
+
+  const page = await client.getSingle('eventList')
+
+  return {
+    props: {
+      page,
+    },
+  }
 }

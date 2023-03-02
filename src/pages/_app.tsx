@@ -2,6 +2,11 @@ import "@/styles/globals.css";
 import { Roboto } from "@next/font/google";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { common, red } from "@mui/material/colors";
+import Link from 'next/link'
+import { PrismicProvider } from '@prismicio/react'
+import { PrismicPreview } from '@prismicio/next'
+import { repositoryName } from '../prismicio'
+
 import type { AppProps } from "next/app";
 
 const roboto = Roboto({
@@ -46,15 +51,19 @@ const theme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={roboto.variable}>
-      <style jsx global>{`
+    <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
+      <PrismicPreview repositoryName={repositoryName}>
+        <div className={roboto.variable}>
+          <style jsx global>{`
         html {
           font-family: ${roboto.style.fontFamily};
         }
       `}</style>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </div>
+          <ThemeProvider theme={theme}>
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </div>
+      </PrismicPreview>
+    </PrismicProvider >
   );
 }

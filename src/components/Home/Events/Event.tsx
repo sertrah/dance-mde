@@ -1,20 +1,25 @@
 import Image from "next/image";
+import dayjs, { Dayjs } from 'dayjs';
+import 'dayjs/locale/es' // load on demand
 import { SubTitle, Paragraph } from "@/components/UI-shared/Typography";
 import styles from "@/styles/Home.module.css";
-import { FC } from "react";
+import { FC, useMemo } from "react";
+dayjs.locale('es') // use Spanish locale globally
 
 const Event: FC<{
-  imageName: string,
-  date: string,
-  detail: string,
-}> = ({ imageName, date, detail }) => {
+  image: any,
+  date: any,
+  title: any,
+  location: any,
+}> = ({ image, date, title, location }) => {
+  const dayMemo: Dayjs | null = useMemo(() => dayjs(date), [date]);
   return (
     <div className={styles.event}>
       <div className={styles.detail}>
-        <SubTitle>{date}</SubTitle>
-        <Paragraph>{detail}</Paragraph>
+        <SubTitle>{dayMemo.format('MMMM D')}</SubTitle>
+        <Paragraph>{`${title}, ${location}`}</Paragraph>
       </div>
-      <Image src={imageName} alt="Vercel Logo" fill
+      <Image src={image.url} alt="Vercel Logo" fill
         style={{ objectFit: "cover" }}
       />
       <div className={styles.cover}></div>

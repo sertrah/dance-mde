@@ -1,0 +1,9 @@
+{
+  "id": "events",
+  "label": "event",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

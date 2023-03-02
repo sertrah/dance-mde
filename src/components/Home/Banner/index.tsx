@@ -3,18 +3,18 @@ import Image from "next/image";
 import { Paragraph, PrimaryTitle } from "@/components/UI-shared/Typography";
 import { FlexContainer } from "@/components/UI-shared/Container";
 import styles from "../../../styles/Home.module.css";
+import Typography from "@/helpers/prismic";
 
 export const Container = styled(FlexContainer)`
   padding: 40% 24px 24px;
   background: var(--andes-white);
 `;
 
-export default function Banner() {
+export default function Banner({ title }: any) {
   return (
     <section className={styles.banner}>
       <div className={styles.banner_item}>
-        <Paragraph> Discover with </Paragraph>
-        <PrimaryTitle> Best Medallo Dancers </PrimaryTitle>
+        <Typography richContent={title} />
       </div>
       <Image
         src="/medellin.jpg"

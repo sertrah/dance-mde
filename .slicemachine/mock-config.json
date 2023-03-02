@@ -1,0 +1,27 @@
+{
+  "_cts": {
+    "events": {},
+    "home": {},
+    "eventList": {}
+  },
+  "slices": {
+    "Event": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "HomeGenre": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "HomeEvents": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}

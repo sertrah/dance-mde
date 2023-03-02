@@ -30,7 +30,7 @@
 .banner_item h1{
   font-size: 3rem;
 }
-.banner_dancers,  .banner img:nth-child(2){
+.banner_dancers {
   width: 50% !important;
   height: auto !important;
   top: initial !important;
@@ -44,8 +44,8 @@
 }
 .genres {
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-  height: 400px;
+  grid-template-rows: repeat(auto-fit, minmax(120px, 1fr));
+  height: 100%;
   margin-top: 2rem;
   gap: 10px;
   padding: 0 10px;
@@ -58,6 +58,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  height: 120px;
 }
 
 .genre_right {
