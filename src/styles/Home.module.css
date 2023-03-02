@@ -29,7 +29,7 @@
   z-index: 5;
   position: relative;
 }
-.banner_item h1{
+.banner_item h1 {
   font-size: 3rem;
 }
 /* CENTER */
@@ -42,7 +42,7 @@
   z-index: 2;
 }
 
-.banner_dancers  {
+.banner_dancers {
   width: 55% !important;
   height: auto !important;
   top: initial !important;
@@ -92,7 +92,8 @@
 }
 
 .genre img {
-  width: auto !important;
+  width: 93px !important;
+  height: auto !important;
   position: relative !important;
   transform: translateY(10px) scale(1.2);
 }
@@ -152,7 +153,7 @@
   position: relative;
 }
 
-.events_btn{
+.events_btn {
   margin-top: 3rem;
   align-self: center;
 }

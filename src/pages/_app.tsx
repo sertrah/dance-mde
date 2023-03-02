@@ -8,6 +8,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '../prismicio'
 
 import type { AppProps } from "next/app";
+import Footer from "@/components/Footer";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -60,7 +61,9 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
           <ThemeProvider theme={theme}>
+            <p> ⚠️⚠️ Pagina aun en construcción! ⚠️⚠️  </p>
             <Component {...pageProps} />
+            <Footer />
           </ThemeProvider>
         </div>
       </PrismicPreview>

@@ -124,6 +124,15 @@ a {
   }
 }
 
+body > div > div > p {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  z-index: 7;
+  background-color: #0000003f;
+}
+
 h1 {
   font-size: 2rem;
   color: var(--primary-color);
@@ -147,4 +156,17 @@ h1.text_underline::before {
 }
 p {
   font-size: 1rem;
+}
+
+footer {
+  background: #2a2828;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem 1rem;
+}
+
+footer .mensajito span {
+  font-size: 0.7rem;
 }
