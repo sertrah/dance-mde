@@ -5,7 +5,6 @@ import Home from '@/components/Home'
 
 
 export default function HomePage(props: any) {
-  console.log(props.page.data);
   return (
     <>
       <Head>

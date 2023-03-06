@@ -4,7 +4,6 @@ import style from '@/styles/Academy.module.css'
 import Typography from '@/helpers/prismic'
 
 const Academy = ({ data }: any) => {
-  console.log(data.slices[0].items)
   return (
     <main className={style.academy_page}>
       <Typography richContent={data.title} hasUnderline />

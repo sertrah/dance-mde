@@ -20,7 +20,6 @@ export default function Events({ page }: any) {
     client.getByID(page.data.reference.id)
       .then((response) => {
         setData(response.data)
-        console.log(response.data)
         setLoading(false)
       })
   }, []);

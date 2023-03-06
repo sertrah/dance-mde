@@ -6,7 +6,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import style from '@/styles/Academy.module.css'
 import Typography from '@/helpers/prismic';
 
-const AcademyCard = ({ content, image, instagramLinkTo, whatsAppNumber }) => {
+const AcademyCard = ({ content, image, instagramLinkTo, whatsAppNumber }: any) => {
   return (
     <section className={style.academy}>
       <Image
