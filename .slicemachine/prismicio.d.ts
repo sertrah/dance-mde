@@ -6,6 +6,46 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for bachata documents */
+interface BachataDocumentData {
+    /**
+     * title field in *bachata*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: bachata.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *bachata*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: bachata.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<BachataDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *bachata → Slice Zone*
+ *
+ */
+type BachataDocumentDataSlicesSlice = AcademiesSlice;
+/**
+ * bachata document from Prismic
+ *
+ * - **API ID**: `bachata`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BachataDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BachataDocumentData>, "bachata", Lang>;
 /** Content for events documents */
 interface EventListDocumentData {
     /**
@@ -19,6 +59,17 @@ interface EventListDocumentData {
      *
      */
     title: prismicT.TitleField;
+    /**
+     * reference field in *events*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: eventList.reference
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    reference: prismicT.RelationField<"events">;
     /**
      * Slice Zone field in *events*
      *
@@ -47,7 +98,46 @@ type EventListDocumentDataSlicesSlice = EventSlice;
  */
 export type EventListDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<EventListDocumentData>, "eventList", Lang>;
 /** Content for event documents */
-type EventsDocumentData = Record<string, never>;
+interface EventsDocumentData {
+    /**
+     * title field in *event*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: events.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * event page title field in *event*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: events.eventPageTitle
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    eventPageTitle: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *event*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: events.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<EventsDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *event → Slice Zone*
+ *
+ */
+type EventsDocumentDataSlicesSlice = EventSlice;
 /**
  * event document from Prismic
  *
@@ -57,7 +147,7 @@ type EventsDocumentData = Record<string, never>;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type EventsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<EventsDocumentData>, "events", Lang>;
+export type EventsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<EventsDocumentData>, "events", Lang>;
 /** Content for home documents */
 interface HomeDocumentData {
     /**
@@ -71,6 +161,17 @@ interface HomeDocumentData {
      *
      */
     title: prismicT.RichTextField;
+    /**
+     * reference field in *home*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.reference
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    reference: prismicT.RelationField;
     /**
      * Slice Zone field in *home*
      *
@@ -98,7 +199,162 @@ type HomeDocumentDataSlicesSlice = HomeGenreSlice | HomeEventsSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
-export type AllDocumentTypes = EventListDocument | EventsDocument | HomeDocument;
+/** Content for salsa documents */
+interface SalsaDocumentData {
+    /**
+     * title field in *salsa*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: salsa.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *salsa*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: salsa.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<SalsaDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *salsa → Slice Zone*
+ *
+ */
+type SalsaDocumentDataSlicesSlice = AcademiesSlice;
+/**
+ * salsa document from Prismic
+ *
+ * - **API ID**: `salsa`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SalsaDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SalsaDocumentData>, "salsa", Lang>;
+export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | SalsaDocument;
+/**
+ * Primary content in Academies → Primary
+ *
+ */
+interface AcademiesSliceDefaultPrimary {
+    /**
+     * Title field in *Academies → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: academies.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Academies → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: academies.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in Academies → Items
+ *
+ */
+export interface AcademiesSliceDefaultItem {
+    /**
+     * content field in *Academies → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.items[].content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    content: prismicT.RichTextField;
+    /**
+     * image field in *Academies → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * start date field in *Academies → Items*
+     *
+     * - **Field Type**: Date
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.items[].startDate
+     * - **Documentation**: https://prismic.io/docs/core-concepts/date
+     *
+     */
+    startDate: prismicT.DateField;
+    /**
+     * location field in *Academies → Items*
+     *
+     * - **Field Type**: GeoPoint
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.items[].location
+     * - **Documentation**: https://prismic.io/docs/core-concepts/geopoint
+     *
+     */
+    location: prismicT.GeoPointField;
+    /**
+     * InstagramLinkTo field in *Academies → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.items[].instagramLinkTo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    instagramLinkTo: prismicT.LinkField;
+    /**
+     * whatsappNumber field in *Academies → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.items[].whatsappnumber
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    whatsappnumber: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Academies Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Academies`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AcademiesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<AcademiesSliceDefaultPrimary>, Simplify<AcademiesSliceDefaultItem>>;
+/**
+ * Slice variation for *Academies*
+ *
+ */
+type AcademiesSliceVariation = AcademiesSliceDefault;
+/**
+ * Academies Shared Slice
+ *
+ * - **API ID**: `academies`
+ * - **Description**: `Academies`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AcademiesSlice = prismicT.SharedSlice<"academies", AcademiesSliceVariation>;
 /**
  * Item in Event → Items
  *
@@ -383,6 +639,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeEventsSliceDefaultPrimary, HomeEventsSliceDefaultItem, HomeEventsSliceDefault, HomeEventsSliceVariation, HomeEventsSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice };
+        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeEventsSliceDefaultPrimary, HomeEventsSliceDefaultItem, HomeEventsSliceDefault, HomeEventsSliceVariation, HomeEventsSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice };
     }
 }

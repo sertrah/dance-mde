@@ -20,8 +20,8 @@
   );
   --radial-primary: radial-gradient(
     50% 50% at 50% 50%,
-    rgba(72, 25, 132, 0.88) 0%,
-    #451089 100%
+    #50218b 0%,
+    #360970 100%
   );
   --radial-secondary: radial-gradient(
     50% 50% at 50% 50%,
@@ -37,6 +37,11 @@
     50% 50% at 50% 50%,
     #0c8e72 0%,
     #0b693c 100%
+  );
+  --radial-black-1: radial-gradient(
+    50% 50% at 50% 50%,
+    #2c2b2a 0%,
+    #1d1d1d 100%
   );
 
   --tile-start-rgb: 239, 245, 249;
@@ -100,6 +105,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 body {
@@ -139,6 +145,11 @@ h1 {
   position: relative;
 }
 
+h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
 h1.text_underline {
   margin-top: 5rem;
   margin-bottom: 3rem;
@@ -156,10 +167,13 @@ h1.text_underline::before {
 }
 p {
   font-size: 1rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
 }
 
 footer {
   background: #2a2828;
+  color: #acacac;
   text-align: center;
   display: flex;
   flex-direction: column;

@@ -2,7 +2,9 @@
   "_cts": {
     "events": {},
     "home": {},
-    "eventList": {}
+    "eventList": {},
+    "bachata": {},
+    "salsa": {}
   },
   "slices": {
     "Event": {
@@ -20,6 +22,11 @@
     "HomeEvents": {
       "default": {
         "primary": {},
+        "items": {}
+      }
+    },
+    "Academies": {
+      "default": {
         "items": {}
       }
     }

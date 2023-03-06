@@ -1,0 +1,113 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Income"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Deserunt anim consectetur ut commodo. Quis culpa nulla sit anim Lorem in do sit est elit. Deserunt in et tempor adipisicing aliquip excepteur incididunt eiusmod anim."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "content",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Deserunt ullamco eiusmod non irure reprehenderit non ut eu fugiat Lorem."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "image",
+            {
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+                "width": 4160,
+                "height": 3120
+              },
+              "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+              "width": 4160,
+              "height": 3120,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
+              "thumbnails": {}
+            }
+          ],
+          [
+            "startDate",
+            {
+              "__TYPE__": "FieldContent",
+              "type": "Date",
+              "value": "2013-10-22"
+            }
+          ],
+          [
+            "location",
+            {
+              "position": {
+                "lat": 48.8841267,
+                "lng": 2.3300579
+              },
+              "__TYPE__": "GeoPointContent"
+            }
+          ],
+          [
+            "instagramLinkTo",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          ],
+          [
+            "whatsappnumber",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "blow",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

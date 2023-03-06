@@ -30,7 +30,10 @@
   position: relative;
 }
 .banner_item h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+}
+.banner_item p {
+  color: #d6d2d2;
 }
 /* CENTER */
 .banner_dancers_3 {
@@ -80,11 +83,12 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  padding: 1.5rem 3rem 0;
+  padding: 0 3rem 0;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
   height: 120px;
+  border-radius: 7px;
 }
 
 .genre_right {
@@ -95,7 +99,7 @@
   width: 93px !important;
   height: auto !important;
   position: relative !important;
-  transform: translateY(10px) scale(1.2);
+  transform: translateY(25px) scale(1.2);
 }
 /* -------- EVENTS ------- */
 .events {
@@ -118,6 +122,8 @@
   display: flex;
   place-items: flex-end;
   height: 140px;
+  border-radius: 7px;
+  overflow: hidden;
 }
 .events .event:nth-child(1) {
   grid-column: 1 / 3;

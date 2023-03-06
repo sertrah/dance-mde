@@ -14,6 +14,22 @@ const routes = [
     type: 'eventList',
     path: '/',
   },
+  {
+    type: 'salsa',
+    path: '/',
+  },
+  {
+    type: 'bachata',
+    path: '/',
+  },
+  {
+    type: 'events',
+    path: '/',
+  },
+  {
+    type: 'home',
+    path: '/',
+  },
 ]
 
 /**

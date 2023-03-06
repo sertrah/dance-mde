@@ -21,6 +21,13 @@
           "multi": "paragraph,heading1"
         }
       },
+      "reference": {
+        "type": "Link",
+        "config": {
+          "label": "reference",
+          "select": "document"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

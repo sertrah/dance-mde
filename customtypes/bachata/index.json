@@ -1,6 +1,6 @@
 {
-  "id": "eventList",
-  "label": "events",
+  "id": "bachata",
+  "label": "bachata",
   "repeatable": false,
   "status": true,
   "json": {
@@ -21,22 +21,12 @@
           "single": "heading1"
         }
       },
-      "reference": {
-        "type": "Link",
-        "config": {
-          "label": "reference",
-          "select": "document",
-          "customtypes": [
-            "events"
-          ]
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "event": {
+            "academies": {
               "type": "SharedSlice"
             }
           }

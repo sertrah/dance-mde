@@ -1,7 +1,7 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "could"
+    "value": "audience"
   },
   "title": {
     "__TYPE__": "StructuredTextContent",
@@ -9,16 +9,23 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Do proident deserunt reprehenderit ad non enim eu incididunt in ex veniam excepteur occaecat."
+          "text": "Aute incididunt dolor non. Nulla sit reprehenderit excepteur sunt deserunt exercitation culpa laborum quis esse labore. Aute adipisicing aliqua ut do eiusmod laboris mollit nisi in consequat labore."
         }
       }
     ]
+  },
+  "reference": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "home_genre$ff2170be-8a7d-4c80-98e0-fd52347ee3a3",
+        "key": "home_genre$e859c1f3-77ab-4ac1-9790-a5384daf18dc",
         "name": "home_genre",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -30,15 +37,10 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Shadow"
+                    "text": "Matter"
                   }
                 }
               ]
-            },
-            "buttonText": {
-              "__TYPE__": "FieldContent",
-              "value": "explain",
-              "type": "Text"
             }
           },
           "items": [
@@ -51,13 +53,13 @@
                     "__TYPE__": "ImageContent",
                     "origin": {
                       "id": "main",
-                      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+                      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
                       "width": 3456,
-                      "height": 3456
+                      "height": 4320
                     },
-                    "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+                    "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
                     "width": 3456,
-                    "height": 3456,
+                    "height": 4320,
                     "edit": {
                       "zoom": 1,
                       "crop": {
@@ -77,7 +79,7 @@
                       {
                         "type": "paragraph",
                         "content": {
-                          "text": "Labore enim ad consequat anim proident nulla do laborum esse sunt ea ea. Ex exercitation consectetur ad dolore anim culpa nostrud eiusmod est."
+                          "text": "Id enim do cillum ex veniam occaecat Lorem. Id amet non magna et sunt occaecat qui qui cillum enim amet labore Lorem. Ipsum ullamco ullamco ea dolore duis amet."
                         }
                       }
                     ]
@@ -89,24 +91,24 @@
                     "__TYPE__": "LinkContent",
                     "value": {
                       "__TYPE__": "ExternalLink",
-                      "url": "https://slicemachine.dev"
+                      "url": "http://twitter.com"
                     }
-                  }
-                ],
-                [
-                  "color",
-                  {
-                    "__TYPE__": "FieldContent",
-                    "value": "#fab1f2",
-                    "type": "Color"
                   }
                 ],
                 [
                   "prueba",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "accept",
+                    "value": "nearly",
                     "type": "Text"
+                  }
+                ],
+                [
+                  "colorWheel",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "--radial-quartary",
+                    "type": "Select"
                   }
                 ]
               ]
@@ -115,7 +117,7 @@
         }
       },
       {
-        "key": "home_events$136b75db-e906-472d-badc-9beb21399153",
+        "key": "home_events$2c19738f-6c80-45ec-8712-61225feb447e",
         "name": "home_events",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -127,7 +129,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Morning"
+                    "text": "Herself"
                   }
                 }
               ]
@@ -143,13 +145,13 @@
                     "__TYPE__": "ImageContent",
                     "origin": {
                       "id": "main",
-                      "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-                      "width": 3168,
-                      "height": 4752
+                      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+                      "width": 6597,
+                      "height": 4398
                     },
-                    "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-                    "width": 3168,
-                    "height": 4752,
+                    "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+                    "width": 6597,
+                    "height": 4398,
                     "edit": {
                       "zoom": 1,
                       "crop": {
@@ -166,14 +168,14 @@
                   {
                     "__TYPE__": "FieldContent",
                     "type": "Date",
-                    "value": "2016-05-22"
+                    "value": "2019-02-22"
                   }
                 ],
                 [
                   "title",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "myself",
+                    "value": "cheese",
                     "type": "Text"
                   }
                 ],
@@ -181,7 +183,7 @@
                   "location",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "led",
+                    "value": "track",
                     "type": "Text"
                   }
                 ],
@@ -191,7 +193,7 @@
                     "__TYPE__": "LinkContent",
                     "value": {
                       "__TYPE__": "ExternalLink",
-                      "url": "https://slicemachine.dev"
+                      "url": "http://google.com"
                     }
                   }
                 ]

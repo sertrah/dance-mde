@@ -1,10 +1,8 @@
 import Image from "next/image";
 import dayjs, { Dayjs } from 'dayjs';
-import 'dayjs/locale/es' // load on demand
-import { SubTitle, Paragraph } from "@/components/UI-shared/Typography";
 import styles from "@/styles/Home.module.css";
 import { FC, useMemo } from "react";
-dayjs.locale('es') // use Spanish locale globally
+import Typography from "@/helpers/prismic";
 
 const Event: FC<{
   image: any,
@@ -13,7 +11,6 @@ const Event: FC<{
   location: any,
   linkto: any,
 }> = ({ image, date, title, location, linkto }) => {
-  const dayMemo: Dayjs | null = useMemo(() => dayjs(date), [date]);
   const handleOnClickEvent = () => {
     window.open(
       linkto.url, "_blank");
@@ -21,8 +18,9 @@ const Event: FC<{
   return (
     <div className={styles.event} onClick={handleOnClickEvent}>
       <div className={styles.detail}>
-        <SubTitle>{dayMemo.format('MMMM D')}</SubTitle>
-        <Paragraph><b>{title}</b>{`, ${location}`}</Paragraph>
+        <Typography richContent={date} />
+        <Typography richContent={title} />
+        <Typography richContent={location} />
       </div>
       <Image src={image.url} alt="Vercel Logo" fill
         style={{ objectFit: "cover" }}
