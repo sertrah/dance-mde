@@ -22,7 +22,7 @@ export default function Events({sliceItems, title}: any) {
       </div>
       <Link href="/events" className={styles.events_btn} >
         <Button type="submit" variant="contained" >
-          See all events
+          Ver todos los eventos
         </Button>
       </Link>
 

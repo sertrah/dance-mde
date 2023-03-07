@@ -47,6 +47,16 @@ const theme = createTheme({
           }
         }
       }
+    },
+    MuiPaper:{
+      styleOverrides: {
+        root: {
+          background: "var(--radial-black-1)",
+          "& .MuiCardContent-root": {
+            padding: "0.8rem",
+          }
+        }
+      }
     }
   }
 });

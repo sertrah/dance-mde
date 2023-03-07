@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@hookform/resolvers": "^2.9.11",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@next/font": "13.1.6",
@@ -33,7 +34,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.1",
     "styled-components": "^5.3.6",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.7",

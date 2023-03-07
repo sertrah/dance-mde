@@ -1,0 +1,135 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "zebra"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "heading1",
+        "content": {
+          "text": "Stronger"
+        }
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "academies$39bded6a-ff98-4ac7-8838-8b981f506654",
+        "name": "academies",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Widely"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Et voluptate nulla nostrud ullamco sunt laborum mollit ullamco duis esse consectetur consectetur. Nisi cillum ad mollit anim."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "content",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Adipisicing dolor ipsum sint nostrud sit veniam labore minim. Laborum voluptate aliqua amet cupidatat deserunt ullamco irure ad ut tempor consectetur sint elit sunt aliquip."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+                      "width": 3882,
+                      "height": 2584
+                    },
+                    "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+                    "width": 3882,
+                    "height": 2584,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "startDate",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "type": "Date",
+                    "value": "2014-05-19"
+                  }
+                ],
+                [
+                  "location",
+                  {
+                    "__TYPE__": "GeoPointContent",
+                    "position": {
+                      "lat": 48.8703712,
+                      "lng": 2.3865198
+                    }
+                  }
+                ],
+                [
+                  "instagramLinkTo",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://twitter.com"
+                    }
+                  }
+                ],
+                [
+                  "whatsappnumber",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "solar",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -23,6 +23,18 @@ const routes = [
     path: '/',
   },
   {
+    type: 'zouk',
+    path: '/',
+  },
+  {
+    type: 'kizomba',
+    path: '/',
+  },
+  {
+    type: 'tango',
+    path: '/',
+  },
+  {
     type: 'events',
     path: '/',
   },

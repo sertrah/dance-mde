@@ -1,0 +1,135 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "swept"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "heading1",
+        "content": {
+          "text": "Sugar"
+        }
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "academies$08640c22-067d-4211-8fdc-a11fd801b42d",
+        "name": "academies",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Practice"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Qui irure exercitation adipisicing. Proident ad sit velit quis aliqua."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "content",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Incididunt qui cupidatat sit voluptate cillum ipsum. Quis non mollit qui esse ut commodo sunt consequat sunt dolore excepteur pariatur. Irure velit cillum et dolore pariatur id."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                      "width": 3344,
+                      "height": 2509
+                    },
+                    "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                    "width": 3344,
+                    "height": 2509,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "startDate",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "type": "Date",
+                    "value": "2014-11-16"
+                  }
+                ],
+                [
+                  "location",
+                  {
+                    "__TYPE__": "GeoPointContent",
+                    "position": {
+                      "lat": 48.8703712,
+                      "lng": 2.3865198
+                    }
+                  }
+                ],
+                [
+                  "instagramLinkTo",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://twitter.com"
+                    }
+                  }
+                ],
+                [
+                  "whatsappnumber",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "inch",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -4,7 +4,10 @@
     "home": {},
     "eventList": {},
     "bachata": {},
-    "salsa": {}
+    "salsa": {},
+    "kizomba": {},
+    "zouk": {},
+    "tango": {}
   },
   "slices": {
     "Event": {
@@ -14,12 +17,6 @@
       }
     },
     "HomeGenre": {
-      "default": {
-        "primary": {},
-        "items": {}
-      }
-    },
-    "HomeEvents": {
       "default": {
         "primary": {},
         "items": {}

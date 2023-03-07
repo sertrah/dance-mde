@@ -6,7 +6,7 @@ import style from "@/styles/Shared.module.css";
 export default function Contact() {
   return (
       <section className={style.contact}>
-          <PrimaryTitle hasUnderline> Contact </PrimaryTitle>
+          <PrimaryTitle hasUnderline> Hablamelo </PrimaryTitle>
           <div>
             <Form />
           </div>

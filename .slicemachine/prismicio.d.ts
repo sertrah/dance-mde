@@ -188,7 +188,7 @@ interface HomeDocumentData {
  * Slice for *home → Slice Zone*
  *
  */
-type HomeDocumentDataSlicesSlice = HomeGenreSlice | HomeEventsSlice;
+type HomeDocumentDataSlicesSlice = HomeGenreSlice;
 /**
  * home document from Prismic
  *
@@ -199,6 +199,46 @@ type HomeDocumentDataSlicesSlice = HomeGenreSlice | HomeEventsSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
+/** Content for kizomba documents */
+interface KizombaDocumentData {
+    /**
+     * title field in *kizomba*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: kizomba.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *kizomba*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: kizomba.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<KizombaDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *kizomba → Slice Zone*
+ *
+ */
+type KizombaDocumentDataSlicesSlice = AcademiesSlice;
+/**
+ * kizomba document from Prismic
+ *
+ * - **API ID**: `kizomba`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type KizombaDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<KizombaDocumentData>, "kizomba", Lang>;
 /** Content for salsa documents */
 interface SalsaDocumentData {
     /**
@@ -239,7 +279,87 @@ type SalsaDocumentDataSlicesSlice = AcademiesSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type SalsaDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SalsaDocumentData>, "salsa", Lang>;
-export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | SalsaDocument;
+/** Content for tango documents */
+interface TangoDocumentData {
+    /**
+     * title field in *tango*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: tango.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *tango*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: tango.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<TangoDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *tango → Slice Zone*
+ *
+ */
+type TangoDocumentDataSlicesSlice = AcademiesSlice;
+/**
+ * tango document from Prismic
+ *
+ * - **API ID**: `tango`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TangoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<TangoDocumentData>, "tango", Lang>;
+/** Content for zouk documents */
+interface ZoukDocumentData {
+    /**
+     * title field in *zouk*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: zouk.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *zouk*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: zouk.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<ZoukDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *zouk → Slice Zone*
+ *
+ */
+type ZoukDocumentDataSlicesSlice = AcademiesSlice;
+/**
+ * zouk document from Prismic
+ *
+ * - **API ID**: `zouk`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ZoukDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ZoukDocumentData>, "zouk", Lang>;
+export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | KizombaDocument | SalsaDocument | TangoDocument | ZoukDocument;
 /**
  * Primary content in Academies → Primary
  *
@@ -445,101 +565,6 @@ type EventSliceVariation = EventSliceDefault;
  */
 export type EventSlice = prismicT.SharedSlice<"event", EventSliceVariation>;
 /**
- * Primary content in HomeEvents → Primary
- *
- */
-interface HomeEventsSliceDefaultPrimary {
-    /**
-     * Title field in *HomeEvents → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: home_events.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-}
-/**
- * Item in HomeEvents → Items
- *
- */
-export interface HomeEventsSliceDefaultItem {
-    /**
-     * image field in *HomeEvents → Items*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_events.items[].image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-    /**
-     * date field in *HomeEvents → Items*
-     *
-     * - **Field Type**: Date
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_events.items[].date
-     * - **Documentation**: https://prismic.io/docs/core-concepts/date
-     *
-     */
-    date: prismicT.DateField;
-    /**
-     * title field in *HomeEvents → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_events.items[].title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    title: prismicT.KeyTextField;
-    /**
-     * location field in *HomeEvents → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_events.items[].location
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    location: prismicT.KeyTextField;
-    /**
-     * linkTo field in *HomeEvents → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_events.items[].linkto
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    linkto: prismicT.LinkField;
-}
-/**
- * Default variation for HomeEvents Slice
- *
- * - **API ID**: `default`
- * - **Description**: `HomeEvents`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HomeEventsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HomeEventsSliceDefaultPrimary>, Simplify<HomeEventsSliceDefaultItem>>;
-/**
- * Slice variation for *HomeEvents*
- *
- */
-type HomeEventsSliceVariation = HomeEventsSliceDefault;
-/**
- * HomeEvents Shared Slice
- *
- * - **API ID**: `home_events`
- * - **Description**: `HomeEvents`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HomeEventsSlice = prismicT.SharedSlice<"home_events", HomeEventsSliceVariation>;
-/**
  * Primary content in HomeGenre → Primary
  *
  */
@@ -609,7 +634,7 @@ export interface HomeGenreSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    colorWheel: prismicT.SelectField<"--radial-primary" | "--radial-secondary" | "--radial-ternary" | "--radial-quartary">;
+    colorWheel: prismicT.SelectField<"--radial-primary" | "--radial-secondary" | "--radial-ternary" | "--radial-quartary" | " --radial-blue">;
 }
 /**
  * Default variation for HomeGenre Slice
@@ -639,6 +664,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeEventsSliceDefaultPrimary, HomeEventsSliceDefaultItem, HomeEventsSliceDefault, HomeEventsSliceVariation, HomeEventsSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice };
+        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, KizombaDocumentData, KizombaDocumentDataSlicesSlice, KizombaDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, TangoDocumentData, TangoDocumentDataSlicesSlice, TangoDocument, ZoukDocumentData, ZoukDocumentDataSlicesSlice, ZoukDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice };
     }
 }

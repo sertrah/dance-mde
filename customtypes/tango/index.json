@@ -1,6 +1,6 @@
 {
-  "id": "home",
-  "label": "home",
+  "id": "tango",
+  "label": "tango",
   "repeatable": false,
   "status": true,
   "json": {
@@ -17,15 +17,8 @@
         "config": {
           "label": "title",
           "placeholder": "",
-          "allowTargetBlank": false,
-          "multi": "paragraph,heading1"
-        }
-      },
-      "reference": {
-        "type": "Link",
-        "config": {
-          "label": "reference",
-          "select": "document"
+          "allowTargetBlank": true,
+          "single": "heading1"
         }
       },
       "slices": {
@@ -33,7 +26,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "home_genre": {
+            "academies": {
               "type": "SharedSlice"
             }
           }

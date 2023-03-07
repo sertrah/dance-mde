@@ -62,7 +62,8 @@
               "--radial-primary",
               "--radial-secondary",
               "--radial-ternary",
-              "--radial-quartary"
+              "--radial-quartary",
+              " --radial-blue"
             ]
           }
         }

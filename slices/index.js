@@ -2,19 +2,16 @@
 
 import Academies from './Academies';
 import Event from './Event';
-import HomeEvents from './HomeEvents';
 import HomeGenre from './HomeGenre';
 
 export {
 	Academies,
 	Event,
-	HomeEvents,
 	HomeGenre,
 };
 
 export const components = {
 	academies: Academies,
 	event: Event,
-	home_events: HomeEvents,
 	home_genre: HomeGenre,
 };

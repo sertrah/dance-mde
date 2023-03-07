@@ -8,7 +8,7 @@ interface Props {
   className?: string,
 }
 
-export const PrimaryTitle: FC<Props> = ({ children, hasUnderline }) => <h1 className={`${styles.title_1} ${hasUnderline ? styles.text_underline : ''} `}> {children}</h1>
+export const PrimaryTitle: FC<Props> = ({ children, hasUnderline, className }) => <h1 className={`${classNames(styles.title_1, className)} ${hasUnderline ? styles.text_underline : ''} `}> {children}</h1>
 export const SubTitle: FC<Props> = ({ children }) => <h2 className={styles.title_2}> {children}</h2>
 
 export const Paragraph: FC<Props> = ({ children, className }) => <p className={classNames(styles.paragraph_1, className)}> {children}</p>

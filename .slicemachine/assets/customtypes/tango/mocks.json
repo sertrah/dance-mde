@@ -1,0 +1,135 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "steam"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "heading1",
+        "content": {
+          "text": "Angry"
+        }
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "academies$b83f1a93-b433-4d7d-93f9-96b511bc55a7",
+        "name": "academies",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "During"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Cillum sint consequat proident labore ipsum deserunt aute nisi eiusmod commodo do voluptate laboris. Ut dolore consequat pariatur qui exercitation cillum aliquip id ipsum. Eiusmod consectetur officia aliqua cillum amet laboris voluptate quis dolore occaecat magna et deserunt eu."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "content",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Mollit velit ut cupidatat nisi commodo pariatur adipisicing anim id adipisicing esse. Consequat laborum velit et adipisicing laboris est dolore eu dolore qui. Officia pariatur ipsum enim est mollit consequat."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "image",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+                      "width": 4024,
+                      "height": 4024
+                    },
+                    "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+                    "width": 4024,
+                    "height": 4024,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "startDate",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "type": "Date",
+                    "value": "2019-05-18"
+                  }
+                ],
+                [
+                  "location",
+                  {
+                    "__TYPE__": "GeoPointContent",
+                    "position": {
+                      "lat": 48.8606111,
+                      "lng": 2.337644
+                    }
+                  }
+                ],
+                [
+                  "instagramLinkTo",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://prismic.io"
+                    }
+                  }
+                ],
+                [
+                  "whatsappnumber",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "like",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

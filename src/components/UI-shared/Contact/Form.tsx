@@ -1,24 +1,50 @@
+import { useRef, useState, useCallback } from "react";
+import * as yup from "yup";
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, Controller } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import style from "@/styles/Shared.module.css";
 
+
+const validationSchema = yup.object({
+  email: yup.string().email().required("Required"),
+  tel: yup.string().max(12).required("Required"),
+  message: yup.string().max(150).required("Required")
+}).required();
+
 const Form = () => {
+  const formRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isValid },
   } = useForm({
+    mode: 'onChange',
+    resolver: yupResolver(validationSchema),
     defaultValues: {
       email: "",
       tel: "",
       message: "",
     },
   });
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = () => {
+    setIsLoading(true);
+    if (formRef.current)
+      fetch('https://script.google.com/macros/s/AKfycby-92_ayeKqkTu2SmDRmEFXcpZHAvithHvRquT8I60tW9OvK7q3Ufkyq_fT0OQp0OxJ/exec', {
+        method: 'POST',
+        body: new FormData(formRef.current),
+      }).then(() => {
+        reset();
+      })
+        .catch(() => { alert("error") })
+        .finally(() => { setIsLoading(false) })
+  };
 
   return (
-    <form className={style.contact_form} onSubmit={handleSubmit(onSubmit)}>
+    <form ref={formRef} className={style.contact_form} onSubmit={handleSubmit(onSubmit)}>
       <Controller
         name="email"
         control={control}
@@ -47,8 +73,8 @@ const Form = () => {
           />
         )}
       />
-      <Button type="submit" variant="contained">
-        Send
+      <Button type="submit" variant="contained" disabled={(isLoading || !isValid)}>
+        Enviar
       </Button>
     </form>
   );

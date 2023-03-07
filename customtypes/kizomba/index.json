@@ -1,6 +1,6 @@
 {
-  "id": "home",
-  "label": "home",
+  "id": "kizomba",
+  "label": "kizomba",
   "repeatable": false,
   "status": true,
   "json": {
@@ -18,14 +18,7 @@
           "label": "title",
           "placeholder": "",
           "allowTargetBlank": false,
-          "multi": "paragraph,heading1"
-        }
-      },
-      "reference": {
-        "type": "Link",
-        "config": {
-          "label": "reference",
-          "select": "document"
+          "single": "heading1"
         }
       },
       "slices": {
@@ -33,7 +26,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "home_genre": {
+            "academies": {
               "type": "SharedSlice"
             }
           }

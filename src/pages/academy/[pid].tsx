@@ -20,7 +20,12 @@ export default function AcademyPage({ page }: any) {
 // Generates `/posts/1` and `/posts/2`
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { pid: 'bachata' } }, { params: { pid: 'salsa' } }],
+    paths: [
+      { params: { pid: 'bachata' } },
+      { params: { pid: 'salsa' } },
+      { params: { pid: 'kizomba' } },
+      { params: { pid: 'tango' } },
+      { params: { pid: 'zouk' } }],
     fallback: false, // can also be true or 'blocking'
   }
 }
