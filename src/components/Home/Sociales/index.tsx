@@ -27,7 +27,13 @@ const sociales: Record<number, any> = {
       name: "Nueva guardia",
       instagramLink: "https://www.instagram.com/nuevaguardiadance/",
       genres: ["Bachata",],
-    }]
+    },
+    {
+      name: "Barcelona",
+      instagramLink: "https://www.instagram.com/barcelonasmartmed/",
+      genres: ["Bachata", "Salsa", "Zouk"],
+    }
+    ]
   }, // Monday
   3: {
     concept: "Miercoles",
@@ -118,7 +124,7 @@ export default function Sociales() {
             <Stack direction="row" alignItems="center" gap={0.4}>
               <Avatar alt="Preview social" src="/yy.png" />
               <TypographyMui variant="h5" component="h5" className={styles.social_title}>
-                {place.name}
+                📍 {place.name}
               </TypographyMui>
             </Stack>
             <Stack direction="row" gap={1} className={styles.social_card_badges} alignItems="center">

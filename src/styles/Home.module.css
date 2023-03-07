@@ -83,6 +83,9 @@
   font-family: var(--roboto-font);
   text-align: center;
 }
+.genres img.genre_tango{
+  transform: translateY(10px) scale(1.6);
+}
 .genres {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(120px, 1fr));
@@ -188,7 +191,7 @@
 .social_card{
   display: flex;
   flex-direction: row;
-  gap: 0.4rem;
+  gap: 1.2rem;
 }
 .sociales_title{
   text-align: center;

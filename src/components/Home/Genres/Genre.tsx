@@ -5,6 +5,8 @@ import Link from 'next/link';
 import styles from "../../../styles/Home.module.css";
 import Typography from "@/helpers/prismic";
 
+
+
 const Genre: FC<{
   isOpposite?: boolean;
   bgColor?: "--radial-primary" | "--radial-secondary" | "--radial-ternary";
@@ -26,6 +28,7 @@ const Genre: FC<{
           alt="Dancers"
           fill
           style={{ objectFit: "contain" }}
+          className={title[0].text === 'Tango' ? styles.genre_tango : ''}
         />
       </div>
     </Link>

@@ -52,8 +52,9 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           background: "var(--radial-black-1)",
+          marginBottom: "0.5rem",
           "& .MuiCardContent-root": {
-            padding: "0.8rem",
+            padding: "0.8rem !important",
           }
         }
       }

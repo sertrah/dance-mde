@@ -8,9 +8,11 @@ export default function HomePage(props: any) {
   return (
     <>
       <Head>
-        <title>Medellin Dance Events</title>
-        <meta name="description" content="Eventos de baile en medellin" />
+        <title>Clases de Baile en Medellín - Sociales en Medellín</title>
+        <meta name="description" content="Encuentra donde bailar salsa, bachata y más en Medellín. Todos los niveles. Descubre los horarios y precios en línea. ¡Disfruta de la magia de Medellín!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Clases de Baile en Medellín - Sociales en Medellín" />
+        <meta property="og:description" content="Encuentra donde bailar salsa, bachata y más en Medellín. Todos los niveles. Descubre los horarios y precios en línea. ¡Disfruta de la magia de Medellín!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
