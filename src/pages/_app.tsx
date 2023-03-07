@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import Script from 'next/script';
 import { Roboto } from "@next/font/google";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { common, red } from "@mui/material/colors";
@@ -52,21 +53,36 @@ const theme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-      <PrismicPreview repositoryName={repositoryName}>
-        <div className={roboto.variable}>
-          <style jsx global>{`
+    <>
+      <Script id="gtag" strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+
+      <Script strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+        page_path: window.location.pathname,
+        });
+      `}}
+        id="ga" />
+      <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
+        <PrismicPreview repositoryName={repositoryName}>
+          <div className={roboto.variable}>
+            <style jsx global>{`
         html {
           font-family: ${roboto.style.fontFamily};
         }
       `}</style>
-          <ThemeProvider theme={theme}>
-            <p> ⚠️⚠️ Pagina aun en construcción! ⚠️⚠️  </p>
-            <Component {...pageProps} />
-            <Footer />
-          </ThemeProvider>
-        </div>
-      </PrismicPreview>
-    </PrismicProvider >
+            <ThemeProvider theme={theme}>
+              <p> ⚠️⚠️ Pagina aun en construcción! ⚠️⚠️  </p>
+              <Component {...pageProps} />
+              <Footer />
+            </ThemeProvider>
+          </div>
+        </PrismicPreview>
+      </PrismicProvider >
+    </>
+
   );
 }
