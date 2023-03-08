@@ -117,7 +117,7 @@ export default function Sociales() {
   const currentSocial = useMemo(() => sociales[dayjs().day()], []);
   return (
     <section className={styles.sociales}>
-      <PrimaryTitle hasUnderline className={styles.sociales_title}>Agendate hoy! {currentSocial.concept}</PrimaryTitle>
+      <PrimaryTitle hasUnderline className={styles.sociales_title}>Social hoy <br/>{currentSocial.concept} o miedo?</PrimaryTitle>
       {currentSocial.places.map((place: { name: string, genres: string[], instagramLink: string }, i: number) => <Card key={`social-${i}`}>
         <Link href={place.instagramLink} target="_blank">
           <CardContent className={styles.social_card}>

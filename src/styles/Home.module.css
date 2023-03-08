@@ -199,6 +199,7 @@
 .social_title{
   color: var(--primary-color);
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 .social_card_badges{
   flex-wrap: wrap;

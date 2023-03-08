@@ -43,7 +43,7 @@ const Genre: FC<{
         <Typography richContent={description} />
         <div className={styles.event_card_location}>
           <Typography richContent={location} />
-          <Link href="https://nextjs.org" passHref >see more</Link>
+          <Link href="https://nextjs.org" passHref >Ver más</Link>
         </div>
       </div>
     </div>

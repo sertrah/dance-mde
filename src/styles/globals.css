@@ -158,7 +158,7 @@ h1.text_underline {
 }
 h1.text_underline::before {
   content: " ";
-  width: 50%;
+  width: 36%;
   background-color: #555;
   height: 1px;
   position: absolute;
