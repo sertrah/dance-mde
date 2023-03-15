@@ -10,6 +10,7 @@ import { repositoryName } from '../prismicio'
 
 import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
+import TopBar from "@/components/UI-shared/TopBar";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -86,7 +87,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
             <ThemeProvider theme={theme}>
-              <p> ⚠️⚠️ Pagina aun en construcción! ⚠️⚠️  </p>
+              <TopBar/>
               <Component {...pageProps} />
               <Footer />
             </ThemeProvider>

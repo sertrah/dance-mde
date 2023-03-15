@@ -16,3 +16,21 @@
 .contact .contact_form button {
   margin-top: 2rem;
 }
+
+.top_bar {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: auto;
+  padding: 0.4rem 0;
+  width: 100%;
+  background: rgb(32, 32, 32); /* fallback for old browsers */
+}
+
+.top_bar_logo {
+  list-style: none;
+  position: relative;
+  margin: auto;
+  height: 20px;
+  width: 100px;
+}
