@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Events from '@/components/Events'
 import { createClient } from '../prismicio'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function EventsPage(props: any) {
   return (
@@ -18,14 +19,19 @@ export default function EventsPage(props: any) {
   )
 }
 
-export async function getStaticProps({ previewData }: any) {
+export async function getStaticProps({ previewData, locale }: any) {
   const client = createClient({ previewData })
+  const currentLocale = locale ?? 'es-CO';
 
-  const page = await client.getSingle('eventList')
+  const page = await client.getSingle('eventList', { lang: currentLocale })
 
   return {
     props: {
       page,
+      ...(await serverSideTranslations(currentLocale, [
+        'common',
+        'footer',
+      ])),
     },
   }
 }

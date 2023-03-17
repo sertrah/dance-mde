@@ -1,15 +1,19 @@
 import Button from "@mui/material/Button";
-import Link from 'next/link';
 import styles from "@/styles/Home.module.css";
 import Typography from "@/helpers/prismic";
+import CustomLink from "@/components/UI-shared/CustomLink";
 import Event from "./Event";
+import { useTranslation } from 'next-i18next'
 
-export default function Events({sliceItems, title}: any) {
+
+export default function Events({ sliceItems, title }: any) {
+  const { t } = useTranslation('common');
+
   return (
     <section className={styles.events}>
       <Typography richContent={title} hasUnderline />
       <div className={styles.events_container}>
-        {sliceItems.map(({ title, image, date, location, showmore }: any, index: number ) => (
+        {sliceItems.map(({ title, image, date, location, showmore }: any, index: number) => (
           <Event
             key={`event-${index}`}
             title={title}
@@ -20,11 +24,11 @@ export default function Events({sliceItems, title}: any) {
           />
         ))}
       </div>
-      <Link href="/events" className={styles.events_btn} >
+      <CustomLink href="/events" className={styles.events_btn} >
         <Button type="submit" variant="contained" >
-          Ver todos los eventos
+          {t('home_event_button')}
         </Button>
-      </Link>
+      </CustomLink>
 
     </section>
   );

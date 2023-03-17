@@ -51,30 +51,12 @@
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
-                  "type": "paragraph",
+                  "type": "heading1",
                   "content": {
-                    "text": "Velit exercitation in cupidatat proident consectetur cillum pariatur."
+                    "text": "Metal"
                   }
                 }
               ]
-            }
-          ],
-          [
-            "linkto",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "https://prismic.io"
-              }
-            }
-          ],
-          [
-            "prueba",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "particles",
-              "type": "Text"
             }
           ],
           [

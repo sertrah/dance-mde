@@ -183,6 +183,28 @@ interface HomeDocumentData {
      *
      */
     slices: prismicT.SliceZone<HomeDocumentDataSlicesSlice>;
+    /**
+     * meta_title field in *home*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.metaTitle
+     * - **Tab**: SEO.
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    metaTitle: prismicT.KeyTextField;
+    /**
+     * meta_description field in *home*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.metaDescription
+     * - **Tab**: SEO.
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    metaDescription: prismicT.KeyTextField;
 }
 /**
  * Slice for *home → Slice Zone*
@@ -598,33 +620,13 @@ export interface HomeGenreSliceDefaultItem {
     /**
      * title field in *HomeGenre → Items*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Title
      * - **Placeholder**: *None*
      * - **API ID Path**: home_genre.items[].title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.RichTextField;
-    /**
-     * linkTo field in *HomeGenre → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_genre.items[].linkto
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    linkto: prismicT.LinkField;
-    /**
-     * prueba field in *HomeGenre → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_genre.items[].prueba
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    prueba: prismicT.KeyTextField;
+    title: prismicT.TitleField;
     /**
      * color wheel field in *HomeGenre → Items*
      *

@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import Link from 'next/link';
+import CustomLink from "@/components/UI-shared/CustomLink";
 
 import styles from "../../../styles/Home.module.css";
 import Typography from "@/helpers/prismic";
+import { useRouter } from "next/router";
 
 
 
@@ -14,8 +15,9 @@ const Genre: FC<{
   imageName?: string;
   image?: any;
 }> = ({ isOpposite = false, bgColor = "--radial-primary", title, image }) => {
+  const { locale } = useRouter();
   return (
-    <Link href={`/academy/${title[0].text.toLowerCase()}`} >
+    <CustomLink href={`/academy/${title[0].text.toLowerCase()}`} locale={locale} >
       <div
         style={{
           backgroundImage: `var(${bgColor ? bgColor : "--radial-primary"})`,
@@ -31,7 +33,7 @@ const Genre: FC<{
           className={title[0].text === 'Tango' ? styles.genre_tango : ''}
         />
       </div>
-    </Link>
+    </CustomLink>
   );
 };
 export default Genre;

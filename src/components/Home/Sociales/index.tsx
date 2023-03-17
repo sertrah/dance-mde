@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import CustomLink from "@/components/UI-shared/CustomLink";
 import dayjs, { Dayjs } from 'dayjs';
 import styles from "@/styles/Home.module.css";
 // import Typography from "@/helpers/prismic";
@@ -11,6 +11,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import TypographyMui from '@mui/material/Typography';
 import { PrimaryTitle } from '@/components/UI-shared/Typography';
+import { useTranslation } from 'next-i18next'
 
 const sociales: Record<number, any> = {
   1: {
@@ -114,12 +115,13 @@ const sociales: Record<number, any> = {
   }, // Sunday
 }
 export default function Sociales() {
+  const { t } = useTranslation('common');
   const currentSocial = useMemo(() => sociales[dayjs().day()], []);
   return (
     <section className={styles.sociales}>
-      <PrimaryTitle hasUnderline className={styles.sociales_title}>Social hoy <br/>{currentSocial.concept} o miedo?</PrimaryTitle>
+      <PrimaryTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br/>{currentSocial.concept} o miedo?</PrimaryTitle>
       {currentSocial.places.map((place: { name: string, genres: string[], instagramLink: string }, i: number) => <Card key={`social-${i}`}>
-        <Link href={place.instagramLink} target="_blank">
+        <CustomLink href={place.instagramLink} target="_blank">
           <CardContent className={styles.social_card}>
             <Stack direction="row" alignItems="center" gap={0.4}>
               <Avatar alt="Preview social" src="/yy.png" />
@@ -131,7 +133,7 @@ export default function Sociales() {
               {place.genres.map((genre) => <Chip size="small" label={genre} className={`is-${genre.toLowerCase()}`} key={`genre-${genre}`} />)}
             </Stack>
           </CardContent>
-        </Link>
+        </CustomLink>
       </Card>)}
     </section>
   );

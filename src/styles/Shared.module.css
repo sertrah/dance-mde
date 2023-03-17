@@ -22,9 +22,12 @@
   top: 0;
   z-index: 10;
   height: auto;
-  padding: 0.4rem 0;
   width: 100%;
   background: rgb(32, 32, 32); /* fallback for old browsers */
+}
+.top_bar_content{
+  position: relative;
+  padding: 0.4rem 0;
 }
 
 .top_bar_logo {
@@ -33,4 +36,17 @@
   margin: auto;
   height: 20px;
   width: 100px;
+}
+.lang_btn_container{
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.lang_btn_container .lang_btn{
+  color: #c9c6c6;
+  text-transform: initial;
+  font-size: 0.8rem;
+  min-width: 40px ;
 }

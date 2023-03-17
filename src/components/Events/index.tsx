@@ -6,22 +6,24 @@ import { createClient } from '@/prismicio';
 import EventCard from "./EventCard";
 import styles from "../../styles/Events.module.css";
 import Typography from "@/helpers/prismic";
+import { useRouter } from "next/router"
 
 export default function Events({ page }: any) {
   const totalEntries = page.data.slices.length || 0;
   const [currentPage, setPage] = useState(1);
   const [responseData, setData] = useState<any>(null)
   const [isLoading, setLoading] = useState(false)
+  const { locale } = useRouter();
 
   useEffect(() => {
     setLoading(true)
     const client = createClient()
 
-    client.getByID(page.data.reference.id)
+    client.getByID(page.data.reference.id,  { lang: locale})
       .then((response) => {
         setData(response.data)
         setLoading(false)
-      })
+      }).catch((e) => console.error("Loading", e))
   }, []);
 
   const handleChange = (event: ChangeEvent<unknown>, value: number) => {

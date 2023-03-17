@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import Link from 'next/link';
+import CustomLink from "@/components/UI-shared/CustomLink";
 import { PrismicRichText } from "@prismicio/react";
 
 import styles from "../../styles/Events.module.css";
@@ -43,7 +43,7 @@ const Genre: FC<{
         <Typography richContent={description} />
         <div className={styles.event_card_location}>
           <Typography richContent={location} />
-          <Link href="https://nextjs.org" passHref >Ver más</Link>
+          <CustomLink href="https://nextjs.org" passHref >Ver más</CustomLink>
         </div>
       </div>
     </div>

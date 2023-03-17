@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '../prismicio'
+import { appWithTranslation } from 'next-i18next'
 
 import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
@@ -63,7 +64,7 @@ const theme = createTheme({
   }
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Script id="gtag" strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
@@ -98,3 +99,5 @@ export default function App({ Component, pageProps }: AppProps) {
 
   );
 }
+
+export default appWithTranslation(App);

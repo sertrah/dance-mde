@@ -9,7 +9,7 @@ export default function Genres({ sliceItems, primary }: any) {
       <div className={styles.genres}>
         {sliceItems.map(({ colorWheel, title, image }: any, index: number ) => (
           <Genre
-            key={`image-genre-${title[0].text}`}
+            key={`image-genre-${title[0]?.text}`}
             title={title}
             isOpposite={!!(index % 2 === 0)}
             image={image}
