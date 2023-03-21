@@ -20,11 +20,6 @@ const sociales: Record<number, any> = {
       name: "Bachata al parque",
       instagramLink: "https://www.instagram.com/bachata_alparque/",
       genres: ["Bachata"]
-    },
-    {
-      name: "Balcón de zouk",
-      instagramLink: "https://www.instagram.com/balcondezouk/",
-      genres: ["Bachata", "Salsa", "Porro", "Zouk"]
     }],
   }, // Sunday
   2: {
@@ -70,6 +65,11 @@ const sociales: Record<number, any> = {
       name: "Social Club",
       instagramLink: "https://www.instagram.com/socialclubacademia/",
       genres: ["Bachata", "Salsa", "Tropicales"]
+    },
+    {
+      name: "Balcón de zouk",
+      instagramLink: "https://www.instagram.com/conexiondancemed/",
+      genres: ["Bachata"]
     }
     ]
   },
