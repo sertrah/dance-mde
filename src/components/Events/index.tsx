@@ -1,10 +1,9 @@
 import { useState, ChangeEvent } from "react";
+import { useQuery } from "react-query";
 import { useRouter } from "next/router"
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import { useQuery } from "react-query";
 
-import { createClient } from '@/prismicio';
 import EventCard from "./EventCard";
 import styles from "../../styles/Events.module.css";
 import Typography from "@/helpers/prismic";
