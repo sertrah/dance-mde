@@ -3,31 +3,27 @@ import Contact from '@/components/UI-shared/Contact'
 import Banner from '@/components/Home/Banner'
 import Events from '@/components/Home/Events'
 import Sociales from '@/components/Home/Sociales';
+import { useQuery } from "react-query";
 import HomeSlices from './Slices';
-import { createClient } from '@/prismicio';
 import { useRouter } from "next/router"
+import SliceEventController from '@/core/infrastructure/controllers/SliceEventController';
 
 const Home: FC<{ page: any }> = ({ page }) => {
-  const [data, setData] = useState<any>(null)
-  const [isLoading, setLoading] = useState(false)
   const { locale } = useRouter();
-
-  useEffect(() => {
-    setLoading(true)
-    const client = createClient()
-
-    client.getByID(page.reference.id, { lang: locale} )
-      .then((response) => {
-        setData(response.data)
-        setLoading(false)
-      })
-  }, []);
+  const { data: SliceEvent } = useQuery(
+    [`event-list`, page.reference.id, locale],
+    ({ queryKey: [, referenceId, lang] }) => SliceEventController.getSliceEventsFromPrismic(referenceId, lang),
+    {
+      retry: 1,
+      retryDelay: 3000,
+    }
+  );
 
   return <>
     <Banner title={page.title} />
     <HomeSlices slices={page.slices} />
-    {data?.title && <Events sliceItems={data.slices[0].items.slice(0,3)} title={data.title} />}
-    <Sociales/>
+    {SliceEvent?.commonTitle && <Events sliceItems={SliceEvent?.list?.slice(0, 3)} title={SliceEvent?.commonTitle} />}
+    <Sociales />
     <Contact />
   </>
 }

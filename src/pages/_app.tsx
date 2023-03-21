@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Script from 'next/script';
 import { Roboto } from "@next/font/google";
+import { QueryClientProvider, QueryClient } from "react-query";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { common, red } from "@mui/material/colors";
 import Link from 'next/link'
@@ -50,7 +51,7 @@ const theme = createTheme({
         }
       }
     },
-    MuiPaper:{
+    MuiPaper: {
       styleOverrides: {
         root: {
           background: "var(--radial-black-1)",
@@ -62,6 +63,14 @@ const theme = createTheme({
       }
     }
   }
+});
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
 });
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -88,8 +97,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         }
       `}</style>
             <ThemeProvider theme={theme}>
-              <TopBar/>
-              <Component {...pageProps} />
+              <TopBar />
+              <QueryClientProvider client={queryClient}>
+                <Component {...pageProps} />
+              </QueryClientProvider>
+
               <Footer />
             </ThemeProvider>
           </div>

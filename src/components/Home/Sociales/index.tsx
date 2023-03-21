@@ -20,6 +20,11 @@ const sociales: Record<number, any> = {
       name: "Bachata al parque",
       instagramLink: "https://www.instagram.com/bachata_alparque/",
       genres: ["Bachata"]
+    },
+    {
+      name: "Balcón de zouk",
+      instagramLink: "https://www.instagram.com/balcondezouk/",
+      genres: ["Bachata", "Salsa", "Porro", "Zouk"]
     }],
   }, // Sunday
   2: {
@@ -119,7 +124,7 @@ export default function Sociales() {
   const currentSocial = useMemo(() => sociales[dayjs().day()], []);
   return (
     <section className={styles.sociales}>
-      <PrimaryTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br/>{currentSocial.concept} o miedo?</PrimaryTitle>
+      <PrimaryTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br />{currentSocial.concept} o miedo?</PrimaryTitle>
       {currentSocial.places.map((place: { name: string, genres: string[], instagramLink: string }, i: number) => <Card key={`social-${i}`}>
         <CustomLink href={place.instagramLink} target="_blank">
           <CardContent className={styles.social_card}>

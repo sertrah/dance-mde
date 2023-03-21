@@ -37,12 +37,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 ## Pending
-- Create academia page
-- Send data from contact
-- Add more dancers from Medellin
+- Create academia page ✅
+- Send data from contact ✅
+- Add more dancers from Medellin 
 - Loader
-- Whatsap link
-- Add events to google calendar
+- Whatsap link ✅
+- Add events to google calendar 
 - Add Tablet/Desktop version
 - Create Ts interfaces
 - Implement DDD
+- Add filter option
