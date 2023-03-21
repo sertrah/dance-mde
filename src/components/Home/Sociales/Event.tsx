@@ -1,7 +1,6 @@
 import Image from "next/image";
-import dayjs, { Dayjs } from 'dayjs';
 import styles from "@/styles/Home.module.css";
-import { FC, useMemo } from "react";
+import { FC } from "react";
 import Typography from "@/helpers/prismic";
 
 const Event: FC<{

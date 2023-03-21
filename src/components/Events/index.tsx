@@ -1,30 +1,28 @@
-import { useState, ChangeEvent, useEffect } from "react";
+import { useState, ChangeEvent } from "react";
+import { useQuery } from "react-query";
+import { useRouter } from "next/router"
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
-import { createClient } from '@/prismicio';
 import EventCard from "./EventCard";
 import styles from "../../styles/Events.module.css";
 import Typography from "@/helpers/prismic";
-import { useRouter } from "next/router"
+import SliceEventController from "@/core/infrastructure/controllers/SliceEventController";
 
 export default function Events({ page }: any) {
   const totalEntries = page.data.slices.length || 0;
   const [currentPage, setPage] = useState(1);
-  const [responseData, setData] = useState<any>(null)
-  const [isLoading, setLoading] = useState(false)
   const { locale } = useRouter();
 
-  useEffect(() => {
-    setLoading(true)
-    const client = createClient()
+  const { data: SliceEvent } = useQuery(
+    [`event-list`, page.data.reference.id, locale],
+    ({ queryKey: [, referenceId, lang] }) => SliceEventController.getSliceEventsFromPrismic(referenceId, lang),
+    {
+      retry: 1,
+      retryDelay: 3000,
+    }
+  );
 
-    client.getByID(page.data.reference.id,  { lang: locale})
-      .then((response) => {
-        setData(response.data)
-        setLoading(false)
-      }).catch((e) => console.error("Loading", e))
-  }, []);
 
   const handleChange = (event: ChangeEvent<unknown>, value: number) => {
     setPage(value);
@@ -34,10 +32,10 @@ export default function Events({ page }: any) {
       <Typography richContent={page.data.title} hasUnderline />
       <Stack spacing={7}>
         <div className={styles.events}>
-          {responseData?.slices[0].items && responseData?.slices[0].items.map(
-            ({ image, date, location, title, description, showmore }: any) => (
+          {SliceEvent?.list && SliceEvent?.list?.map(
+            ({ image, date, location, title, description, showmore }: any, index: number) => (
               <EventCard
-                key={`event-card-${title[0].text}`}
+                key={`event-card-${title[0].text} ${index}`}
                 imageName="/event2.jpg"
                 imageUrl={image.url}
                 date={date}

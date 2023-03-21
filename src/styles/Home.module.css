@@ -190,7 +190,7 @@
 }
 .social_card{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1.2rem;
 }
 .sociales_title{

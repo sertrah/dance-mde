@@ -4,7 +4,6 @@ import { createClient } from '../prismicio'
 import Home from '@/components/Home'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-
 export default function HomePage(props: any) {
   return (
     <>
