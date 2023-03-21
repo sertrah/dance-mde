@@ -1,6 +1,6 @@
 import Event from "../../domain/entities/Event";
 import { EventRepository } from "../../domain/interfaces/Event.repository";
-import { EventDTO } from "../http/dto/EventDto";
+import { EventDTO } from "../http/dto/SliceEvent.dto";
 import { http } from "../http/http";
 import { createClient } from "@/prismicio";
 
