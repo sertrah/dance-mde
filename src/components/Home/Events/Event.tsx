@@ -1,28 +1,25 @@
 import Image from "next/image";
-import dayjs, { Dayjs } from 'dayjs';
 import styles from "@/styles/Home.module.css";
-import { FC, useMemo } from "react";
+import { FC } from "react";
 import Typography from "@/helpers/prismic";
+import { EventSliceItem } from "@/core/domain/interfaces/Event.repository";
+import { locationLinks } from "@/helpers/temp";
+import { Paragraph } from "@/components/UI-shared/Typography";
 
-const Event: FC<{
-  image: any,
-  date: any,
-  title: any,
-  location: any,
-  linkto: any,
-}> = ({ image, date, title, location, linkto }) => {
+const Event: FC<
+  EventSliceItem & { openDialog: () => void }
+> = ({ image, date, title, LocationId, openDialog }) => {
   const handleOnClickEvent = () => {
-    window.open(
-      linkto.url, "_blank");
+    openDialog();
   }
   return (
     <div className={styles.event} onClick={handleOnClickEvent}>
       <div className={styles.detail}>
         <Typography richContent={date} />
         <Typography richContent={title} />
-        <Typography richContent={location} />
+        <Paragraph >{locationLinks[LocationId].label}</Paragraph>
       </div>
-      <Image src={image.url} alt="Vercel Logo" fill
+      <Image src={image?.url ?? ''} alt="Vercel Logo" fill
         style={{ objectFit: "cover" }}
       />
       <div className={styles.cover}></div>

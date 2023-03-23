@@ -64,7 +64,7 @@ const sociales: Record<number, any> = {
     {
       name: "Social Club",
       instagramLink: "https://www.instagram.com/socialclubacademia/",
-      genres: ["Bachata", "Salsa", "Tropicales"]
+      genres: ["Bachata", "Salsa", "Porro"]
     },
     {
       name: "Balcón de zouk",

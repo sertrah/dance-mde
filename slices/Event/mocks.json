@@ -76,7 +76,7 @@
             }
           ],
           [
-            "showmore",
+            "showWebsite",
             {
               "__TYPE__": "LinkContent",
               "value": {
@@ -86,17 +86,27 @@
             }
           ],
           [
-            "location",
+            "showLocation",
             {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Eiusmod fugiat enim id sit do non fugiat laborum eu proident ut officia ut."
-                  }
-                }
-              ]
+              "__TYPE__": "FieldContent",
+              "value": "below",
+              "type": "Text"
+            }
+          ],
+          [
+            "LocationId",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "matter",
+              "type": "Text"
+            }
+          ],
+          [
+            "showWebsiteLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "allow",
+              "type": "Text"
             }
           ]
         ]
@@ -147,17 +157,37 @@
             }
           ],
           [
-            "location",
+            "showWebsite",
             {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Reprehenderit aute laborum excepteur nulla tempor dolor velit velit adipisicing cillum est. Officia irure sit est consequat sunt ipsum veniam dolor exercitation commodo ipsum."
-                  }
-                }
-              ]
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "showLocation",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "exchange",
+              "type": "Text"
+            }
+          ],
+          [
+            "LocationId",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "both",
+              "type": "Text"
+            }
+          ],
+          [
+            "showWebsiteLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "massage",
+              "type": "Text"
             }
           ]
         ]
@@ -208,17 +238,37 @@
             }
           ],
           [
-            "location",
+            "showWebsite",
             {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Ullamco aute anim consequat excepteur dolor non."
-                  }
-                }
-              ]
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          ],
+          [
+            "showLocation",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "mass",
+              "type": "Text"
+            }
+          ],
+          [
+            "LocationId",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "make",
+              "type": "Text"
+            }
+          ],
+          [
+            "showWebsiteLabel",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "many",
+              "type": "Text"
             }
           ]
         ]

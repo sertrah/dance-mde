@@ -8,11 +8,14 @@ import EventCard from "./EventCard";
 import styles from "../../styles/Events.module.css";
 import Typography from "@/helpers/prismic";
 import SliceEventController from "@/core/infrastructure/controllers/SliceEventController";
+import { EventSliceItem } from "@/core/domain/interfaces/Event.repository";
+import SliceEventDialog from "../UI-shared/SliceEventDialog";
 
 export default function Events({ page }: any) {
   const totalEntries = page.data.slices.length || 0;
   const [currentPage, setPage] = useState(1);
   const { locale } = useRouter();
+  const [sliceEventSelected, setSliceEventSelected] = useState<EventSliceItem | null>(null);
 
   const { data: SliceEvent } = useQuery(
     [`event-list`, page.data.reference.id, locale],
@@ -23,26 +26,24 @@ export default function Events({ page }: any) {
     }
   );
 
-
   const handleChange = (event: ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
+
+  const handleClose = ()=> {
+    setSliceEventSelected(null);
+  }
   return (
     <section className={styles.event_page}>
       <Typography richContent={page.data.title} hasUnderline />
       <Stack spacing={7}>
         <div className={styles.events}>
           {SliceEvent?.list && SliceEvent?.list?.map(
-            ({ image, date, location, title, description, showmore }: any, index: number) => (
+            (sliceEventData: EventSliceItem, index: number) => (
               <EventCard
-                key={`event-card-${title[0].text} ${index}`}
-                imageName="/event2.jpg"
-                imageUrl={image.url}
-                date={date}
-                location={location}
-                description={description}
-                title={title}
-                showmore={showmore}
+                key={`event-card-${sliceEventData?.title[0]?.text} ${index}`}
+                openDialog={setSliceEventSelected}
+                {...sliceEventData}
               />
             )
           )}
@@ -51,6 +52,12 @@ export default function Events({ page }: any) {
           <Pagination count={totalEntries} page={currentPage} onChange={handleChange} shape="rounded" color="primary" />
         )}
       </Stack>
+
+      <SliceEventDialog
+        open={!!sliceEventSelected}
+        currentSliceEvent={sliceEventSelected}
+        onClose={handleClose}
+      />
     </section>
   );
 }

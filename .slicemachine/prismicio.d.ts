@@ -543,25 +543,45 @@ export interface EventSliceDefaultItem {
      */
     description: prismicT.RichTextField;
     /**
-     * showMore field in *Event → Items*
+     * Show website field in *Event → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: event.items[].showmore
+     * - **API ID Path**: event.items[].showWebsite
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    showmore: prismicT.LinkField;
+    showWebsite: prismicT.LinkField;
     /**
-     * location field in *Event → Items*
+     * show website label field in *Event → Items*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: event.items[].location
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **API ID Path**: event.items[].showWebsiteLabel
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    location: prismicT.RichTextField;
+    showWebsiteLabel: prismicT.KeyTextField;
+    /**
+     * Show Location field in *Event → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.items[].showLocation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    showLocation: prismicT.KeyTextField;
+    /**
+     * location ID field in *Event → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.items[].LocationId
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    LocationId: prismicT.KeyTextField;
 }
 /**
  * Default variation for Event Slice

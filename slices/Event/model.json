@@ -47,21 +47,34 @@
             "single": "paragraph"
           }
         },
-        "showmore": {
+        "showWebsite": {
           "type": "Link",
           "config": {
-            "label": "showMore",
+            "label": "Show website",
             "placeholder": "",
+            "allowTargetBlank": true,
             "select": null
           }
         },
-        "location": {
-          "type": "StructuredText",
+        "showWebsiteLabel": {
+          "type": "Text",
           "config": {
-            "label": "location",
-            "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "paragraph"
+            "label": "show website label",
+            "placeholder": ""
+          }
+        },
+        "showLocation": {
+          "type": "Text",
+          "config": {
+            "label": "Show Location",
+            "placeholder": ""
+          }
+        },
+        "LocationId": {
+          "type": "Text",
+          "config": {
+            "label": "location ID",
+            "placeholder": ""
           }
         }
       },

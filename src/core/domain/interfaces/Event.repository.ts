@@ -32,8 +32,10 @@ export interface EventSliceItem {
   title: prismicT.TitleField;
   date: prismicT.RichTextField;
   description: prismicT.RichTextField;
-  showmore: prismicT.LinkField;
-  location: prismicT.RichTextField;
+  LocationId: string;
+  showLocation: string;
+  showWebsiteLabel: string;
+  showWebsite: prismicT.FilledLinkToWebField;
 }
 
 /** Prismic Interfaces end */
