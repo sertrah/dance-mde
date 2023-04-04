@@ -62,7 +62,7 @@ export default function SliceEventDialog(props: SliceEventDialogProps) {
         </div>
         <div className={styles.moda_event_actions}>
           <CustomLink
-            href={locationLinks[LocationId].link ?? ""}
+            href={locationLinks?.[LocationId]?.link ?? LocationId}
             passHref
             target="_blank"
           >

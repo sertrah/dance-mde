@@ -17,7 +17,7 @@ const Event: FC<
       <div className={styles.detail}>
         <Typography richContent={date} />
         <Typography richContent={title} />
-        <Paragraph >{locationLinks[LocationId].label}</Paragraph>
+        <Paragraph >{locationLinks?.[LocationId]?.label || '👀'}</Paragraph>
       </div>
       <Image src={image?.url ?? ''} alt="Vercel Logo" fill
         style={{ objectFit: "cover" }}

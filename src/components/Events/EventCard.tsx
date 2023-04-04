@@ -53,7 +53,7 @@ const EventCard: FC<
       </div>
       <div className={styles.event_card_location}>
         <CustomLink
-          href={locationLinks[LocationId].link ?? ""}
+          href={locationLinks?.[LocationId]?.link ?? LocationId}
           passHref
           target="_blank"
         >
