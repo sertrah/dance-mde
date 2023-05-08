@@ -61,7 +61,30 @@ const theme = createTheme({
           }
         }
       }
-    }
+    },
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: 'h1' }, /* component props */
+          style: {
+            fontSize: "2.2rem",
+          },
+        },
+        {
+          props: { variant: 'h2' }, /* component props */
+          style: {
+            fontSize: "1.6rem",
+          },
+        },
+        {
+          props: { variant: 'body1'},
+          style: {
+            color: "#fff",
+            fontSize: "1.04rem",
+          }
+        }
+      ],
+    },
   }
 });
 

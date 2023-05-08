@@ -18,7 +18,7 @@ export default function Events({ page }: any) {
   const [sliceEventSelected, setSliceEventSelected] = useState<EventSliceItem | null>(null);
 
   const { data: SliceEvent } = useQuery(
-    [`event-list`, page.data.reference.id, locale],
+    [`event-list`, page.data.reference.id, 'es-co'],
     ({ queryKey: [, referenceId, lang] }) => SliceEventController.getSliceEventsFromPrismic(referenceId, lang),
     {
       retry: 1,

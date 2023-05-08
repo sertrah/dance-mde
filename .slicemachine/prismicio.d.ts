@@ -444,16 +444,6 @@ export interface AcademiesSliceDefaultItem {
      */
     startDate: prismicT.DateField;
     /**
-     * location field in *Academies → Items*
-     *
-     * - **Field Type**: GeoPoint
-     * - **Placeholder**: *None*
-     * - **API ID Path**: academies.items[].location
-     * - **Documentation**: https://prismic.io/docs/core-concepts/geopoint
-     *
-     */
-    location: prismicT.GeoPointField;
-    /**
      * InstagramLinkTo field in *Academies → Items*
      *
      * - **Field Type**: Link

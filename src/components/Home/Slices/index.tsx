@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import Genres from '@/components/Home/Genres'
-import Events from '@/components/Home/Events'
 
 const slice_type = { home_genre: "", "home_events": "" }
 // <Events sliceItems={items} primary={primary} key={slice_type} />

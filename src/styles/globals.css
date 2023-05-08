@@ -38,6 +38,11 @@
     #0c8e64 0%,
     #0b6920 100%
   );
+  --radial-gray: radial-gradient(
+    50% 50% at 50% 50%,
+    #696868 0%,
+    #4a4a4a 100%
+  );
   --radial-blue: radial-gradient(50% 50% at 50% 50%, #0c3b8e 0%, #0b2169 100%);
   --radial-yellow: radial-gradient(50% 50% at 50% 50%, #938f24 0%, #aa9907 100%);
   --radial-black-1: radial-gradient(
@@ -194,7 +199,7 @@ footer .mensajito span {
   background-image: var(--radial-blue);
 }
 .is-tango {
-  background-image: var(--radial-ternary);
+  background-image: var(--radial-gray);
 }
 .is-porro{
   background-image: var(--radial-yellow);

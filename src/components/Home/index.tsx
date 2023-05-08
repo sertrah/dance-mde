@@ -5,13 +5,11 @@ import Events from "@/components/Home/Events";
 import Sociales from "@/components/Home/Sociales";
 import { useQuery } from "react-query";
 import HomeSlices from "./Slices";
-import { useRouter } from "next/router";
 import SliceEventController from "@/core/infrastructure/controllers/SliceEventController";
 
 const Home: FC<{ page: any }> = ({ page }) => {
-  const { locale } = useRouter();
   const { data: SliceEvent } = useQuery(
-    [`event-list`, page.reference.id, locale],
+    [`event-list`, 'ZAX_whAAACgATCfT', 'es-CO'],
     ({ queryKey: [, referenceId, lang] }) =>
       SliceEventController.getSliceEventsFromPrismic(referenceId, lang),
     {

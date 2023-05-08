@@ -1,0 +1,69 @@
+.teacher_page {
+  padding-top: 2rem;
+}
+
+.teacher_banner{
+  position: relative;
+  padding: 2rem 1.4rem;
+}
+
+.cover{
+  background-color: rgba(11, 10, 10, 0.46);
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title{
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+.title span{
+  font-weight: 500;
+}
+.description{
+  position: relative;
+  z-index: 1;
+}
+
+.card_fake {
+  position: relative;
+  width: 85%;
+  margin: 0  auto  2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_fake img {
+  margin: auto;
+  transform: translateY(50px);
+}
+
+.card {
+  overflow: initial;
+  border-radius: 1rem;
+}
+
+.card_content {
+  position: relative;
+}
+
+.card_title {
+  margin-top: 4rem;
+}
+
+.card_chips{
+  margin-top: 0.8rem;
+}
+
+.card_chips > div{
+  margin: 0.4rem 0.2rem;
+}
+
+.card_link_in{
+  margin: auto;
+}

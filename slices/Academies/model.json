@@ -53,12 +53,6 @@
             "placeholder": ""
           }
         },
-        "location": {
-          "type": "GeoPoint",
-          "config": {
-            "label": "location"
-          }
-        },
         "instagramLinkTo": {
           "type": "Link",
           "config": {
