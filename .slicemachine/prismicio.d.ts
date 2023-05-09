@@ -533,45 +533,35 @@ export interface EventSliceDefaultItem {
      */
     description: prismicT.RichTextField;
     /**
-     * Show website field in *Event → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.items[].showWebsite
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    showWebsite: prismicT.LinkField;
-    /**
-     * show website label field in *Event → Items*
+     * url location field in *Event → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: event.items[].showWebsiteLabel
+     * - **API ID Path**: event.items[].urlLocation
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    showWebsiteLabel: prismicT.KeyTextField;
-    /**
-     * Show Location field in *Event → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.items[].showLocation
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    showLocation: prismicT.KeyTextField;
+    urlLocation: prismicT.KeyTextField;
     /**
      * location ID field in *Event → Items*
      *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.items[].locationId
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    locationId: prismicT.SelectField<"bachatea" | "balconzouk" | "socialclub" | "almambo" | "laazotea" | "eloasis" | "latindancecenter" | "matizBello" | "cmDance" | "casaritmo">;
+    /**
+     * url Event field in *Event → Items*
+     *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: event.items[].LocationId
+     * - **API ID Path**: event.items[].urlEvent
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    LocationId: prismicT.KeyTextField;
+    urlEvent: prismicT.KeyTextField;
 }
 /**
  * Default variation for Event Slice

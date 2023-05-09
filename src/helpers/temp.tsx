@@ -6,4 +6,7 @@ export const locationLinks: Record<string, { link: string, label: string }> = {
   laazotea: { link: "https://goo.gl/maps/xHa4ZzDvwZ9yY8zd8", label: '📍 LaAzotea' },
   eloasis: { link: "https://goo.gl/maps/715USrHsKj86f5qV8", label: '📍 El Oasis' },
   latindancecenter: { link: "https://goo.gl/maps/PipvE9Z2Lmfu5afM9", label: '📍 Latin Dance Center' },
+  cmDance: { link: "https://goo.gl/maps/TyENT5UiqEQnpBLs9", label: '📍 CM Dance' },
+  matizBello: { link: "https://goo.gl/maps/2iNYC3LVTXaJwMHw9", label: '📍 Matiz sede bello' },
+  casaritmo: { link: "https://goo.gl/maps/X1i4Ay5CodeYmBhc8", label: '📍 Casa ritmo' },
 };

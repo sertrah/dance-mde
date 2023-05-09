@@ -30,6 +30,14 @@
   z-index: 1;
 }
 
+.card{
+  background: linear-gradient(135deg, #681e1e 0%,#1c0202 100%);
+}
+
+.secondary_title {
+  text-align: center;
+}
+
 .card_fake {
   position: relative;
   width: 85%;
@@ -40,7 +48,8 @@
 
 .card_fake img {
   margin: auto;
-  transform: translateY(50px);
+  transform: translateY(40px);
+  object-fit: contain;
 }
 
 .card {
@@ -53,7 +62,7 @@
 }
 
 .card_title {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .card_chips{

@@ -71,6 +71,8 @@
   margin-top: 0.8rem;
   overflow-y: scroll;
   max-height: 280px;
+  min-height: 205px;
+  height: 205px;
 }
 
 .moda_event_detail::-webkit-scrollbar {
@@ -87,6 +89,7 @@
 p.moda_event_date{
   color: #c06d07;
   text-align: left;
+  font-weight: bold;
   font-size: 1.1rem;
 }
 .moda_event_description{
@@ -98,6 +101,7 @@ p.moda_event_date{
   margin-top: 0.6rem;
   display: flex;
   justify-content: space-between;
+  height: 29px;
 }
 
 .moda_event_actions a{

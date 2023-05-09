@@ -3,12 +3,14 @@ import styles from "@/styles/Home.module.css";
 import { FC } from "react";
 import Typography from "@/helpers/prismic";
 import { EventSliceItem } from "@/core/domain/interfaces/Event.repository";
-import { locationLinks } from "@/helpers/temp";
 import { Paragraph } from "@/components/UI-shared/Typography";
+import { useTranslation } from "react-i18next";
 
 const Event: FC<
   EventSliceItem & { openDialog: () => void }
-> = ({ image, date, title, LocationId, openDialog }) => {
+> = ({ image, date, title, openDialog }) => {
+  const { t } = useTranslation('common');
+
   const handleOnClickEvent = () => {
     openDialog();
   }
@@ -17,9 +19,9 @@ const Event: FC<
       <div className={styles.detail}>
         <Typography richContent={date} />
         <Typography richContent={title} />
-        <Paragraph >{locationLinks?.[LocationId]?.label || '👀'}</Paragraph>
+        <Paragraph >{t('see_more')}</Paragraph>
       </div>
-      <Image src={image?.url ?? ''} alt="Vercel Logo" fill
+      <Image src={image?.url ?? ''} alt="Event image" fill
         style={{ objectFit: "cover" }}
       />
       <div className={styles.cover}></div>

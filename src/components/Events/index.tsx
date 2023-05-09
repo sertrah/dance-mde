@@ -14,7 +14,6 @@ import SliceEventDialog from "../UI-shared/SliceEventDialog";
 export default function Events({ page }: any) {
   const totalEntries = page.data.slices.length || 0;
   const [currentPage, setPage] = useState(1);
-  const { locale } = useRouter();
   const [sliceEventSelected, setSliceEventSelected] = useState<EventSliceItem | null>(null);
 
   const { data: SliceEvent } = useQuery(

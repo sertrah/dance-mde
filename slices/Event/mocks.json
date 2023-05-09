@@ -76,36 +76,26 @@
             }
           ],
           [
-            "showWebsite",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "https://slicemachine.dev"
-              }
-            }
-          ],
-          [
-            "showLocation",
+            "urlLocation",
             {
               "__TYPE__": "FieldContent",
-              "value": "below",
+              "value": "younger",
               "type": "Text"
             }
           ],
           [
-            "LocationId",
+            "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "matter",
-              "type": "Text"
+              "value": "matizBello",
+              "type": "Select"
             }
           ],
           [
-            "showWebsiteLabel",
+            "urlEvent",
             {
               "__TYPE__": "FieldContent",
-              "value": "allow",
+              "value": "review",
               "type": "Text"
             }
           ]
@@ -157,36 +147,26 @@
             }
           ],
           [
-            "showWebsite",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "http://twitter.com"
-              }
-            }
-          ],
-          [
-            "showLocation",
+            "urlLocation",
             {
               "__TYPE__": "FieldContent",
-              "value": "exchange",
+              "value": "material",
               "type": "Text"
             }
           ],
           [
-            "LocationId",
+            "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "both",
-              "type": "Text"
+              "value": "casaritmo",
+              "type": "Select"
             }
           ],
           [
-            "showWebsiteLabel",
+            "urlEvent",
             {
               "__TYPE__": "FieldContent",
-              "value": "massage",
+              "value": "sick",
               "type": "Text"
             }
           ]
@@ -238,36 +218,26 @@
             }
           ],
           [
-            "showWebsite",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "http://google.com"
-              }
-            }
-          ],
-          [
-            "showLocation",
+            "urlLocation",
             {
               "__TYPE__": "FieldContent",
-              "value": "mass",
+              "value": "hall",
               "type": "Text"
             }
           ],
           [
-            "LocationId",
+            "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "make",
-              "type": "Text"
+              "value": "socialclub",
+              "type": "Select"
             }
           ],
           [
-            "showWebsiteLabel",
+            "urlEvent",
             {
               "__TYPE__": "FieldContent",
-              "value": "many",
+              "value": "remove",
               "type": "Text"
             }
           ]

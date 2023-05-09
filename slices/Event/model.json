@@ -47,33 +47,36 @@
             "single": "paragraph"
           }
         },
-        "showWebsite": {
-          "type": "Link",
-          "config": {
-            "label": "Show website",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null
-          }
-        },
-        "showWebsiteLabel": {
+        "urlLocation": {
           "type": "Text",
           "config": {
-            "label": "show website label",
+            "label": "url location",
             "placeholder": ""
           }
         },
-        "showLocation": {
-          "type": "Text",
-          "config": {
-            "label": "Show Location",
-            "placeholder": ""
-          }
-        },
-        "LocationId": {
-          "type": "Text",
+        "locationId": {
+          "type": "Select",
           "config": {
             "label": "location ID",
+            "placeholder": "",
+            "options": [
+              "bachatea",
+              "balconzouk",
+              "socialclub",
+              "almambo",
+              "laazotea",
+              "eloasis",
+              "latindancecenter",
+              "matizBello",
+              "cmDance",
+              "casaritmo"
+            ]
+          }
+        },
+        "urlEvent": {
+          "type": "Text",
+          "config": {
+            "label": "url Event",
             "placeholder": ""
           }
         }

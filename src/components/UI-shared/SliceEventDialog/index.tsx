@@ -10,6 +10,7 @@ import { locationLinks } from "@/helpers/temp";
 
 import styles from "../../../styles/Shared.module.css";
 import { SubTitle } from '../Typography';
+import { useTranslation } from 'react-i18next';
 
 
 const components = {
@@ -24,17 +25,19 @@ export interface SliceEventDialogProps {
 
 export default function SliceEventDialog(props: SliceEventDialogProps) {
   const { onClose, open, currentSliceEvent } = props;
+  const { t } = useTranslation('common');
+
   if (!currentSliceEvent) return <></>;
   const {
     title,
     date,
-    showWebsiteLabel,
-    showWebsite,
     description,
     image,
-    LocationId,
-    showLocation
+    locationId,
+    urlLocation,
+    urlEvent
   } = currentSliceEvent;
+
   const handleClose = () => {
     onClose();
   };
@@ -62,14 +65,14 @@ export default function SliceEventDialog(props: SliceEventDialogProps) {
         </div>
         <div className={styles.moda_event_actions}>
           <CustomLink
-            href={locationLinks?.[LocationId]?.link ?? LocationId}
+            href={locationLinks?.[locationId]?.link ?? urlLocation}
             passHref
             target="_blank"
           >
-            {showLocation}
+            {t('location')}
           </CustomLink>
-          <CustomLink href={showWebsite?.url ?? ""} passHref target="_blank">
-            {showWebsiteLabel}
+          <CustomLink href={urlEvent} passHref target="_blank">
+            {t('see_more')}
           </CustomLink>
         </div>
       </div>

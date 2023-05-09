@@ -11,7 +11,7 @@
 .events {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 2rem;
   padding: 0 0.6rem;
 }
 
@@ -28,6 +28,11 @@
 
 .event_card_container_img {
   position: relative;
+}
+
+.event_card_detail {
+  overflow: hidden;
+  height: 10rem;
 }
 
 .event_card_detail h2 {
