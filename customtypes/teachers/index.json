@@ -1,0 +1,39 @@
+{
+  "id": "teachers",
+  "label": "teachers",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "mainSection": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Main_section",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "multi": "paragraph,heading1,em,strong"
+        }
+      },
+      "secondary_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "secondary_title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading2"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "teacher_slice": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

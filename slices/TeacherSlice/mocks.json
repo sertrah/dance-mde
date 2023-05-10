@@ -1,0 +1,70 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "teacher",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+                "width": 3882,
+                "height": 2584
+              },
+              "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+              "width": 3882,
+              "height": 2584,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "garden",
+              "type": "Text"
+            }
+          ],
+          [
+            "description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "lungs",
+              "type": "Text"
+            }
+          ],
+          [
+            "danceGenre",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "desk",
+              "type": "Text"
+            }
+          ],
+          [
+            "instagramUrl",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "brother",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -341,6 +341,57 @@ type TangoDocumentDataSlicesSlice = AcademiesSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type TangoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<TangoDocumentData>, "tango", Lang>;
+/** Content for teachers documents */
+interface TeachersDocumentData {
+    /**
+     * Main_section field in *teachers*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teachers.mainSection
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    mainSection: prismicT.RichTextField;
+    /**
+     * secondary_title field in *teachers*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teachers.secondary_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    secondary_title: prismicT.TitleField;
+    /**
+     * Slice Zone field in *teachers*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teachers.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<TeachersDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *teachers → Slice Zone*
+ *
+ */
+type TeachersDocumentDataSlicesSlice = TeacherSliceSlice;
+/**
+ * teachers document from Prismic
+ *
+ * - **API ID**: `teachers`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TeachersDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<TeachersDocumentData>, "teachers", Lang>;
 /** Content for zouk documents */
 interface ZoukDocumentData {
     /**
@@ -381,7 +432,7 @@ type ZoukDocumentDataSlicesSlice = AcademiesSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type ZoukDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ZoukDocumentData>, "zouk", Lang>;
-export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | KizombaDocument | SalsaDocument | TangoDocument | ZoukDocument;
+export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | KizombaDocument | SalsaDocument | TangoDocument | TeachersDocument | ZoukDocument;
 /**
  * Primary content in Academies → Primary
  *
@@ -661,11 +712,90 @@ type HomeGenreSliceVariation = HomeGenreSliceDefault;
  *
  */
 export type HomeGenreSlice = prismicT.SharedSlice<"home_genre", HomeGenreSliceVariation>;
+/**
+ * Item in TeacherSlice → Items
+ *
+ */
+export interface TeacherSliceSliceDefaultItem {
+    /**
+     * teacher field in *TeacherSlice → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teacher_slice.items[].teacher
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    teacher: prismicT.ImageField<never>;
+    /**
+     * Name field in *TeacherSlice → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teacher_slice.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * description field in *TeacherSlice → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teacher_slice.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
+    /**
+     * dance genre field in *TeacherSlice → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teacher_slice.items[].danceGenre
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    danceGenre: prismicT.KeyTextField;
+    /**
+     * Instagram URL field in *TeacherSlice → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: teacher_slice.items[].instagramUrl
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    instagramUrl: prismicT.KeyTextField;
+}
+/**
+ * Default variation for TeacherSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `TeacherSlice`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TeacherSliceSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<TeacherSliceSliceDefaultItem>>;
+/**
+ * Slice variation for *TeacherSlice*
+ *
+ */
+type TeacherSliceSliceVariation = TeacherSliceSliceDefault;
+/**
+ * TeacherSlice Shared Slice
+ *
+ * - **API ID**: `teacher_slice`
+ * - **Description**: `TeacherSlice`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TeacherSliceSlice = prismicT.SharedSlice<"teacher_slice", TeacherSliceSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, KizombaDocumentData, KizombaDocumentDataSlicesSlice, KizombaDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, TangoDocumentData, TangoDocumentDataSlicesSlice, TangoDocument, ZoukDocumentData, ZoukDocumentDataSlicesSlice, ZoukDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice };
+        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, KizombaDocumentData, KizombaDocumentDataSlicesSlice, KizombaDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, TangoDocumentData, TangoDocumentDataSlicesSlice, TangoDocument, TeachersDocumentData, TeachersDocumentDataSlicesSlice, TeachersDocument, ZoukDocumentData, ZoukDocumentDataSlicesSlice, ZoukDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice, TeacherSliceSliceDefaultItem, TeacherSliceSliceDefault, TeacherSliceSliceVariation, TeacherSliceSlice };
     }
 }

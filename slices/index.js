@@ -3,15 +3,18 @@
 import Academies from './Academies';
 import Event from './Event';
 import HomeGenre from './HomeGenre';
+import TeacherSlice from './TeacherSlice';
 
 export {
 	Academies,
 	Event,
 	HomeGenre,
+	TeacherSlice,
 };
 
 export const components = {
 	academies: Academies,
 	event: Event,
 	home_genre: HomeGenre,
+	teacher_slice: TeacherSlice,
 };

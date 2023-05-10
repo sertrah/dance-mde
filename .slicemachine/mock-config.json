@@ -7,7 +7,8 @@
     "salsa": {},
     "kizomba": {},
     "zouk": {},
-    "tango": {}
+    "tango": {},
+    "teachers": {}
   },
   "slices": {
     "Event": {
@@ -25,6 +26,11 @@
     "Academies": {
       "default": {
         "items": {}
+      }
+    },
+    "TeacherSlice": {
+      "default": {
+        "primary": {}
       }
     }
   }
