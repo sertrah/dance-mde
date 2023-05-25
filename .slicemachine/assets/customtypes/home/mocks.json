@@ -1,7 +1,7 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "pattern"
+    "value": "shall"
   },
   "title": {
     "__TYPE__": "StructuredTextContent",
@@ -9,7 +9,7 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Amet adipisicing laboris qui quis velit cupidatat ex amet nulla et."
+          "text": "Minim laboris culpa aliquip reprehenderit adipisicing Lorem aliquip. Commodo consequat eu qui elit fugiat aliquip Lorem ullamco sint id velit. Ex nisi enim cillum non ea enim ipsum."
         }
       }
     ]
@@ -21,11 +21,48 @@
       "id": "mock_document_id"
     }
   },
+  "teacher": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+      "width": 8640,
+      "height": 8640
+    },
+    "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+    "width": 8640,
+    "height": 8640,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "teacherTitle": {
+    "__TYPE__": "FieldContent",
+    "value": "highest",
+    "type": "Text"
+  },
+  "teacherDescription": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Lorem nulla et et."
+        }
+      }
+    ]
+  },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "home_genre$ddfdd6ef-bdae-4249-9974-0f07bd955ed2",
+        "key": "home_genre$ca12e716-6898-4684-a10d-ebca8fe8a5d6",
         "name": "home_genre",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -37,7 +74,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Built"
+                    "text": "Market"
                   }
                 }
               ]
@@ -53,13 +90,13 @@
                     "__TYPE__": "ImageContent",
                     "origin": {
                       "id": "main",
-                      "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
-                      "width": 3424,
-                      "height": 3424
+                      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+                      "width": 4160,
+                      "height": 3120
                     },
-                    "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
-                    "width": 3424,
-                    "height": 3424,
+                    "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+                    "width": 4160,
+                    "height": 3120,
                     "edit": {
                       "zoom": 1,
                       "crop": {
@@ -77,37 +114,19 @@
                     "__TYPE__": "StructuredTextContent",
                     "value": [
                       {
-                        "type": "paragraph",
+                        "type": "heading1",
                         "content": {
-                          "text": "Ullamco adipisicing Lorem dolor nulla. Id quis mollit laborum sint qui cillum."
+                          "text": "Famous"
                         }
                       }
                     ]
                   }
                 ],
                 [
-                  "linkto",
-                  {
-                    "__TYPE__": "LinkContent",
-                    "value": {
-                      "__TYPE__": "ExternalLink",
-                      "url": "http://google.com"
-                    }
-                  }
-                ],
-                [
-                  "prueba",
-                  {
-                    "__TYPE__": "FieldContent",
-                    "value": "addition",
-                    "type": "Text"
-                  }
-                ],
-                [
                   "colorWheel",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": " --radial-blue",
+                    "value": "--radial-quartary",
                     "type": "Select"
                   }
                 ]
@@ -120,12 +139,12 @@
   },
   "metaTitle": {
     "__TYPE__": "FieldContent",
-    "value": "old",
+    "value": "therefore",
     "type": "Text"
   },
   "metaDescription": {
     "__TYPE__": "FieldContent",
-    "value": "till",
+    "value": "whispered",
     "type": "Text"
   }
 }

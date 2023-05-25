@@ -28,6 +28,30 @@
           "select": "document"
         }
       },
+      "teacher": {
+        "type": "Image",
+        "config": {
+          "label": "teacher",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "teacherTitle": {
+        "type": "Text",
+        "config": {
+          "label": "teacherTitle",
+          "placeholder": ""
+        }
+      },
+      "teacherDescription": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Teacher description",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "multi": "paragraph,strong,hyperlink,heading3"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -11,11 +11,13 @@ import Image from 'next/image';
 import style from '@/styles/Teachers.module.css'
 
 
-const TeacherCard = () => {
+const TeacherCard = ({ name, instagramUrl, description, danceGenre, teacher }: any) => {
+
+  const genres: string[] = danceGenre.split(",");
   return (
     <div className={style.card_fake}>
       <Image
-        src="/jhaiir.png"
+        src={teacher.url}
         alt="Jhair"
         width={150}
         height={180}
@@ -23,21 +25,18 @@ const TeacherCard = () => {
       <Card className={style.card}>
         <CardContent className={style.card_content}>
           <Typography variant="h2" gutterBottom className={style.card_title}>
-            Jhair Valpini
+            {name}
           </Typography>
           <Typography variant="body2" >
-            Bailarin profesional con más de 60 años de experiencia, especializado en bailes como Tango, Porro, Bachata y Kizomba
+            {description}
           </Typography>
 
           <div className={style.card_chips}>
-            <Chip size="small" label='Bachata' className={`is-bachata`} />
-            <Chip size="small" label='Kizomba' className={`is-kizomba`} />
-            <Chip size="small" label='Porro' className={`is-porro`} />
-            <Chip size="small" label='Tango' className={`is-tango`} />
+            {genres.map((genre) => <Chip key={`${genre}-${name}`} size="small" label={genre} className={`is-${genre.toLocaleLowerCase()}`} />)}
           </div>
         </CardContent>
         <CardActions>
-          <Link href="/blog/hello-world" className={style.card_link_in}>
+          <Link href={instagramUrl} className={style.card_link_in}>
             <InstagramIcon />
           </Link>
         </CardActions>

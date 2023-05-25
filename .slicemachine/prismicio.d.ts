@@ -173,6 +173,39 @@ interface HomeDocumentData {
      */
     reference: prismicT.RelationField;
     /**
+     * teacher field in *home*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.teacher
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    teacher: prismicT.ImageField<never>;
+    /**
+     * teacherTitle field in *home*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.teacherTitle
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    teacherTitle: prismicT.KeyTextField;
+    /**
+     * Teacher description field in *home*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.teacherDescription
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    teacherDescription: prismicT.RichTextField;
+    /**
      * Slice Zone field in *home*
      *
      * - **Field Type**: Slice Zone
@@ -602,7 +635,7 @@ export interface EventSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    locationId: prismicT.SelectField<"bachatea" | "balconzouk" | "socialclub" | "almambo" | "laazotea" | "eloasis" | "latindancecenter" | "matizBello" | "cmDance" | "casaritmo">;
+    locationId: prismicT.SelectField<"bachatea" | "balconzouk" | "socialclub" | "almambo" | "laazotea" | "eloasis" | "latindancecenter" | "matizBello" | "cmDance" | "casaritmo" | "matizRobledo">;
     /**
      * url Event field in *Event → Items*
      *

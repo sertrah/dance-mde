@@ -13,19 +13,20 @@ export default function TeachersPage({ page }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Teachers data={page} />
+      <Teachers data={page?.data} />
     </>
   )
 }
 
 export async function getStaticProps({ previewData, params, locale }: any) {
   const client = createClient({ previewData });
-  const currentLocale = 'es-CO';
+  const currentLocale = locale ?? 'es-CO';
 
-  // const page = await client.getSingle(params.pid, { lang: currentLocale})
+  const page = await client.getSingle('teachers', { lang: currentLocale})
 
   return {
     props: {
+      page,
       ...(await serverSideTranslations(currentLocale, [
         'common',
         'footer',

@@ -6,6 +6,7 @@ import TeacherCard from './TeacherCard';
 import TeachersBanner from './TeachersBanner';
 import { PrimaryTitle } from '../UI-shared/Typography';
 
+
 const Teachers = ({ data }: any) => {
   const { t } = useTranslation('teachers');
 
@@ -14,9 +15,14 @@ const Teachers = ({ data }: any) => {
       <TeachersBanner t={t} />
       <PrimaryTitle hasUnderline className={style.secondary_title}> {t('secondary_title')} </PrimaryTitle>
       <section>
-        <TeacherCard />
-        <TeacherCard />
-        <TeacherCard />
+        {data.slices[0].items.map(({ name, instagramUrl, description, danceGenre, teacher }: any) =>
+          <TeacherCard key={`${name}-${teacher}`}
+            name={name}
+            instagramUrl={instagramUrl}
+            description={description}
+            danceGenre={danceGenre}
+            teacher={teacher}
+          />)}
       </section>
     </main>
   )

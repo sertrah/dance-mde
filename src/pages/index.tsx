@@ -32,6 +32,7 @@ export async function getStaticProps({ previewData, locale }: any) {
       ...(await serverSideTranslations(currentLocale, [
         'common',
         'footer',
+        'teachers'
       ])),
       // Will be passed to the page component as props
     }

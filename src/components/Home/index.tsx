@@ -3,6 +3,8 @@ import Contact from "@/components/UI-shared/Contact";
 import Banner from "@/components/Home/Banner";
 import Events from "@/components/Home/Events";
 import Sociales from "@/components/Home/Sociales";
+import Teachers from "@/components/Home/Teachers";
+
 import { useQuery } from "react-query";
 import HomeSlices from "./Slices";
 import SliceEventController from "@/core/infrastructure/controllers/SliceEventController";
@@ -21,13 +23,14 @@ const Home: FC<{ page: any }> = ({ page }) => {
   return (
     <>
       <Banner title={page.title} />
-      <HomeSlices slices={page.slices} />
+      <Teachers title={page.teacherTitle} description={page.teacherDescription} image={page.teacher} />
       {SliceEvent?.commonTitle && (
         <Events
           sliceItems={SliceEvent?.list?.slice(0, 3)}
           title={SliceEvent?.commonTitle}
         />
       )}
+      <HomeSlices slices={page.slices} />
       <Sociales />
       <Contact />
     </>

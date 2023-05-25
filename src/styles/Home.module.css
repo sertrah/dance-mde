@@ -326,6 +326,32 @@
   }
 }
 
+.teachers{
+
+  .teachers_title{
+    text-align: center;
+  }
+
+  .teachers_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 82%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .teachers_img{
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+}
+
+.teachers a {
+  color: var(--green-100);
+  text-decoration: underline;
+}
+
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {

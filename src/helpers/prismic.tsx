@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as prismicT from "@prismicio/types";
 import { PrismicRichText } from "@prismicio/react";
 import { SubTitle, Paragraph, PrimaryTitle } from "@/components/UI-shared/Typography";
@@ -14,6 +15,11 @@ export const components = (className?: string, hasUnderline?: boolean) => ({
   paragraph: ({ children }: any) => (
     <Paragraph className={className}>{children}</Paragraph>
   ),
+  hyperlink: ({node, children}: any) => {
+    return (
+      <Link className={className} href={node?.data?.slug}>{children}</Link>
+    )
+  }
 })
 
 const Typography: FC<{
