@@ -27,7 +27,7 @@ export default function Banner({ title }: any) {
                 100vw"
       />
       <Image
-        src="/ivan.png"
+        src="/yerin.png"
         alt="Dancers"
         priority
         fill

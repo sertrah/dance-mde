@@ -71,7 +71,7 @@ export default function SliceEventDialog(props: SliceEventDialogProps) {
           >
             {t('location')}
           </CustomLink>
-          <CustomLink href={urlEvent} passHref target="_blank">
+          <CustomLink href={urlEvent ?? locationLinks?.[locationId]?.instagramLink} passHref target="_blank">
             {t('see_more')}
           </CustomLink>
         </div>

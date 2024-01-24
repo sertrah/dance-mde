@@ -37,7 +37,7 @@
 }
 /* CENTER */
 .banner_dancers_3 {
-  width: 45% !important;
+  width: 64% !important;
   height: auto !important;
   top: initial !important;
   bottom: -20px !important;
@@ -200,6 +200,9 @@
   color: var(--primary-color);
   font-size: 0.9rem;
   white-space: nowrap;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .social_card_badges{
   flex-wrap: wrap;

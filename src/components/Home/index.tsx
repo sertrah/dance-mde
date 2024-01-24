@@ -23,6 +23,7 @@ const Home: FC<{ page: any }> = ({ page }) => {
   return (
     <>
       <Banner title={page.title} />
+      <Sociales />
       <Teachers title={page.teacherTitle} description={page.teacherDescription} image={page.teacher} />
       {SliceEvent?.commonTitle && (
         <Events
@@ -31,7 +32,6 @@ const Home: FC<{ page: any }> = ({ page }) => {
         />
       )}
       <HomeSlices slices={page.slices} />
-      <Sociales />
       <Contact />
     </>
   );

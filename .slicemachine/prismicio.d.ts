@@ -635,7 +635,7 @@ export interface EventSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    locationId: prismicT.SelectField<"bachatea" | "balconzouk" | "socialclub" | "almambo" | "laazotea" | "eloasis" | "latindancecenter" | "matizBello" | "cmDance" | "casaritmo" | "matizRobledo">;
+    locationId: prismicT.SelectField<"bachatea" | "balconzouk" | "socialclub" | "almambo" | "laazotea" | "eloasis" | "latindancecenter" | "matizBello" | "cmDance" | "casaritmo" | "matizRobledo" | "nuevaGuardia" | "grandSocial" | "saborymasna" | "majao" | "danceFree" | "bachataAlparque" | "barcelona" | "QuimbaraBara" | "madera" | "zoukAlParque" | "selinamedellin">;
     /**
      * url Event field in *Event → Items*
      *

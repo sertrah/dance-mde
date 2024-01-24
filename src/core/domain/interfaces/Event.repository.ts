@@ -1,3 +1,4 @@
+import { socialPlaceKeys } from "@/helpers/temp";
 import Event from "../entities/Event";
 import type * as prismicT from "@prismicio/types";
 
@@ -32,7 +33,7 @@ export interface EventSliceItem {
   title: prismicT.TitleField;
   date: prismicT.RichTextField;
   description: prismicT.RichTextField;
-  locationId: string;
+  locationId: socialPlaceKeys;
   showLocation: string;
   urlEvent: string,
   urlLocation: string,
