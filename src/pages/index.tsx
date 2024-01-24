@@ -11,6 +11,7 @@ export default function HomePage(props: any) {
         <title>{props.page.data.metaTitle}</title>
         <meta name="description" content={props.page.data.metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='keywords' content={props.keyWord} />
         <meta property="og:title" content={props.page.data.metaTitle} />
         <meta property="og:description" content={props.page.data.metaDescription} />
         <link rel="icon" href="/favicon.ico" />
@@ -25,10 +26,13 @@ export default function HomePage(props: any) {
 export async function getStaticProps({ previewData, locale }: any) {
   const client = createClient({ previewData })
   const currentLocale = locale ?? 'es-CO';
-  const page = await client.getSingle('home', { lang: currentLocale })
+  const keyWordEN = 'dancing class, dance classes, salsa dancing class, bachata dancing class, Dance class in Medellín, dance classes near me';
+  const keyWordES = 'clases de baile medellin, clases de baile salsa, clases de baile bachata, sociales en medellin, clases de baile cerca de mi';
+  const page = await client.getSingle('home', { lang: currentLocale });
   return {
     props: {
       page,
+      keyWord: currentLocale === 'en-US' ? keyWordEN: keyWordES,
       ...(await serverSideTranslations(currentLocale, [
         'common',
         'footer',
