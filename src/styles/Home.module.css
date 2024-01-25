@@ -353,6 +353,7 @@
 .teachers a {
   color: var(--green-100);
   text-decoration: underline;
+  font-size: 1.5em;
 }
 
 /* Tablet and Smaller Desktop */
