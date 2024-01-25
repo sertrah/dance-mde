@@ -18,7 +18,7 @@ export default function Teachers({title, image, description}: any) {
       <Image
         className={styles.teachers_img}
         src={image.url}
-        alt="Vercel Logo"
+        alt="Clases gratis de baile"
         priority
         width={300}
         height={100}

@@ -21,7 +21,7 @@ const Event: FC<{
         <Typography richContent={title} />
         <Typography richContent={location} />
       </div>
-      <Image src={image.url} alt="Vercel Logo" fill
+      <Image src={image.url} alt="Clases de baile en medellin" fill
         style={{ objectFit: "cover" }}
       />
       <div className={styles.cover}></div>

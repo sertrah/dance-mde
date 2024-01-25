@@ -18,7 +18,7 @@ export default function Banner({ title }: any) {
       </div>
       <Image
         src="/medellin.jpg"
-        alt="Vercel Logo"
+        alt="Bailes en Medellin"
         priority
         fill
         style={{ objectFit: "cover" }}
