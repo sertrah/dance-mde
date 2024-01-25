@@ -15,6 +15,7 @@ const TeachersBanner = ({ data }: any) => {
           alt="Social Event Medellin"
           fill
           style={{ objectFit: "cover" }}
+          priority
         />
         <div className={style.cover} />
         <Typography variant="h1" className={style.title}>{t('title')} <span>{t('title_1')}</span></Typography>

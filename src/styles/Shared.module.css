@@ -107,3 +107,7 @@ p.moda_event_date{
 .moda_event_actions a{
   color: #97dc8f;
 }
+
+.top_bar_img {
+  position: relative;
+}

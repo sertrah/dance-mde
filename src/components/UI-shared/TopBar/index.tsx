@@ -19,11 +19,12 @@ export default function TopBar() {
     <nav className={style.top_bar}>
       <ul className={style.top_bar_content}>
         <li className={style.top_bar_logo}>
-          <CustomLink href="/">
+          <CustomLink href="/" className={style.top_bar_img}>
             <Image
               src="/logo.png"
               alt="Medallo Logo Image"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{ objectFit: "cover" }}
             />
           </CustomLink> </li>
