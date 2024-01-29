@@ -16,6 +16,18 @@ import { useTranslation } from 'next-i18next'
 import { locationLinks, socialPlaceData } from "@/helpers/temp";
 import { holidays } from "@/helpers/colombiaHolydais";
 
+
+
+function stringAvatar(name: string) {
+  const splitName = name.split(' ');
+  return {
+    sx: {
+      bgcolor: "#000",
+    },
+    children: `${splitName[0][0]}${splitName[splitName.length - 1][0]}`.toUpperCase(),
+  };
+}
+
 const sociales: Record<number, { concept: string, places: socialPlaceData[] }> = {
   1: {
     concept: "Lunes",
@@ -79,7 +91,7 @@ export default function Sociales() {
         <CustomLink href={place.instagramLink} target="_blank">
           <CardContent className={styles.social_card}>
             <Stack direction="row" alignItems="center" gap={0.4}>
-              <Avatar alt="Preview social" src="/yy.png" />
+              <Avatar alt="Preview social" {...stringAvatar(place.name)} />
               <TypographyMui variant="h5" component="h5" className={styles.social_title}>
                 <strong>{place.name}</strong> {place.label}
               </TypographyMui>
