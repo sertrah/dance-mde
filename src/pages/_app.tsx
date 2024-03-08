@@ -6,8 +6,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { common, red } from "@mui/material/colors";
 import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'
-import { PrismicPreview } from '@prismicio/next'
-import { repositoryName } from '../prismicio'
 import { appWithTranslation } from 'next-i18next'
 
 import type { AppProps } from "next/app";
@@ -112,7 +110,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       `}}
         id="ga" />
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-        <PrismicPreview repositoryName={repositoryName}>
           <div className={roboto.variable}>
             <style jsx global>{`
         html {
@@ -128,7 +125,6 @@ const App = ({ Component, pageProps }: AppProps) => {
               <Footer />
             </ThemeProvider>
           </div>
-        </PrismicPreview>
       </PrismicProvider >
     </>
 

@@ -29,6 +29,7 @@ const Genre: FC<{
           src={image.url}
           alt="Dancers"
           fill
+          sizes="(max-width: 360px) 33vw"
           style={{ objectFit: "contain" }}
           className={title[0].text === 'Tango' ? styles.genre_tango : ''}
         />

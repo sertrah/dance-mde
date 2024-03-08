@@ -34,7 +34,7 @@
   list-style: none;
   position: relative;
   margin: auto;
-  height: 20px;
+  height: 30px;
   width: 100px;
 }
 .lang_btn_container {
@@ -42,6 +42,9 @@
   position: absolute;
   right: 0;
   top: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .lang_btn_container .lang_btn {
@@ -110,4 +113,7 @@ p.moda_event_date{
 
 .top_bar_img {
   position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
