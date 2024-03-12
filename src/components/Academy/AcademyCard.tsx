@@ -13,7 +13,7 @@ const AcademyCard = ({ content, image, instagramLinkTo, whatsAppNumber }: any) =
     <section className={style.academy}>
       <Image
         src={image.url}
-        alt="Academias"
+        alt="Academias de baile"
         fill
         style={{ objectFit: "cover" }}
       />

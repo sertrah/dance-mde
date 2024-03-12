@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "@/styles/Home.module.css";
 
-import { PrimaryTitle } from '@/components/UI-shared/Typography';
+import { SubTitle } from '@/components/UI-shared/Typography';
 import Typography from "@/helpers/prismic";
 import { useTranslation } from 'next-i18next'
 
@@ -12,7 +12,7 @@ export default function Teachers({title, image, description}: any) {
 
   return (
     <section className={styles.teachers}>
-      <PrimaryTitle hasUnderline className={styles.teachers_title}>{title} </PrimaryTitle>
+      <SubTitle hasUnderline className={styles.teachers_title}>{title} </SubTitle>
 
       <div className={styles.teachers_content}>
       <Image

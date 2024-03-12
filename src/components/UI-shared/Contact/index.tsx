@@ -1,4 +1,4 @@
-import { PrimaryTitle } from "@/components/UI-shared/Typography";
+import { SubTitle } from "@/components/UI-shared/Typography";
 import Form from "./Form";
 
 import style from "@/styles/Shared.module.css";
@@ -8,7 +8,7 @@ export default function Contact() {
   const {t} = useTranslation('common');
   return (
       <section className={style.contact}>
-          <PrimaryTitle hasUnderline> {t('contact_title')} </PrimaryTitle>
+          <SubTitle hasUnderline> {t('contact_title')} </SubTitle>
           <div>
             <Form />
           </div>

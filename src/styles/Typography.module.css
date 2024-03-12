@@ -21,8 +21,9 @@
 }
 
 .title_2 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: var(--primary-color);
+  position: relative;
 }
 
 .paragraph_1 {

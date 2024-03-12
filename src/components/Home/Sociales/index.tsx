@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import TypographyMui from '@mui/material/Typography';
-import { PrimaryTitle } from '@/components/UI-shared/Typography';
+import { SubTitle } from '@/components/UI-shared/Typography';
 import { useTranslation } from 'next-i18next'
 import { locationLinks, socialPlaceData } from "@/helpers/temp";
 import { holidays } from "@/helpers/colombiaHolydais";
@@ -86,7 +86,7 @@ export default function Sociales() {
   }, []);
   return (
     <section className={styles.sociales}>
-      <PrimaryTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br />{currentSocial.concept} o miedo?</PrimaryTitle>
+      <SubTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br />{currentSocial.concept} o miedo?</SubTitle>
       {currentSocial.places.map((place: socialPlaceData, i: number) => <Card key={`social-${i}`}>
         <CustomLink href={place.instagramLink} target="_blank">
           <CardContent className={styles.social_card}>
