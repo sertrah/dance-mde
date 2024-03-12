@@ -9,7 +9,7 @@ export default function TeachersPage({ page }: any) {
     <>
       <Head>
         <title>Profesores de baile</title>
-        <meta name="description" content="Reserva clases de baile privadas o personalizadas en Medellín" />
+        <meta name="description" content="Reserva clases de baile privadas o personalizadas en Medellín. clases de baile en medellin" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -126,11 +126,11 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     label: '📍 The Grand Social'
   },
   saborymasna: {
-    link: "https://maps.app.goo.gl/LdsewYghpKch5pr67",
+    link: "https://maps.app.goo.gl/DS2M4CamodAyAXce6",
     instagramLink: "https://www.instagram.com/saborymasna/",
-    name: "Sabor y más na' 💃🕺",
+    name: "Sabor y más na'",
     genres: ["Bachata", "Salsa"],
-    label: "📍 Los patios (Poblado)"
+    label: "📍 La House Provenza"
   },
   majao: {
     link: "https://maps.app.goo.gl/gJCyLU9WTcdN1jVX8",

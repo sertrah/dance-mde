@@ -18,7 +18,7 @@ export default function TopBar() {
   return (
     <nav className={style.top_bar}>
       <ul className={style.top_bar_content}>
-        <li className={style.top_bar_logo}  href="/" >
+        <li className={style.top_bar_logo} onClick={() => { router.push('/') }} >
           <CustomLink href="/" className={style.top_bar_img}>
             <Image
               src="/logo.png"
