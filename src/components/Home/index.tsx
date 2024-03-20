@@ -1,3 +1,4 @@
+
 import { FC, useEffect, useState } from "react";
 import Contact from "@/components/UI-shared/Contact";
 import Banner from "@/components/Home/Banner";

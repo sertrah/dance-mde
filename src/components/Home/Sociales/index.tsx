@@ -92,7 +92,7 @@ export default function Sociales() {
           <CardContent className={styles.social_card}>
             <Stack direction="row" alignItems="center" gap={0.4}>
               <Avatar alt="Preview social" {...stringAvatar(place.name)} />
-              <TypographyMui variant="h5" component="h5" className={styles.social_title}>
+              <TypographyMui component="p" className={styles.social_title}>
                 <strong>{place.name}</strong> {place.label}
               </TypographyMui>
             </Stack>

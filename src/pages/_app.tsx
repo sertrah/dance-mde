@@ -112,6 +112,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
           <div className={roboto.variable}>
             <style jsx global>{`
+            @import './../styles/globals.css';
+
         html {
           font-family: ${roboto.style.fontFamily};
         }

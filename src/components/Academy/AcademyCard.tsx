@@ -22,11 +22,11 @@ const AcademyCard = ({ content, image, instagramLinkTo, whatsAppNumber }: any) =
 
         <h3 className={style.academy_sub_title}>Redes sociales</h3>
         <div className={style.academy_social_media}>
-          <CustomLink href={instagramLinkTo.url} className={style.academy_link} target="_blank">
+          <CustomLink href={instagramLinkTo.url} className={style.academy_link} target="_blank" rel="nofollow">
             Instagram
             <InstagramIcon />
           </CustomLink>
-          <CustomLink  href={`https://wa.me/57${whatsAppNumber}?text=Hola%2C%20vi%20tu%20academia%20desde%20el%20portal%20web%20dance-mde.%20Me%20gustar%C3%ADa%20saber%20m%C3%A1s%21`} target="_blank" className={style.academy_link}>
+          <CustomLink  rel="nofollow" href={`https://wa.me/57${whatsAppNumber}?text=Hola%2C%20vi%20tu%20academia%20desde%20el%20portal%20web%20dance-mde.%20Me%20gustar%C3%ADa%20saber%20m%C3%A1s%21`} target="_blank" className={style.academy_link}>
             Whatsapp
             <WhatsAppIcon />
           </CustomLink>

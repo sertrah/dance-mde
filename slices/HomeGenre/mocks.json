@@ -7,9 +7,9 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "heading1",
+            "type": "heading2",
             "content": {
-              "text": "Seldom"
+              "text": "Since"
             }
           }
         ]
@@ -51,9 +51,9 @@
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
-                  "type": "heading1",
+                  "type": "heading2",
                   "content": {
-                    "text": "Metal"
+                    "text": "Pattern"
                   }
                 }
               ]

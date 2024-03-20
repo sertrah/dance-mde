@@ -24,6 +24,16 @@
             }
           }
         ]
+      },
+      "keyPhrases": {
+        "__TYPE__": "FieldContent",
+        "value": "bare",
+        "type": "Text"
+      },
+      "site_description": {
+        "__TYPE__": "FieldContent",
+        "value": "due",
+        "type": "Text"
       }
     },
     "items": [

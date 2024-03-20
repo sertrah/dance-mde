@@ -26,6 +26,20 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "keyPhrases": {
+          "type": "Text",
+          "config": {
+            "label": "keyPhrases",
+            "placeholder": ""
+          }
+        },
+        "site_description": {
+          "type": "Text",
+          "config": {
+            "label": "site_description",
+            "placeholder": ""
+          }
         }
       },
       "items": {

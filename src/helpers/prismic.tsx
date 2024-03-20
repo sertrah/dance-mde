@@ -10,7 +10,7 @@ export const components = (className?: string, hasUnderline?: boolean) => ({
     <PrimaryTitle className={className} hasUnderline={hasUnderline}>{children}</PrimaryTitle>
   ),
   heading2: ({ children }: any) => (
-    <SubTitle className={className}>{children}</SubTitle>
+    <SubTitle className={className} hasUnderline={hasUnderline}>{children}</SubTitle>
   ),
   paragraph: ({ children }: any) => (
     <Paragraph className={className}>{children}</Paragraph>

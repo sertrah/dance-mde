@@ -58,10 +58,11 @@ const EventCard: FC<
           href={locationLinks?.[locationId]?.link ?? urlLocation}
           passHref
           target="_blank"
+          rel="nofollow" 
         >
           {t('location')}
         </CustomLink>
-        <CustomLink href={urlEvent ?? ""} passHref target="_blank">
+        <CustomLink  rel="nofollow"  href={urlEvent ?? ""} passHref target="_blank">
          {t('see_more')}
         </CustomLink>
       </div>

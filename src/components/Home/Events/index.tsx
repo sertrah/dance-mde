@@ -27,7 +27,7 @@ export default function Events({ sliceItems, title }: any) {
           />
         ))}
       </div>
-      <CustomLink href="/events" className={styles.events_btn} >
+      <CustomLink rel="nofollow"  href="/events" className={styles.events_btn} >
         <Button type="submit" variant="contained" >
           {t('home_event_button')}
         </Button>

@@ -491,6 +491,26 @@ interface AcademiesSliceDefaultPrimary {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * keyPhrases field in *Academies → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.primary.keyPhrases
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    keyPhrases: prismicT.KeyTextField;
+    /**
+     * site_description field in *Academies → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: academies.primary.site_description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    site_description: prismicT.KeyTextField;
 }
 /**
  * Item in Academies → Items

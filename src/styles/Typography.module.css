@@ -24,6 +24,7 @@
   font-size: 1.8rem;
   color: var(--primary-color);
   position: relative;
+  text-align: center;
 }
 
 .paragraph_1 {
