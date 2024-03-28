@@ -8,7 +8,6 @@ const Academy = ({ data }: any) => {
   if (!slices) {
     return <p>Upss... algo paso</p>
   }
-  console.log(slices);
   return (
     <main className={style.academy_page}>
       <Typography richContent={data.title} hasUnderline />

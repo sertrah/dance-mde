@@ -17,7 +17,7 @@ export const components = (className?: string, hasUnderline?: boolean) => ({
   ),
   hyperlink: ({node, children}: any) => {
     return (
-      <Link className={className} href={node?.data?.slug}>{children}</Link>
+      <Link className={className} href={node?.data?.type}>{children}</Link>
     )
   }
 })

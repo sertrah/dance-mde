@@ -1,4 +1,3 @@
-import CustomLink from "@/components/UI-shared/CustomLink";
 import Image from "next/image";
 
 import styles from "@/styles/Home.module.css";
@@ -7,7 +6,7 @@ import { SubTitle, Paragraph } from '@/components/UI-shared/Typography';
 import Typography from "@/helpers/prismic";
 import { useTranslation } from 'next-i18next'
 
-export default function Teachers({ title, image, description, siteDescription }: any) {
+export default function Teachers({ title, image, description }: any) {
   const { t } = useTranslation('teachers');
 
   return (

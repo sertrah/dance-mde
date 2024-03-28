@@ -23,7 +23,6 @@ const Home: FC<{ page: any }> = ({ page }) => {
       retryDelay: 3000,
     }
   );
-  console.log(page);
   return (
     <>
       <Banner title={page.title} siteDescription={page.description} />
