@@ -20,6 +20,10 @@
   position: relative !important;
   height: 120px !important;
 }
+.academy_description {
+  width: 90%;
+  margin: auto;
+}
 
 .academy_detail {
   padding: 1rem 1rem;

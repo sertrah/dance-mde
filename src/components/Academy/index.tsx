@@ -11,7 +11,7 @@ const Academy = ({ data }: any) => {
   return (
     <main className={style.academy_page}>
       <Typography richContent={data.title} hasUnderline />
-      <Typography richContent={slices.primary.description} />
+      <Typography richContent={slices.primary.description} className={style.academy_description} />
       <div className={style.academies}>
         {slices.items.map(({ content, image, instagramLinkTo, whatsappnumber }: any, index: any) => <AcademyCard
           content={content}
