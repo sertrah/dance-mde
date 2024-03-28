@@ -88,7 +88,7 @@ export default function Sociales() {
     <section className={styles.sociales}>
       <SubTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br />{currentSocial.concept}</SubTitle>
       {currentSocial.places.map((place: socialPlaceData, i: number) => <Card key={`social-${i}`}>
-        <CustomLink href={place.instagramLink} target="_blank">
+        <CustomLink rel="nofollow"  href={place.instagramLink} target="_blank">
           <CardContent className={styles.social_card}>
             <Stack direction="row" alignItems="center" gap={0.4}>
               <Avatar alt="Preview social" {...stringAvatar(place.name)} />

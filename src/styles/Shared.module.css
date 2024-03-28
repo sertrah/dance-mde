@@ -23,8 +23,10 @@
   z-index: 10;
   height: auto;
   width: 100%;
-  background: rgb(32, 32, 32); /* fallback for old browsers */
+  background: rgb(32, 32, 32);
+  /* fallback for old browsers */
 }
+
 .top_bar_content {
   position: relative;
   padding: 0.4rem 0;
@@ -37,6 +39,7 @@
   height: 30px;
   width: 100px;
 }
+
 .lang_btn_container {
   list-style: none;
   position: absolute;
@@ -57,7 +60,9 @@
 /** MODAL EVENT **/
 .moda_event {
   padding: 1.2rem 0.8rem;
+  position: relative;
 }
+
 .moda_event h2 {
   text-align: center;
   font-size: 2rem;
@@ -72,42 +77,53 @@
 .moda_event_detail {
   padding: 0.8rem 0;
   margin-top: 0.8rem;
-  overflow-y: scroll;
-  max-height: 280px;
-  min-height: 205px;
-  height: 205px;
+  height: auto;
 }
 
 .moda_event_detail::-webkit-scrollbar {
   width: 4px;
 }
+
 .moda_event_detail::-webkit-scrollbar-track {
-  background: rgb(44, 44, 44);        /* color of the tracking area */
+  background: rgb(44, 44, 44);
+  /* color of the tracking area */
 }
 
 .moda_event_detail::-webkit-scrollbar-thumb {
   background-color: #161616;
   height: 10%;
 }
-p.moda_event_date{
+
+p.moda_event_date {
   color: #c06d07;
   text-align: left;
   font-weight: bold;
   font-size: 1.1rem;
 }
-.moda_event_description{
+
+.moda_event_description {
   margin-top: 0.5rem;
   padding-bottom: 1em;
 }
 
-.moda_event_actions{
+.moda_event_actions {
   margin-top: 0.6rem;
   display: flex;
   justify-content: space-between;
-  height: 29px;
+  height: 35px;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+}
+.moda_event_actions  a {
+  background-color: #232322;
+  padding: 0rem 0.5rem;
+  height: 35px;
+  vertical-align: middle;
+  align-content: center;
 }
 
-.moda_event_actions a{
+.moda_event_actions a {
   color: #97dc8f;
 }
 

@@ -4,6 +4,7 @@
   flex-direction: column;
   place-content: flex-end;
   place-items: flex-start;
+  height: 460px;
   min-height: 50vh;
   padding: 1rem 1rem 0;
   overflow: hidden;

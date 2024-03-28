@@ -13,6 +13,7 @@ const Event: FC<
 
   const handleOnClickEvent = () => {
     openDialog();
+    document.querySelector('html')!.style.overflow = "hidden";
   }
   return (
     <div className={styles.event} onClick={handleOnClickEvent}>
@@ -23,7 +24,7 @@ const Event: FC<
       </div>
       <Image src={image?.url ?? ''} alt="Event image" fill
         style={{ objectFit: "cover" }}
-        sizes="(max-width: 768px) 80vw,
+        sizes="(max-width: 768px) 60vw,
         (max-width: 1200px) 70vw,
         100vw"
       />

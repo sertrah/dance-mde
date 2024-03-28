@@ -87,7 +87,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "selinamedellin",
+              "value": "casaritmoLaureles",
               "type": "Select"
             }
           ],
@@ -158,7 +158,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "matizBello",
+              "value": "cmDance",
               "type": "Select"
             }
           ],
@@ -229,7 +229,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "socialclub",
+              "value": "bachataAlparque",
               "type": "Select"
             }
           ],

@@ -40,6 +40,7 @@ export default function SliceEventDialog(props: SliceEventDialogProps) {
 
   const handleClose = () => {
     onClose();
+    document.querySelector('html')!.style.overflow = "auto";
   };
 
   return (

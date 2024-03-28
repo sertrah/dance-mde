@@ -25,6 +25,7 @@ export type socialPlace = {
   madera: socialPlaceData;
   zoukAlParque: socialPlaceData;
   selinamedellin: socialPlaceData;
+  aPuroTango: socialPlaceData;
 };
 export type socialPlaceKeys = keyof socialPlace
 
@@ -196,7 +197,14 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     name: "Zouk al parque",
     genres: ["Zouk"],
     label: "📍 Parques del rio (Laureles)"
-  }
+  },
+  aPuroTango: {
+    link: "https://maps.app.goo.gl/Phb5RASK2xqqqVFT7",
+    instagramLink: "https://www.instagram.com/apurotango/",
+    name: "A puro Tango",
+    genres: ["Tango"],
+    label: "📍 A Puro tango"
+  },
 };
 
 
