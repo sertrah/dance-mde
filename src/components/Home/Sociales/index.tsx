@@ -48,8 +48,6 @@ const sociales: Record<number, { concept: string, places: socialPlaceData[] }> =
   4: {
     concept: "Jueves",
     places: [
-    locationLinks.grandSocial,
-    locationLinks.nuevaGuardia,
     locationLinks.danceFree,
     locationLinks.socialclub,
     ]
