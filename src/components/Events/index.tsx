@@ -1,6 +1,5 @@
 import { useState, ChangeEvent } from "react";
 import { useQuery } from "react-query";
-import { useRouter } from "next/router"
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 

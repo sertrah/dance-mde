@@ -1,10 +1,13 @@
 
-import { FC, useEffect, useState } from "react";
-import Contact from "@/components/UI-shared/Contact";
+import { FC } from "react";
+import dynamic from 'next/dynamic'
+
 import Banner from "@/components/Home/Banner";
-import Events from "@/components/Home/Events";
-import Sociales from "@/components/Home/Sociales";
-import Teachers from "@/components/Home/Teachers";
+
+const Sociales = dynamic(() => import('@/components/Home/Sociales'))
+const Teachers = dynamic(() => import('@/components/Home/Teachers'))
+const Events = dynamic(() => import('@/components/Home/Events'))
+const Contact = dynamic(() => import('@/components/UI-shared/Contact'))
 
 import { useQuery } from "react-query";
 import HomeSlices from "./Slices";
@@ -20,10 +23,10 @@ const Home: FC<{ page: any }> = ({ page }) => {
       retryDelay: 3000,
     }
   );
-
+  console.log(page);
   return (
     <>
-      <Banner title={page.title} />
+      <Banner title={page.title} siteDescription={page.description} />
       <Sociales />
       <Teachers title={page.teacherTitle} description={page.teacherDescription} image={page.teacher} />
       {SliceEvent?.commonTitle && (

@@ -23,6 +23,9 @@ const Event: FC<
       </div>
       <Image src={image?.url ?? ''} alt="Event image" fill
         style={{ objectFit: "cover" }}
+        sizes="(max-width: 768px) 80vw,
+        (max-width: 1200px) 70vw,
+        100vw"
       />
       <div className={styles.cover}></div>
     </div>

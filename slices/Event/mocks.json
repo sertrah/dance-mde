@@ -87,7 +87,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "madera",
+              "value": "selinamedellin",
               "type": "Select"
             }
           ],
@@ -158,7 +158,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "casaritmo",
+              "value": "matizBello",
               "type": "Select"
             }
           ],
@@ -229,7 +229,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "eloasis",
+              "value": "socialclub",
               "type": "Select"
             }
           ],

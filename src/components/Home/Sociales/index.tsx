@@ -47,7 +47,9 @@ const sociales: Record<number, { concept: string, places: socialPlaceData[] }> =
   }, // Thursday
   4: {
     concept: "Jueves",
-    places: [locationLinks.nuevaGuardia,
+    places: [
+    locationLinks.grandSocial,
+    locationLinks.nuevaGuardia,
     locationLinks.danceFree,
     locationLinks.socialclub,
     ]
@@ -86,7 +88,7 @@ export default function Sociales() {
   }, []);
   return (
     <section className={styles.sociales}>
-      <SubTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br />{currentSocial.concept} o miedo?</SubTitle>
+      <SubTitle hasUnderline className={styles.sociales_title}>{t('social_title')} <br />{currentSocial.concept}</SubTitle>
       {currentSocial.places.map((place: socialPlaceData, i: number) => <Card key={`social-${i}`}>
         <CustomLink href={place.instagramLink} target="_blank">
           <CardContent className={styles.social_card}>

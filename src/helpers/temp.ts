@@ -11,7 +11,9 @@ export type socialPlace = {
   cmDance: socialPlaceData;
   matizBello: socialPlaceData;
   matizRobledo: socialPlaceData;
+  matizBuenosAires: socialPlaceData;
   casaritmo: socialPlaceData;
+  casaritmoLaureles: socialPlaceData;
   nuevaGuardia: socialPlaceData;
   grandSocial: socialPlaceData;
   saborymasna: socialPlaceData;
@@ -104,12 +106,26 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     genres: ["Bachata", "Salsa"],
     label: '📍 Matiz sede Robledo'
   },
+  matizBuenosAires: {
+    link: "https://maps.app.goo.gl/HbH11fdVFbkFPEjTA",
+    instagramLink: "https://www.instagram.com/matizacademiabaile",
+    name: 'Matiz sede Buenos Aires',
+    genres: ["Bachata", "Salsa"],
+    label: '📍 Matiz sede Robledo'
+  },
   casaritmo: {
     link: "https://goo.gl/maps/X1i4Ay5CodeYmBhc8",
     instagramLink: "https://www.instagram.com/casaritmolatino",
     name: 'Casa ritmo',
     genres: ["Bachata", "Salsa"],
     label: '📍 Casa ritmo (Poblado)'
+  },
+  casaritmoLaureles: {
+    link: "https://maps.app.goo.gl/NfUCYaeDydnXU6jF7",
+    instagramLink: "https://www.instagram.com/casaritmolatino",
+    name: 'Casa ritmo (Laureles)',
+    genres: ["Bachata", "Salsa", "Porro"],
+    label: '📍 Casa ritmo (Laureles)'
   },
   nuevaGuardia: {
     link: "https://maps.app.goo.gl/mjUvLoV8dLDKxq2L7",

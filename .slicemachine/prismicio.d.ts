@@ -206,6 +206,17 @@ interface HomeDocumentData {
      */
     teacherDescription: prismicT.RichTextField;
     /**
+     * Description field in *home*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
+    /**
      * Slice Zone field in *home*
      *
      * - **Field Type**: Slice Zone
@@ -655,7 +666,7 @@ export interface EventSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    locationId: prismicT.SelectField<"bachatea" | "balconzouk" | "socialclub" | "almambo" | "laazotea" | "eloasis" | "latindancecenter" | "matizBello" | "cmDance" | "casaritmo" | "matizRobledo" | "nuevaGuardia" | "grandSocial" | "saborymasna" | "majao" | "danceFree" | "bachataAlparque" | "barcelona" | "QuimbaraBara" | "madera" | "zoukAlParque" | "selinamedellin">;
+    locationId: prismicT.SelectField<"bachatea" | "balconzouk" | "socialclub" | "almambo" | "laazotea" | "eloasis" | "latindancecenter" | "matizBello" | "cmDance" | "casaritmo" | "matizRobledo" | "nuevaGuardia" | "grandSocial" | "saborymasna" | "majao" | "danceFree" | "bachataAlparque" | "barcelona" | "QuimbaraBara" | "madera" | "zoukAlParque" | "selinamedellin" | "matizBuenosAires" | "casaritmoLaureles">;
     /**
      * url Event field in *Event → Items*
      *

@@ -43,6 +43,9 @@ const EventCard: FC<
           alt="Dancers"
           fill
           style={{ objectFit: "cover" }}
+          sizes="(max-width: 768px) 80vw,
+          (max-width: 1200px) 70vw,
+          100vw"
         />
       </div>
       <div className={styles.event_card_detail} onClick={handleOnClickEvent}>
