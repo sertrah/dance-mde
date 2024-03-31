@@ -221,6 +221,13 @@
   color: #fff;
 }
 
+.events_title {
+  font-size: 1.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .events .event img {
   position: relative;
 }

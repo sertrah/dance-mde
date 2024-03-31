@@ -19,7 +19,7 @@ const Event: FC<
     <div className={styles.event} onClick={handleOnClickEvent}>
       <div className={styles.detail}>
         <Typography richContent={date} />
-        <Typography richContent={title} />
+        <Typography className={styles.events_title} richContent={title} />
         <Paragraph >{t('see_more')}</Paragraph>
       </div>
       <Image src={image?.url ?? ''} alt="Event image" fill

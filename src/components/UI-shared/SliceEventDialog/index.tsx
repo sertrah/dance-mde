@@ -9,7 +9,7 @@ import Typography from "@/helpers/prismic";
 import { locationLinks } from "@/helpers/temp";
 
 import styles from "../../../styles/Shared.module.css";
-import { SubTitle } from '../Typography';
+import { SubTitle, Paragraph } from '../Typography';
 import { useTranslation } from 'react-i18next';
 
 
@@ -58,6 +58,7 @@ export default function SliceEventDialog(props: SliceEventDialogProps) {
           />
         </div>
         <div className={styles.moda_event_detail} >
+          <Paragraph  className={styles.moda_event_date}>{locationLinks?.[locationId]?.label}</Paragraph>
           <Typography richContent={date} className={styles.moda_event_date} />
           <Typography
             richContent={description}
