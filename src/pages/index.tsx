@@ -93,7 +93,7 @@ export default function HomePage(props: any) {
         <header className={`header ${small ? "small" : ""}`}>MB</header>
         <section className={style.banner}>
           <div className="prueba" />
-          <video controls autoPlay loop muted>
+          <video controls autoPlay loop muted playsInline>
             <source src="/videos/banner.mp4" type="video/mp4" />
           </video>
           <h1>{t("title")}</h1>
