@@ -87,7 +87,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "casaritmoLaureles",
+              "value": "laazotea",
               "type": "Select"
             }
           ],
@@ -166,7 +166,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "cmDance",
+              "value": "saborymasna",
               "type": "Select"
             }
           ],
@@ -245,7 +245,7 @@
             "locationId",
             {
               "__TYPE__": "FieldContent",
-              "value": "bachataAlparque",
+              "value": "cmDance",
               "type": "Select"
             }
           ],

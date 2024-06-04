@@ -26,6 +26,7 @@ export type socialPlace = {
   zoukAlParque: socialPlaceData;
   selinamedellin: socialPlaceData;
   aPuroTango: socialPlaceData;
+  bloodDanceLaureles: socialPlaceData;
 };
 export type socialPlaceKeys = keyof socialPlace
 
@@ -204,6 +205,13 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     name: "A puro Tango",
     genres: ["Tango"],
     label: "📍 A Puro tango"
+  },
+  bloodDanceLaureles: {
+    link: "https://maps.app.goo.gl/X4PHXPfssW7SQPQr5",
+    instagramLink: "https://www.instagram.com/blooddancecompany/",
+    name: "Blood Dance Company",
+    genres: ["Salsa"],
+    label: "📍 Laureles"
   },
 };
 
