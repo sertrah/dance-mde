@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Dialog from '@mui/material/Dialog';
-import { EventSliceItem } from '@/core/domain/interfaces/Event.repository';
+import * as React from "react";
+import Dialog from "@mui/material/Dialog";
+import { EventSliceItem } from "@/core/domain/interfaces/Event.repository";
 
 import Image from "next/image";
 import CustomLink from "@/components/UI-shared/CustomLink";
@@ -9,9 +9,8 @@ import Typography from "@/helpers/prismic";
 import { locationLinks } from "@/helpers/temp";
 
 import styles from "../../../styles/Shared.module.css";
-import { SubTitle, Paragraph } from '../Typography';
-import { useTranslation } from 'react-i18next';
-
+import { SubTitle, Paragraph } from "../Typography";
+import { useTranslation } from "react-i18next";
 
 const components = {
   paragraph: ({ children }: any) => <SubTitle>{children}</SubTitle>,
@@ -20,45 +19,38 @@ const components = {
 export interface SliceEventDialogProps {
   open: boolean;
   onClose: () => void;
-  currentSliceEvent: EventSliceItem | null
+  currentSliceEvent: EventSliceItem | null;
 }
 
 export default function SliceEventDialog(props: SliceEventDialogProps) {
   const { onClose, open, currentSliceEvent } = props;
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   if (!currentSliceEvent) return <></>;
-  const {
-    title,
-    date,
-    description,
-    image,
-    locationId,
-    urlLocation,
-    urlEvent
-  } = currentSliceEvent;
+  const { title, date, description, image, locationId, urlLocation, urlEvent } =
+    currentSliceEvent;
 
   const handleClose = () => {
     onClose();
-    document.querySelector('html')!.style.overflow = "auto";
+    document.querySelector("html")!.style.overflow = "auto";
   };
 
   return (
     <Dialog onClose={handleClose} open={open}>
       <div className={styles.moda_event}>
         <PrismicRichText field={title} components={components} />
-        <div
-          className={styles.moda_event_container_img}
-        >
+        <div className={styles.moda_event_container_img}>
           <Image
             src={image.url ?? ""}
-            alt="Dancers"
+            alt="Bailarines profesionales"
             fill
             style={{ objectFit: "cover", objectPosition: "top" }}
           />
         </div>
-        <div className={styles.moda_event_detail} >
-          <Paragraph  className={styles.moda_event_date}>{locationLinks?.[locationId]?.label}</Paragraph>
+        <div className={styles.moda_event_detail}>
+          <Paragraph className={styles.moda_event_date}>
+            {locationLinks?.[locationId]?.label}
+          </Paragraph>
           <Typography richContent={date} className={styles.moda_event_date} />
           <Typography
             richContent={description}
@@ -71,10 +63,14 @@ export default function SliceEventDialog(props: SliceEventDialogProps) {
             passHref
             target="_blank"
           >
-            {t('location')}
+            {t("location")}
           </CustomLink>
-          <CustomLink href={urlEvent ?? locationLinks?.[locationId]?.instagramLink} passHref target="_blank">
-            {t('see_more')}
+          <CustomLink
+            href={urlEvent ?? locationLinks?.[locationId]?.instagramLink}
+            passHref
+            target="_blank"
+          >
+            {t("see_more")}
           </CustomLink>
         </div>
       </div>

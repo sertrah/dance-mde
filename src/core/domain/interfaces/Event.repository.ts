@@ -31,12 +31,13 @@ export type EventSliceZone = prismicT.SliceZone<EventSlice>
 export interface EventSliceItem {
   image: prismicT.ImageField<never>;
   title: prismicT.TitleField;
-  date: prismicT.RichTextField;
+  date: prismicT.TitleField;
   description: prismicT.RichTextField;
   locationId: socialPlaceKeys;
   showLocation: string;
   urlEvent: string,
   urlLocation: string,
+  genres: string,
 }
 
 /** Prismic Interfaces end */

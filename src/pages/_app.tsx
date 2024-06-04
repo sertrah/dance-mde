@@ -1,12 +1,21 @@
-import "@/styles/globals.css";
-import Script from 'next/script';
-import { Roboto } from "@next/font/google";
+import "@/styles/globals.scss";
+import Script from "next/script";
+import {
+  Roboto,
+  Abril_Fatface,
+  Noto_Sans,
+  Libre_Caslon_Text,
+} from "@next/font/google";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { QueryClientProvider, QueryClient } from "react-query";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { common, red } from "@mui/material/colors";
-import Link from 'next/link'
-import { PrismicProvider } from '@prismicio/react'
-import { appWithTranslation } from 'next-i18next'
+import Link from "next/link";
+import { PrismicProvider } from "@prismicio/react";
+import { appWithTranslation } from "next-i18next";
 
 import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
@@ -18,6 +27,19 @@ const roboto = Roboto({
   variable: "--roboto-font",
 });
 
+const libre_caslon = Libre_Caslon_Text({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--libre-caslon-text-font",
+});
+
+const noto_sans = Noto_Sans({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--noto_sans-font",
+});
 const theme = createTheme({
   palette: {
     primary: {
@@ -45,9 +67,9 @@ const theme = createTheme({
         root: {
           "&::before": {
             borderBottomColor: "#fff !important",
-          }
-        }
-      }
+          },
+        },
+      },
     },
     MuiPaper: {
       styleOverrides: {
@@ -56,34 +78,43 @@ const theme = createTheme({
           marginBottom: "0.5rem",
           "& .MuiCardContent-root": {
             padding: "0.8rem !important",
-          }
-        }
-      }
+          },
+        },
+      },
     },
     MuiTypography: {
       variants: [
         {
-          props: { variant: 'h1' }, /* component props */
+          props: { variant: "h1" } /* component props */,
           style: {
             fontSize: "2.2rem",
           },
         },
         {
-          props: { variant: 'h2' }, /* component props */
+          props: { variant: "h2" } /* component props */,
           style: {
             fontSize: "1.6rem",
           },
         },
         {
-          props: { variant: 'body1'},
+          props: { variant: "body1" },
           style: {
             color: "#fff",
             fontSize: "1.04rem",
-          }
-        }
+          },
+        },
       ],
     },
-  }
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          "&.MuiTabPanel-root": {
+            color: "#000",
+          },
+        },
+      },
+    },
+  },
 });
 
 const queryClient = new QueryClient({
@@ -97,9 +128,14 @@ const queryClient = new QueryClient({
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Script id="gtag" strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script
+        id="gtag"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
 
-      <Script strategy="afterInteractive"
+      <Script
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -107,30 +143,36 @@ const App = ({ Component, pageProps }: AppProps) => {
       gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
         page_path: window.location.pathname,
         });
-      `}}
-        id="ga" />
+      `,
+        }}
+        id="ga"
+      />
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-          <div className={roboto.variable}>
-            <style jsx global>{`
-            @import './../styles/globals.css';
+        <div
+          className={`${roboto.variable} ${libre_caslon.variable} ${noto_sans.variable}`}
+        >
+          <style jsx global>{`
+            @font-face {
+              font-family: ${libre_caslon.style.fontFamily};
+            }
+            @font-face {
+              font-family: ${noto_sans.style.fontFamily};
+            }
+            html {
+              font-family: ${roboto.style.fontFamily};
+            }
+          `}</style>
+          <ThemeProvider theme={theme}>
+            <QueryClientProvider client={queryClient}>
+              <Component {...pageProps} />
+            </QueryClientProvider>
 
-        html {
-          font-family: ${roboto.style.fontFamily};
-        }
-      `}</style>
-            <ThemeProvider theme={theme}>
-              <TopBar />
-              <QueryClientProvider client={queryClient}>
-                <Component {...pageProps} />
-              </QueryClientProvider>
-
-              <Footer />
-            </ThemeProvider>
-          </div>
-      </PrismicProvider >
+            <Footer />
+          </ThemeProvider>
+        </div>
+      </PrismicProvider>
     </>
-
   );
-}
+};
 
 export default appWithTranslation(App);

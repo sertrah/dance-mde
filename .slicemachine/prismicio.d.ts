@@ -677,6 +677,16 @@ export interface EventSliceDefaultItem {
      *
      */
     urlEvent: prismicT.KeyTextField;
+    /**
+     * genres field in *Event → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.items[].genres
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    genres: prismicT.KeyTextField;
 }
 /**
  * Default variation for Event Slice

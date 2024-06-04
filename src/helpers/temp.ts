@@ -126,14 +126,14 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     instagramLink: "https://www.instagram.com/casaritmolatino",
     name: 'Casa ritmo (Laureles)',
     genres: ["Bachata", "Salsa", "Porro"],
-    label: '📍 Casa ritmo (Laureles)'
+    label: '📍 Laureles'
   },
   nuevaGuardia: {
     link: "https://maps.app.goo.gl/mjUvLoV8dLDKxq2L7",
     instagramLink: "https://www.instagram.com/nuevaguardiadance",
     name: 'Nueva guardia',
     genres: ["Bachata", "Salsa"],
-    label: '📍 Nueva Guardia (Laureles)'
+    label: '📍 Laureles'
   },
   grandSocial: {
     link: "https://maps.app.goo.gl/UWzZtuAMpdBZNp7N8",

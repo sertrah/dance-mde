@@ -1,24 +1,28 @@
-import React from 'react'
-import Card from '@mui/material/Card';
-import Link from 'next/link';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Chip from '@mui/material/Chip';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import Typography from '@mui/material/Typography';
-import Image from 'next/image';
+import React from "react";
+import Card from "@mui/material/Card";
+import Link from "next/link";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Chip from "@mui/material/Chip";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import Typography from "@mui/material/Typography";
+import Image from "next/image";
 
-import style from '@/styles/Teachers.module.css'
+import style from "@/styles/Teachers.module.css";
 
-
-const TeacherCard = ({ name, instagramUrl, description, danceGenre, teacher }: any) => {
-
+const TeacherCard = ({
+  name,
+  instagramUrl,
+  description,
+  danceGenre,
+  teacher,
+}: any) => {
   const genres: string[] = danceGenre.split(",");
   return (
     <div className={style.card_fake}>
       <Image
         src={teacher.url}
-        alt="Jhair"
+        alt="Profesores de baile medellin"
         width={150}
         height={180}
       />
@@ -27,12 +31,17 @@ const TeacherCard = ({ name, instagramUrl, description, danceGenre, teacher }: a
           <Typography variant="h2" gutterBottom className={style.card_title}>
             {name}
           </Typography>
-          <Typography variant="body2" >
-            {description}
-          </Typography>
+          <Typography variant="body2">{description}</Typography>
 
           <div className={style.card_chips}>
-            {genres.map((genre) => <Chip key={`${genre}-${name}`} size="small" label={genre} className={`is-${genre.toLocaleLowerCase()}`} />)}
+            {genres.map((genre) => (
+              <Chip
+                key={`${genre}-${name}`}
+                size="small"
+                label={genre}
+                className={`is-${genre.toLocaleLowerCase()}`}
+              />
+            ))}
           </div>
         </CardContent>
         <CardActions>
@@ -42,7 +51,7 @@ const TeacherCard = ({ name, instagramUrl, description, danceGenre, teacher }: a
         </CardActions>
       </Card>
     </div>
-  )
-}
+  );
+};
 
-export default TeacherCard
+export default TeacherCard;
