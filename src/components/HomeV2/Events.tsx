@@ -85,7 +85,8 @@ function Events() {
                           rel="noopener noreferrer"
                         >
                           <PlaceIcon />{" "}
-                          {locationLinks?.[eventSliceItem.locationId].name}
+                          {locationLinks?.[eventSliceItem.locationId]?.name ||
+                            "Ver Ubicación"}
                         </a>
                         <Link
                           className={style.event_link}
