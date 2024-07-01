@@ -68,7 +68,7 @@ const Card = ({ name, label, instagramLink, genres }: any) => {
 
 const sociales: Record<string, { places: socialPlaceData[] }> = {
   monday: {
-    places: [locationLinks.bachataAlparque],
+    places: [locationLinks.bachataAlparque, locationLinks.bloodDanceLaureles],
   }, // Sunday
   tuesday: {
     places: [
