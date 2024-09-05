@@ -80,7 +80,7 @@ const sociales: Record<string, { places: socialPlaceData[] }> = {
     places: [locationLinks.majao],
   }, // Thursday
   thursday: {
-    places: [locationLinks.danceFree, locationLinks.socialclub],
+    places: [locationLinks.grandSocial, locationLinks.danceFree],
   },
   friday: {
     places: [
@@ -102,7 +102,7 @@ function WeekSchedule() {
 
   const [value, setValue] = React.useState("1");
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    //setValue(newValue);
+    setValue(newValue);
   };
 
   useEffect(() => {

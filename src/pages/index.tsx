@@ -8,6 +8,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import style from "./../styles/temp.module.css";
+import AdBanner from "@/components/UI-shared/AdBanner";
 
 const Events = dynamic(() => import("@/components/HomeV2/Events"));
 const WeekSchedule = dynamic(() => import("@/components/HomeV2/WeekSchedule"));
@@ -99,6 +100,8 @@ export default function HomePage(props: any) {
           <h1>{t("title")}</h1>
           <p>{t("description_home")}</p>
         </section>
+        <AdBanner />
+
         <Events />
         <WeekSchedule />
         <section className={style.private}>
@@ -225,7 +228,7 @@ export default function HomePage(props: any) {
             >
               <Image
                 className={style.academy_teachers}
-                src="/ana.webp"
+                src="/urbano.png"
                 alt="Social Event Medellin"
                 style={{ objectFit: "contain" }}
                 width={100}
