@@ -133,6 +133,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
+      <Script id="adSense" strategy="afterInteractive" crossOrigin="anonymous" src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1751201806991863`} />
 
       <Script
         strategy="afterInteractive"
