@@ -307,7 +307,9 @@ footer {
 }
 
 footer .mensajito span {
-  font-size: 0.7rem;
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
 }
 
 .is-bachata,
@@ -337,9 +339,21 @@ footer .mensajito span {
   background-image: var(--radial-yellow);
 }
 
-@media (min-width: 750px) {
+@media (min-width: 950px) {
   main {
-    max-width: 700px;
+    max-width: initial;
+    margin: auto;
+    width: 100%;
+  }
+  p {
+    font-size: 18px;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 2.2rem;
+  }
+  p.mensajito {
+    max-width: 900px;
     margin: auto;
   }
 }

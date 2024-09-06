@@ -45,7 +45,7 @@ function Events() {
   const [emblaRef] = useEmblaCarousel();
 
   if (!SliceEvent?.list) {
-    return <></>;
+    return <div className={style.events_temp}></div>;
   }
 
   return (

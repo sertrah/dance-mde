@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -9,7 +8,10 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import style from "./../styles/temp.module.css";
 import AdBanner from "@/components/UI-shared/AdBanner";
+import PrivateClasses from "@/components/HomeV2/PrivateClasses";
+import Academies from "@/components/HomeV2/Academies";
 
+const Cover = dynamic(() => import("@/components/HomeV2/Cover"));
 const Events = dynamic(() => import("@/components/HomeV2/Events"));
 const WeekSchedule = dynamic(() => import("@/components/HomeV2/WeekSchedule"));
 
@@ -92,153 +94,13 @@ export default function HomePage(props: any) {
       </Head>
       <main>
         <header className={`header ${small ? "small" : ""}`}>MB</header>
-        <section className={style.banner}>
-          <div className="prueba" />
-          <video controls autoPlay loop muted playsInline>
-            <source src="/videos/banner.mp4" type="video/mp4" />
-          </video>
-          <h1>{t("title")}</h1>
-          <p>{t("description_home")}</p>
-        </section>
+        <Cover t={t} />
         <AdBanner />
 
         <Events />
         <WeekSchedule />
-        <section className={style.private}>
-          <h2>{t("private_title")}</h2>
-          <p>{t("private_short_description")}</p>
-          <div className={style.private_images}>
-            <Image
-              className={style.private_image_1}
-              src="/ana.webp"
-              alt="Bailarina de bachata"
-              style={{ objectFit: "cover" }}
-              width={200}
-              height={300}
-            />
-            <Image
-              className={style.private_image_2}
-              src="/yerin.png"
-              alt="Socialas de baile en medellin"
-              style={{ objectFit: "cover" }}
-              width={200}
-              height={300}
-            />
-            <Image
-              className={style.private_image_3}
-              src="/sebas.webp"
-              alt="Social Event Medellin"
-              style={{ objectFit: "cover" }}
-              width={200}
-              height={300}
-            />
-            <div className={style.private_draw}></div>
-          </div>
-
-          <p>{t("private_description")} </p>
-          <Link href={"/teachers"} locale={locale}>
-            {t("contact_private")}
-          </Link>
-        </section>
-        <section className={style.academies}>
-          <h2>{t("academy_title")}</h2>
-          <p className={style.academies_description}>
-            {t("academy_description")}
-          </p>
-          <div className={style.academy_container}>
-            <Link
-              href={`/academy/bachata`}
-              locale={locale}
-              className={`${style.academy} ${style.academy_bachata}`}
-            >
-              <Image
-                className={style.academy_teachers}
-                src="/dancers/bachata.webp"
-                alt="Social Event Medellin"
-                style={{ objectFit: "contain" }}
-                width={130}
-                height={200}
-              />
-              <p>Bachata</p>
-            </Link>
-            <Link
-              href={`/academy/zouk`}
-              locale={locale}
-              className={`${style.academy} ${style.academy_zouk}`}
-            >
-              <Image
-                className={style.academy_teachers}
-                src="/dancers/zouk.webp"
-                alt="Social Event Medellin"
-                style={{ objectFit: "contain" }}
-                width={130}
-                height={200}
-              />
-              <p>Zouk</p>
-            </Link>
-            <Link
-              href={`/academy/salsa`}
-              locale={locale}
-              className={`${style.academy} ${style.academy_salsa}`}
-            >
-              <Image
-                className={style.academy_teachers}
-                src="/dancers/salsa.webp"
-                alt="Social Event Medellin"
-                style={{ objectFit: "contain" }}
-                width={130}
-                height={200}
-              />
-              <p>Salsa</p>
-            </Link>
-            <Link
-              href={`/academy/tango`}
-              locale={locale}
-              className={`${style.academy} ${style.academy_tango}`}
-            >
-              <Image
-                className={style.academy_teachers}
-                src="/dancers/tango.webp"
-                alt="Social Event Medellin"
-                style={{ objectFit: "contain" }}
-                width={130}
-                height={200}
-              />
-              <p>Tango</p>
-            </Link>
-            <Link
-              href={`/academy/kizomba`}
-              locale={locale}
-              className={`${style.academy} ${style.academy_kiz}`}
-            >
-              <Image
-                className={style.academy_teachers}
-                src="/dancers/kiz.webp"
-                alt="Social Event Medellin"
-                style={{ objectFit: "contain" }}
-                width={130}
-                height={168}
-              />
-              <p>Kizomba</p>
-            </Link>
-            <Link
-              href={`/academy/urbano`}
-              locale={locale}
-              className={`${style.academy} ${style.academy_urbano}`}
-            >
-              <Image
-                className={style.academy_teachers}
-                src="/urbano.png"
-                alt="Social Event Medellin"
-                style={{ objectFit: "contain" }}
-                width={100}
-                height={200}
-              />
-              <p>Urbano</p>
-            </Link>
-          </div>
-          <div className={style.cuadro}></div>
-        </section>
+        <PrivateClasses t={t} locale={locale} />
+        <Academies t={t} locale={locale} />
         <section className={style.more_services}>
           <h2>{t("info_title")}</h2>
           <p>{t("info_description")}</p>

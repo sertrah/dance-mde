@@ -11,6 +11,7 @@
 
 .banner {
   height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -502,4 +503,67 @@
   line-height: 1;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 950px) {
+  .banner {
+    background-color: #102475;
+    height: 100lvh;
+  }
+  .cover_video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .private {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 40px;
+  }
+  .private_images {
+    height: 400px;
+  }
+  .private_image_1 {
+    right: 0;
+    margin: auto;
+    width: 240px;
+    transform: translateX(-117px);
+  }
+  .private_image_2 {
+    width: 240px;
+  }
+
+  .private_image_3 {
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 240px;
+    transform: translateX(117px);
+  }
+  .private_draw {
+    width: 450px;
+    height: 450px;
+    top: 130px;
+    border-radius: 100%;
+  }
+  .private_images::before,
+  .private_images::after {
+    top: 130px;
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+  }
+
+  .academy_container {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .more_services h2 {
+    max-width: 720px;
+    margin: auto;
+    margin-bottom: 35px;
+  }
 }

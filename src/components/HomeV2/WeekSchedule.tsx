@@ -128,137 +128,139 @@ function WeekSchedule() {
     <section className={style.schedule}>
       <h2 className="font-color-secondary">{t("schedule_title")}</h2>
 
-      <div className={style.week_schedule}>
-        <TabContext value={value}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList onChange={handleChange} aria-label="Social Events tabs">
-              <Tab label="Monday" value="1" />
-              <Tab label="Tuesday" value="2" />
-              <Tab label="Wednesday" value="3" />
-              <Tab label="Thursday" value="4" />
-              <Tab label="Friday" value="5" />
-              <Tab label="Saturday" value="6" />
-              <Tab label="Sunday" value="7" />
-            </TabList>
-          </Box>
-          <StyledTabPanel value="1">
-            <>
-              {sociales.monday.places.map(
-                ({ name, label, instagramLink, genres }) => (
-                  <Card
-                    key={`monday-${name}`}
-                    name={name}
-                    label={label}
-                    instagramLink={instagramLink}
-                    genres={genres}
-                  />
-                )
-              )}
-            </>
-          </StyledTabPanel>
-          <StyledTabPanel value="2">
-            <>
-              {sociales.tuesday.places.map(
-                ({ name, label, instagramLink, genres }) => (
-                  <Card
-                    key={`monday-${name}`}
-                    name={name}
-                    label={label}
-                    instagramLink={instagramLink}
-                    genres={genres}
-                  />
-                )
-              )}
-            </>
-          </StyledTabPanel>
-          <StyledTabPanel value="3">
-            <>
-              {sociales.wednesday.places.map(
-                ({ name, label, instagramLink, genres }) => (
-                  <Card
-                    key={`monday-${name}`}
-                    name={name}
-                    label={label}
-                    instagramLink={instagramLink}
-                    genres={genres}
-                  />
-                )
-              )}
-            </>
-          </StyledTabPanel>
-          <StyledTabPanel value="4">
-            <>
-              {sociales.thursday.places.map(
-                ({ name, label, instagramLink, genres }) => (
-                  <Card
-                    key={`monday-${name}`}
-                    name={name}
-                    label={label}
-                    instagramLink={instagramLink}
-                    genres={genres}
-                  />
-                )
-              )}
-            </>
-          </StyledTabPanel>
-          <StyledTabPanel value="5">
-            <>
-              {sociales.friday.places.map(
-                ({ name, label, instagramLink, genres }) => (
-                  <Card
-                    key={`monday-${name}`}
-                    name={name}
-                    label={label}
-                    instagramLink={instagramLink}
-                    genres={genres}
-                  />
-                )
-              )}
-            </>
-          </StyledTabPanel>
-          <StyledTabPanel value="6">
-            <>
-              {sociales.saturday.places.map(
-                ({ name, label, instagramLink, genres }) => (
-                  <Card
-                    key={`monday-${name}`}
-                    name={name}
-                    label={label}
-                    instagramLink={instagramLink}
-                    genres={genres}
-                  />
-                )
-              )}
-            </>
-          </StyledTabPanel>
-          <StyledTabPanel value="7">
-            <>
-              {sociales.sunday.places.map(
-                ({ name, label, instagramLink, genres }) => (
-                  <Card
-                    key={`monday-${name}`}
-                    name={name}
-                    label={label}
-                    instagramLink={instagramLink}
-                    genres={genres}
-                  />
-                )
-              )}
-            </>
-          </StyledTabPanel>
-        </TabContext>
-      </div>
+      <div  className={style.schedule_container}>
+        <div className={style.week_schedule}>
+          <TabContext value={value}>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <TabList onChange={handleChange} aria-label="Social Events tabs">
+                <Tab label="Monday" value="1" />
+                <Tab label="Tuesday" value="2" />
+                <Tab label="Wednesday" value="3" />
+                <Tab label="Thursday" value="4" />
+                <Tab label="Friday" value="5" />
+                <Tab label="Saturday" value="6" />
+                <Tab label="Sunday" value="7" />
+              </TabList>
+            </Box>
+            <StyledTabPanel value="1">
+              <>
+                {sociales.monday.places.map(
+                  ({ name, label, instagramLink, genres }) => (
+                    <Card
+                      key={`monday-${name}`}
+                      name={name}
+                      label={label}
+                      instagramLink={instagramLink}
+                      genres={genres}
+                    />
+                  )
+                )}
+              </>
+            </StyledTabPanel>
+            <StyledTabPanel value="2">
+              <>
+                {sociales.tuesday.places.map(
+                  ({ name, label, instagramLink, genres }) => (
+                    <Card
+                      key={`monday-${name}`}
+                      name={name}
+                      label={label}
+                      instagramLink={instagramLink}
+                      genres={genres}
+                    />
+                  )
+                )}
+              </>
+            </StyledTabPanel>
+            <StyledTabPanel value="3">
+              <>
+                {sociales.wednesday.places.map(
+                  ({ name, label, instagramLink, genres }) => (
+                    <Card
+                      key={`monday-${name}`}
+                      name={name}
+                      label={label}
+                      instagramLink={instagramLink}
+                      genres={genres}
+                    />
+                  )
+                )}
+              </>
+            </StyledTabPanel>
+            <StyledTabPanel value="4">
+              <>
+                {sociales.thursday.places.map(
+                  ({ name, label, instagramLink, genres }) => (
+                    <Card
+                      key={`monday-${name}`}
+                      name={name}
+                      label={label}
+                      instagramLink={instagramLink}
+                      genres={genres}
+                    />
+                  )
+                )}
+              </>
+            </StyledTabPanel>
+            <StyledTabPanel value="5">
+              <>
+                {sociales.friday.places.map(
+                  ({ name, label, instagramLink, genres }) => (
+                    <Card
+                      key={`monday-${name}`}
+                      name={name}
+                      label={label}
+                      instagramLink={instagramLink}
+                      genres={genres}
+                    />
+                  )
+                )}
+              </>
+            </StyledTabPanel>
+            <StyledTabPanel value="6">
+              <>
+                {sociales.saturday.places.map(
+                  ({ name, label, instagramLink, genres }) => (
+                    <Card
+                      key={`monday-${name}`}
+                      name={name}
+                      label={label}
+                      instagramLink={instagramLink}
+                      genres={genres}
+                    />
+                  )
+                )}
+              </>
+            </StyledTabPanel>
+            <StyledTabPanel value="7">
+              <>
+                {sociales.sunday.places.map(
+                  ({ name, label, instagramLink, genres }) => (
+                    <Card
+                      key={`monday-${name}`}
+                      name={name}
+                      label={label}
+                      instagramLink={instagramLink}
+                      genres={genres}
+                    />
+                  )
+                )}
+              </>
+            </StyledTabPanel>
+          </TabContext>
+        </div>
 
-      <div className={style.schedule_dance}>
-        <div className={style.schedule_circle}></div>
-        <Image
-          className={style.schedule_dance_img}
-          src="/salsa1.png"
-          alt="Social Event Medellin"
-          style={{ objectFit: "cover" }}
-          width={200}
-          height={300}
-        />
+        <div className={style.schedule_dance}>
+          <div className={style.schedule_circle}></div>
+          <Image
+            className={style.schedule_dance_img}
+            src="/salsa1.png"
+            alt="Social Event Medellin"
+            style={{ objectFit: "cover" }}
+            width={200}
+            height={300}
+          />
+        </div>
       </div>
     </section>
   );
