@@ -9,13 +9,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import style from "./../styles/temp.module.css";
 import AdBanner from "@/components/UI-shared/AdBanner";
 import PrivateClasses from "@/components/HomeV2/PrivateClasses";
-import Academies from "@/components/HomeV2/Academies";
 
 const Cover = dynamic(() => import("@/components/HomeV2/Cover"));
+const Academies = dynamic(() => import("@/components/HomeV2/Academies"));
+const SpecialEvent = dynamic(() => import("@/components/HomeV2/SpecialEvent"));
 const Events = dynamic(() => import("@/components/HomeV2/Events"));
 const WeekSchedule = dynamic(() => import("@/components/HomeV2/WeekSchedule"));
 
-const whsap = "https://wa.me/573052597643?text=Hey";
+const whsap = "https://wa.me/573052597643?text=Quiero....saber...Mas";
 
 export default function HomePage(props: any) {
   const { t } = useTranslation("home");
@@ -95,8 +96,18 @@ export default function HomePage(props: any) {
       <main>
         <header className={`header ${small ? "small" : ""}`}>MB</header>
         <Cover t={t} />
+        <p
+          style={{
+            textAlign: "center",
+            margin: "2rem auto",
+            width: "80%",
+            maxWidth: "800px",
+          }}
+        >
+          {t("long_description")}
+        </p>
+        <SpecialEvent t={t} />
         <AdBanner />
-
         <Events />
         <WeekSchedule />
         <PrivateClasses t={t} locale={locale} />

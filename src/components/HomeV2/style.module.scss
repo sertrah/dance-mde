@@ -522,7 +522,29 @@
   }
 }
 
+.events_lg {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 400px;
+}
+.events_lg > div {
+  width: 100%;
+  height: 100%;
+}
 
+.events_lg .card_events {
+  height: 100%;
+}
+
+.events_lg .event_name {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+/* .events_item_lg{
+  flex-basis: 33%;
+} */
 
 @media (min-width: 950px) {
   .schedule_container {

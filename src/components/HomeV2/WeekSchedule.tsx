@@ -128,11 +128,16 @@ function WeekSchedule() {
     <section className={style.schedule}>
       <h2 className="font-color-secondary">{t("schedule_title")}</h2>
 
-      <div  className={style.schedule_container}>
+      <div className={style.schedule_container}>
         <div className={style.week_schedule}>
           <TabContext value={value}>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-              <TabList onChange={handleChange} aria-label="Social Events tabs">
+              <TabList
+                variant="scrollable"
+                onChange={handleChange}
+                scrollButtons="auto"
+                aria-label="Social Events tabs"
+              >
                 <Tab label="Monday" value="1" />
                 <Tab label="Tuesday" value="2" />
                 <Tab label="Wednesday" value="3" />
