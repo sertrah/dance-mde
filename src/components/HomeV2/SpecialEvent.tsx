@@ -6,7 +6,7 @@ import Image from "next/image";
 const SpecialEvent: React.FC<{ t: (arg: string) => string }> = ({ t }) => {
   return (
     <section className={style.specialEvent}>
-      <div className={style.specialBadge}>Imperdible!</div>
+      <div className={style.specialBadge}>{t("special-unmissable")}!</div>
       <h2>
         {t("special-event-title")}
         <br />
