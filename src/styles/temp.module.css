@@ -500,9 +500,11 @@
 
 .academies_description {
   color: black;
-  line-height: 1;
+  line-height: 1.2;
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 2rem;
+  width: 90%;
 }
 
 @media (min-width: 950px) {
@@ -565,6 +567,11 @@
     max-width: 720px;
     margin: auto;
     margin-bottom: 35px;
+  }
+
+  .academies_description {
+    max-width: 1000px;
+    line-height: 1.3;
   }
 }
 

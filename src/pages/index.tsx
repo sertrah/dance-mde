@@ -1,63 +1,120 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import React from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import style from "./../styles/temp.module.css";
-import AdBanner from "@/components/UI-shared/AdBanner";
-import PrivateClasses from "@/components/HomeV2/PrivateClasses";
-
-const Cover = dynamic(() => import("@/components/HomeV2/Cover"));
-const Academies = dynamic(() => import("@/components/HomeV2/Academies"));
-const SpecialEvent = dynamic(() => import("@/components/HomeV2/SpecialEvent"));
-const Events = dynamic(() => import("@/components/HomeV2/Events"));
-const WeekSchedule = dynamic(() => import("@/components/HomeV2/WeekSchedule"));
-
-const whsap = "https://wa.me/573052597643?text=Quiero....saber...Mas";
+const Home = dynamic(() => import("@/components/Home"));
 
 export default function HomePage(props: any) {
-  const { t } = useTranslation("home");
-  const { locale } = useRouter();
-
   function addProductJsonLd() {
     return {
       __html: `{
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Medallo Baila",
-        "alternateName": "TEMP",
-        "url": "https://medallobaila.com/",
-        "logo": "https://medallobaila.com/_next/image?url=%2Flogo.png&w=1920&q=75",
-        "sameAs": [
-          "https://www.instagram.com/harlen.giraldo/",
-          "https://www.linkedin.com/in/harlen-giraldo-ortega-852179116/"
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MedalloBaila",
+  "url": "http://medallobaila.com/",
+  "logo": "https://medallobaila.com/logo.png",
+  "description": "Descubre los mejores eventos y clases de baile en Medellín. Salsa, bachata, zouk y más.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios especiales",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Clases de baile",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Clase de Salsa"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Clase de Bachata"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Clase de Zouk"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Clase de personalizadas"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Eventos de baile",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Event",
+              "name": "Noche de Salsa en Medellín",
+              "location": "Medellín",
+              "startDate": "2024-01-20T20:00",
+              "endDate": "2024-12-21T02:00"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Event",
+              "name": "Maratón de Bachata en Medellín",
+              "location": "Medellín",
+              "startDate": "2024-01-20T20:00",
+              "endDate": "2024-12-21T02:00"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Event",
+              "name": "Baila Zouk en Medellín",
+              "location": "Medellín",
+              "startDate": "2024-01-20T20:00",
+              "endDate": "2024-12-21T02:00"
+            }
+          }
         ]
       }
+    ]
+  },
+  "event": [
+    {
+      "@type": "Event",
+      "name": "Noche de bailar Salsa, Bachata y Zouk en Medellín",
+      "location": "Medellín",
+      "startDate": "2024-01-20T20:00",
+      "endDate": "2024-12-21T02:00",
+      "offers": {
+        "@type": "Offer",
+        "price": "10000",
+        "priceCurrency": "COP"
+      }
+    }
+  ]
+}
   `,
     };
   }
 
-  const [small, setSmall] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-        setSmall(window.pageYOffset > 400)
-      );
-    }
-  }, []);
-
   return (
     <>
       <Head>
-        <title>Clases de baile en medellin</title>
-        <meta
-          name="description"
-          content="Explora la mejor selección de academias de baile, eventos, clases y sociales en Medellín. Descubre clases de salsa, bachata, zouk y más."
-        />
+        <title>{props.title}</title>
+        <meta name="description" content={props.keyWord} />
         <link
           rel="alternate"
           href={`https://medallobaila.com${
@@ -78,14 +135,8 @@ export default function HomePage(props: any) {
           property="og:locale"
           content={props.currentLocale.toLowerCase()}
         />
-        <meta
-          property="og:title"
-          content="Clases de Baile en Medellín - Sociales en Medellín"
-        />
-        <meta
-          property="og:description"
-          content="Explora la mejor selección de academias de baile, eventos, clases y sociales en Medellín. Descubre clases de salsa, bachata, zouk y más."
-        />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:description" content={props.keyWord} />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
@@ -94,31 +145,7 @@ export default function HomePage(props: any) {
         />
       </Head>
       <main>
-        <header className={`header ${small ? "small" : ""}`}>MB</header>
-        <Cover t={t} />
-        <p
-          style={{
-            textAlign: "center",
-            margin: "2rem auto",
-            width: "80%",
-            maxWidth: "800px",
-          }}
-        >
-          {t("long_description")}
-        </p>
-        <SpecialEvent t={t} />
-        <AdBanner />
-        <Events />
-        <WeekSchedule />
-        <PrivateClasses t={t} locale={locale} />
-        <Academies t={t} locale={locale} />
-        <section className={style.more_services}>
-          <h2>{t("info_title")}</h2>
-          <p>{t("info_description")}</p>
-          <Link href={whsap} target="_blank">
-            {t("contact")}
-          </Link>
-        </section>
+        <Home />
       </main>
     </>
   );
@@ -126,12 +153,17 @@ export default function HomePage(props: any) {
 
 export async function getStaticProps({ previewData, locale }: any) {
   const currentLocale = locale ?? "es-CO";
+  const title =
+    currentLocale === "en-US"
+      ? "Dance classes in Medellín - Social Dancing in Medellín"
+      : "Clases de baile en Medellín - Sociales en Medellín";
   const keyWordEN =
     "Explore the best selection of dance academies, events, classes and socials in Medellín. Discover salsa, bachata, zouk and more.";
   const keyWordES =
     "Explora la mejor selección de academias de baile, eventos, clases y sociales en Medellín. Descubre clases de salsa, bachata, zouk y más.";
   return {
     props: {
+      title,
       keyWord: currentLocale === "en-US" ? keyWordEN : keyWordES,
       currentLocale,
       ...(await serverSideTranslations(currentLocale, [

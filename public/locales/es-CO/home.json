@@ -1,10 +1,10 @@
 {
   "title": "Medallo Baila",
   "description_home": "Descubre los mejores sociales y profesores de baile de medelin",
-  "long_description": "Bienvenido a MedalloBaila, tu website definitivo para encontrar los mejores eventos de baile, clases y sociales en Medellín. Nuestra plataforma te mantiene al día con los eventos de baile social en Medellín, donde podrás practicar tus movimientos, conocer gente nueva y disfrutar de la vibrante escena de baile de la ciudad. No te pierdas las clases de baile en Medellín que se destacan por su calidad y profesionalismo.",
+  "long_description": "Bienvenido a MedalloBaila, tu website definitivo para encontrar los mejores eventos para bailar, tomar clases en Medellín. Nuestra plataforma te mantiene al día con los eventos de baile social en Medellín. No te pierdas las clases de baile en Medellín que se destacan por su calidad y profesionalismo.",
   "event_title": "Próximos Eventos",
   "event_description": "¡No te pierdas los próximos eventos de baile en Medellín! Mantente al día con todos los eventos de baile que sucederán en la ciudad.",
-  "schedule_title": "¿Dónde salir hoy?",
+  "schedule_title": "Sociales Top: Descubre dónde bailar en Medellín esta noche",
   "private_title": "Clases particulares",
   "private_short_description": "Mejora tus habilidades y conviértete en un bailador experto.",
   "private_description": "Incrementa tu nivel de baile con los mejores profesores de baile en Medellín. Aprovecha nuestras clases impartidas por expertos en los generos Bachata, Salsa, Porro, Zouk & Kizomba",
@@ -25,6 +25,17 @@
   "special-event-more": "¿Quieres saber más?",
   "special-event-click-here": "Haz clic aquí.",
   "special-event-link-2": "No te querrás perder este social.",
-  "special-event-buy-here": "No te querrás perder este social.",
-  "special-event-wsp": "También puedes hacer una transferencia a nuestra cuenta de ahorros de Bancolombia( 31454267802 ) y enviar el comprobante al siguiente número."
+  "special-event-buy-here": "Compre sus entradas aquí",
+  "where-to-go": "¿Quieres aprovechar al máximo tus ganas de bailar bachata, salsa y zouk en Medellín? ¡Programa tu semana de baile! Agenda semanal para bailarines:",
+  "where-to-go-1": "Lunes: Empieza la semana con energía en Blood Dance Company. Clases para todos los niveles y social después (clase de Bachata. Baila bachata, Salsa y zouk toda la noche).",
+  "where-to-go-2": "Martes: Sumérgete en el mundo de la bachata en Nueva Guardia. Aprende nuevos pasos y disfruta de una noche llena de sensualidad (Clase de bachata. Baila bachata toda la noche). ",
+  "where-to-go-3": "Miercoles: A mitad de semana, ¡máxima diversión! Majao ofrece una mezcla perfecta de ritmos latinos para todos los gustos (Clase de bachata. Baila bachata, salsa y zouk toda la noche).",
+  "where-to-go-4": "Jueves: Prepárate para el fin de semana en The Grand Social. Ambiente exclusivo y los mejores DJ's de bachata de la ciudad (clase de bachata, baila bachata toda la noche).",
+  "where-to-go-5": "Viernes: ¡Bienvenido al fin de semana! Blood Dance Company te espera con una explosión de ritmos latinos para bailar hasta el amanecer (clase de salsa. Baila bachata y salsa toda la noche).",
+  "where-to-go-6": "Sábado:  La noche es joven en DanceFree. Ven a disfrutar de los mejores éxitos de bachata y salsa en un ambiente único (clase de salsa y bachata, baile de bachata y salsa toda la noche).",
+  "where-to-go-7": "Domingo: Cierre la semana con broche de oro en ZoukMedellin por la tarde y en CONEXION DANCE por la noche. Dos lugares, una pasión: ¡bailar!",
+  "special-event-wsp": "También puedes hacer una transferencia a nuestra cuenta de ahorros de Bancolombia( 31454267802 ) y enviar el comprobante al siguiente número.",
+  "academy-title": "¿Estás buscando las mejores academias de baile en Medellín?",
+  "academy-description-1": "¡Baila como un paisa en Medellín! Nuestra ciudad es un paraíso para los bailarines con academias de baile para todos los gustos y presupuestos. ¿Buscas clases de salsa en Medellín? ¿O tal vez prefieres aprender tango en la capital de la montaña? Sea cual sea su ritmo, aquí lo encontrará. aquí lo encontrará. Desde clases de baile gratuitas hasta opciones económicas desde 5 dolares, Medellín tiene algo para cada bailarín. Aprende bachata, perfecciona tu porro o sumérgete en el mundo de la danza urbana. danza urbana. Las mejores academias de baile de Medellín ofrecen una gran variedad de estilos. variedad de estilos: Salsa caleña y cubana - Tango argentino - Porro antioqueño - Porro antioqueño - Cumbia colombiana - Bachata dominicana - Baile urbano y hip hop Baile urbano y hip hop brasileño Zouk.",
+  "academy-description-2": "Seas principiante o experto, adulto o niño, encontrarás clases de baile en Medellín clases de baile en Medellín adaptadas a tu nivel. Las academias que encontrarás aquí ofrecen cursos para todas las edades y experiencias."
 }

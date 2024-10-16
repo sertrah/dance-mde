@@ -127,7 +127,18 @@ function WeekSchedule() {
   return (
     <section className={style.schedule}>
       <h2 className="font-color-secondary">{t("schedule_title")}</h2>
-
+      <div className={style.schedule_content}>
+        <p className={style.schedule_description}>{t("where-to-go")}</p>
+        <ul className={style.schedule_weekly}>
+          <li>{t("where-to-go-1")}</li>
+          <li>{t("where-to-go-2")}</li>
+          <li>{t("where-to-go-3")}</li>
+          <li>{t("where-to-go-4")}</li>
+          <li>{t("where-to-go-5")}</li>
+          <li>{t("where-to-go-6")}</li>
+          <li>{t("where-to-go-7")}</li>
+        </ul>
+      </div>
       <div className={style.schedule_container}>
         <div className={style.week_schedule}>
           <TabContext value={value}>

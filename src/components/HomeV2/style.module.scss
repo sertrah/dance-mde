@@ -542,6 +542,29 @@
   text-transform: uppercase;
 }
 
+.schedule_content {
+  width: 90%;
+  max-width: 50rem;
+  margin: 0 auto 3rem;
+}
+
+.schedule_description {
+  color: #2c2b2a;
+}
+
+.schedule_weekly {
+  color: #2c2b2a;
+  font-family: var(--noto_sans-font);
+  font-weight: 200;
+  margin-left: 1.4rem;
+  margin-top: 1rem;
+  list-style: circle;
+
+  & > li {
+    margin-bottom: 1rem;
+  }
+}
+
 /* .events_item_lg{
   flex-basis: 33%;
 } */
