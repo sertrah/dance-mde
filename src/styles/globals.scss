@@ -255,7 +255,8 @@ h1.text_underline::before {
   margin: auto;
 }
 
-p {
+p,
+li {
   font-size: 1rem;
   line-height: 1.6;
   overflow-wrap: break-word;
@@ -388,3 +389,136 @@ a {
     padding: 10px 20px;
   }
 }
+
+// NEW ------
+
+.subtitle--flower {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  &-large {
+    z-index: 3;
+    position: relative;
+    color: #f6f2e8;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 0.8;
+    flex-grow: 0;
+    flex-basis: 90%;
+    text-align: center;
+
+    &__main {
+      color: #440c0d;
+      font-weight: 300;
+      line-height: 1;
+      width: 70%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translateY(0.1em);
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    &__flower-r {
+      transform: translateY(-1rem) translateX(-1rem);
+    }
+
+    &__flower-l {
+      place-self: flex-end;
+      transform: translateY(1rem) translateX(1rem);
+    }
+  }
+  &--text-black {
+    & .subtitle--flower-large {
+      color: #282828;
+      &__main {
+        color: #e3e3e3;
+      }
+    }
+  }
+}
+
+.dark-subtitle {
+  position: relative;
+  padding-top: 3rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 3rem;
+  z-index: 1;
+  &__flower-l,
+  &__flower-r {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__flower-l {
+    left: 0;
+    top: 0;
+    transform: translateY(-1rem);
+  }
+
+  &__flower-r {
+    right: 0;
+    bottom: 0;
+  }
+
+  &--title {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    color: #282828;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 0.8;
+    flex-grow: 0;
+    flex-basis: min-content;
+    text-align: center;
+
+    &__main {
+      color: #f6f2e8;
+      font-weight: 300;
+      line-height: 1;
+      width: 70%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translateY(0.1em);
+      font-size: 0.8em;
+      text-align: center;
+    }
+  }
+
+  &--text-black {
+    & .dark-subtitle--title {
+      color: #e3e3e3;
+      &__main {
+        color: #282828;
+      }
+    }
+  }
+}
+
+.text-white {
+  color: #f3f3f3;
+}
+
+.button-large {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(to bottom, #96cfbe, #6db09c);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+// End new ----

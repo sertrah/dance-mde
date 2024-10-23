@@ -1,0 +1,59 @@
+.danceAcademies {
+  &__container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 3rem;
+  }
+}
+
+.bentoCollage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+.bento {
+  background: linear-gradient(to bottom, #fffdfc, #fffdfa, #fffdfc);
+  border-radius: 20px;
+  color: #000;
+  padding: 1rem 0 0;
+  overflow: hidden;
+  & p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  & img {
+    transform: translateY(5px);
+  }
+  &__horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__orange {
+    background-image: linear-gradient(to bottom, #ff9573, #ff5722, #e45427);
+  }
+  &__purple {
+    background-image: linear-gradient(to bottom, #ddadfd, #b266e5, #9941d4);
+  }
+  &__blue {
+    background-image: linear-gradient(to bottom, #b0dcfe, #78b7e7, #3594dc);
+  }
+  &__beige {
+    background-image: linear-gradient(to bottom, #faf0e6, #f7e3cf, #e4cfbb);
+  }
+  &__black {
+    background-image: linear-gradient(to bottom, #3d3d3d, #313131, #131313);
+    color: #fff;
+  }
+  &__red {
+    background-image: linear-gradient(to bottom, #c1363e, #ad3038, #8c1b22);
+  }
+}
