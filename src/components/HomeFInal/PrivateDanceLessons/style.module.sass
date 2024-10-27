@@ -2,6 +2,18 @@
     background: linear-gradient(to bottom,#FEE28E, #F6CF5E)
     position: relative
     padding: 1rem 2rem 4rem
+    &__internal_triangle
+        position: absolute
+        margin: auto
+        top: 0
+        left: 0
+        right: 0
+        width: 90%
+        background: #fff
+        height: 70px
+        z-index: 10
+        transform: translateY(-38px)
+        clip-path: polygon(0 0, 0 25%, 100% 100%, 0 100%)
     &__underBg
         background: #fff
         position: absolute
@@ -13,6 +25,18 @@
         width: 90%
         height: 95%
         margin: auto
+        &_triangle
+            position: absolute
+            margin: auto
+            bottom: -65px
+            left: 0
+            right: 0
+            width: 90%
+            background: #fff
+            height: 100px
+            z-index: 10
+            clip-path: polygon(0 0, 100% 0, 100% 19%, 0 82%)
+
     &__container
         width: 90%
         margin: 0 auto
@@ -22,6 +46,22 @@
     &__text
         text-align: center
         margin-bottom: 2rem
+    &__aboveBg_triangle
+        background: linear-gradient(to bottom,#F6CF5E, #FEE28E)
+        position: relative
+        z-index: 3
+        width: 100%
+        height: 60px
+        clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%)
+        transform: translateY(1px)
+    &__triangleEnd
+        background: linear-gradient(to bottom,#F6CF5E, #FEE28E)
+        position: relative
+        z-index: 3
+        width: 100%
+        height: 100px
+        clip-path: polygon(0 0, 100% 0, 100% 5%, 0 82%)
+        transform: translateY(-1px)
 
 .dancers
     position: relative

@@ -3,10 +3,19 @@ import Image from "next/image";
 import classNames from "classnames";
 import style from "./style.module.scss";
 
-const Bento: FC<{ color: string }> = ({ color }) => {
+const academies = [
+  { title: "Urbano", color: "orange" },
+  { title: "Bachata", color: "purple" },
+  { title: "Zouk", color: "blue" },
+  { title: "Tango", color: "black" },
+  { title: "Kizomba", color: "beige" },
+  { title: "Salsa", color: "red" },
+];
+
+const Bento: FC<{ color: string; title: string }> = ({ color, title }) => {
   return (
     <div className={classNames(style.bento, style[`bento__${color}`])}>
-      <p>Gente Bailando</p>
+      <p>{title}</p>
       <Image
         src="/sebas.webp"
         alt="Gente de medellin bailando"
@@ -26,18 +35,15 @@ const BentoCollage = () => {
           src="/sebas.webp"
           alt="Gente de medellin bailando"
           height={200}
-          width={200}
+          width={150}
           style={{ objectFit: "contain" }}
         />
-        <p>Gente Bailando</p>
+        <p>Encuentra tu lugar</p>
       </div>
       <div className={style.bentoCollage__items}>
-        <Bento color="orange" />
-        <Bento color="purple" />
-        <Bento color="blue" />
-        <Bento color="black" />
-        <Bento color="beige" />
-        <Bento color="red" />
+        {academies.map(({ title, color }) => (
+          <Bento key={title} title={title} color={color} />
+        ))}
       </div>
     </div>
   );

@@ -166,7 +166,7 @@ function WeekSchedule() {
                 <StyledTabLabel label="Thursday" value="4" />
                 <StyledTabLabel label="Friday" value="5" />
                 <StyledTabLabel label="Saturday" value="6" />
-                <StyledTabLabel label="Sunday" value="7" />
+                <StyledTabLabel label="Sunday" value="0" />
               </StyledTabList>
             </Box>
             <StyledTabPanel value="1">
@@ -259,7 +259,7 @@ function WeekSchedule() {
                 )}
               </>
             </StyledTabPanel>
-            <StyledTabPanel value="7">
+            <StyledTabPanel value="0">
               <>
                 {sociales.sunday.places.map(
                   ({ name, label, instagramLink, genres }) => (

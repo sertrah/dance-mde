@@ -43,7 +43,7 @@ const HomePage = () => {
       >
         {t("long_description")}
       </p>
-      <SpecialEvent t={t} />
+      {/* <SpecialEvent t={t} /> */}
       <AdBanner />
       <Events />
       <WeekSchedule />

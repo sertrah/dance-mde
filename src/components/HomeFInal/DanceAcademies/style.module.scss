@@ -1,4 +1,6 @@
 .danceAcademies {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
   &__container {
     width: 90%;
     margin: auto;
@@ -12,6 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 3rem;
   &__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -27,7 +30,8 @@
   overflow: hidden;
   & p {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
+    text-transform: uppercase;
   }
   & img {
     transform: translateY(5px);

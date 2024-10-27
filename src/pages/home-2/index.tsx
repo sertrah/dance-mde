@@ -1,10 +1,20 @@
-import DanceAcademies from "@/components/HomeFInal/DanceAcademies/DanceAcademies";
-import DanceEventsCalendar from "@/components/HomeFInal/DanceEventsCalendar/DanceEventsCalendar";
-import HeroSection from "@/components/HomeFInal/HeroSection/HeroSection";
-import PrivateDanceLessons from "@/components/HomeFInal/PrivateDanceLessons/PrivateDanceLessons";
-import UpcomingEvents from "@/components/HomeFInal/UpcomingEvents/UpcomingEvents";
 import Head from "next/head";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import HeroSection from "@/components/HomeFInal/HeroSection/HeroSection";
+
+const UpcomingEvents = dynamic(
+  () => import("@/components/HomeFInal/UpcomingEvents/UpcomingEvents")
+);
+const DanceEventsCalendar = dynamic(
+  () => import("@/components/HomeFInal/DanceEventsCalendar/DanceEventsCalendar")
+);
+const PrivateDanceLessons = dynamic(
+  () => import("@/components/HomeFInal/PrivateDanceLessons/PrivateDanceLessons")
+);
+const DanceAcademies = dynamic(
+  () => import("@/components/HomeFInal/DanceAcademies/DanceAcademies")
+);
 
 export default function Home2({ page }: any) {
   return (
@@ -29,15 +39,28 @@ export default function Home2({ page }: any) {
   );
 }
 
-export async function getStaticProps({ previewData, params, locale }: any) {
-  /*   const client = createClient({ previewData });
+export async function getStaticProps({ previewData, locale }: any) {
   const currentLocale = locale ?? "es-CO";
-
-  const page = await client.getSingle("teachers", { lang: currentLocale });
- */
+  const title =
+    currentLocale === "en-US"
+      ? "Dance classes in Medellín - Social Dancing in Medellín"
+      : "Clases de baile en Medellín - Sociales en Medellín";
+  const keyWordEN =
+    "Explore the best selection of dance academies, events, classes and socials in Medellín. Discover salsa, bachata, zouk and more.";
+  const keyWordES =
+    "Explora la mejor selección de academias de baile, eventos, clases y sociales en Medellín. Descubre clases de salsa, bachata, zouk y más.";
   return {
     props: {
-      page: "",
+      title,
+      keyWord: currentLocale === "en-US" ? keyWordEN : keyWordES,
+      currentLocale,
+      ...(await serverSideTranslations(currentLocale, [
+        "common",
+        "footer",
+        "teachers",
+        "home",
+      ])),
+      // Will be passed to the page component as props
     },
   };
 }
