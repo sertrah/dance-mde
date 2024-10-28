@@ -371,6 +371,10 @@ a {
     background-color: #000;
     transition: background-color 0.5s;
   }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .cookie-consent {

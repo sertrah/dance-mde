@@ -2,6 +2,7 @@
   text-align: center;
   text-transform: capitalize;
 }
+
 .academies {
   padding: 1rem;
   gap: 1.6rem;
@@ -28,10 +29,10 @@
 .academy_detail {
   padding: 1rem 1rem;
 }
-.academy_detail h2{
+.academy_detail h2 {
   margin-bottom: 1rem;
 }
-.academy_detail p{
+.academy_detail p {
   margin-bottom: 1rem;
 }
 

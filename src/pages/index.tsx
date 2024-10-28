@@ -120,13 +120,19 @@ function addProductJsonLd() {
   };
 }
 
-export default function Home2({ title, keyWord, currentLocale }: any) {
+export default function Home2({
+  title,
+  keyWord,
+  currentLocale,
+  keywords,
+}: any) {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={keyWord} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content={keywords} />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"
@@ -164,10 +170,16 @@ export async function getStaticProps({ previewData, locale }: any) {
     "Explore the best selection of dance academies, events, classes and socials in Medellín. Discover salsa, bachata, zouk and more.";
   const keyWordES =
     "Explora la mejor selección de academias de baile, eventos, clases y sociales en Medellín. Descubre clases de salsa, bachata, zouk y más.";
+
+  const keywordsEN =
+    "dancing classes near me, dance classes for adults near me, salsa dance, bachata dance, dance studio dance, private dancing class	";
+  const keywordsES =
+    "clases privadas, clases de baile cerca de mi, clases de baile para adultos cerca de mi, baile salsa, baile bachata, estudio de baile danza  ";
   return {
     props: {
       title,
       keyWord: currentLocale === "en-US" ? keyWordEN : keyWordES,
+      keywords: currentLocale === "en-US" ? keywordsEN : keywordsES,
       currentLocale,
       ...(await serverSideTranslations(currentLocale, [
         "common",
