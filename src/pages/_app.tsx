@@ -1,11 +1,6 @@
 import "@/styles/globals.scss";
 import Script from "next/script";
-import {
-  Roboto,
-  Abril_Fatface,
-  Noto_Sans,
-  Libre_Caslon_Text,
-} from "@next/font/google";
+import { Roboto, Noto_Sans, Libre_Caslon_Text } from "@next/font/google";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -25,19 +20,23 @@ const roboto = Roboto({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--roboto-font",
+  preload: true,
+  display: "swap",
 });
 
 const libre_caslon = Libre_Caslon_Text({
   weight: "400",
   subsets: ["latin"],
   variable: "--libre-caslon-text-font",
+  preload: true,
+  display: "swap",
 });
 
 const noto_sans = Noto_Sans({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
   style: ["normal"],
   subsets: ["latin"],
-  display: "swap",
+  display: "optional",
   variable: "--noto_sans-font",
 });
 const theme = createTheme({
@@ -133,7 +132,12 @@ const App = ({ Component, pageProps }: AppProps) => {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-      <Script id="adSense" strategy="afterInteractive" crossOrigin="anonymous" src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1751201806991863`} />
+      <Script
+        id="adSense"
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1751201806991863`}
+      />
 
       <Script
         strategy="afterInteractive"
@@ -155,12 +159,14 @@ const App = ({ Component, pageProps }: AppProps) => {
           <style jsx global>{`
             @font-face {
               font-family: ${libre_caslon.style.fontFamily};
+              font-display: swap;
             }
             @font-face {
               font-family: ${noto_sans.style.fontFamily};
             }
             html {
               font-family: ${roboto.style.fontFamily};
+              font-display: swap;
             }
           `}</style>
           <ThemeProvider theme={theme}>

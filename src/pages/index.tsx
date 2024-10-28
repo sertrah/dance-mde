@@ -1,143 +1,142 @@
-import React from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import HeroSection from "@/components/HomeFInal/HeroSection/HeroSection";
 
-const Home = dynamic(() => import("@/components/Home"));
+const UpcomingEvents = dynamic(
+  () => import("@/components/HomeFInal/UpcomingEvents/UpcomingEvents")
+);
+const DanceEventsCalendar = dynamic(
+  () => import("@/components/HomeFInal/DanceEventsCalendar/DanceEventsCalendar")
+);
+const PrivateDanceLessons = dynamic(
+  () => import("@/components/HomeFInal/PrivateDanceLessons/PrivateDanceLessons")
+);
+const DanceAcademies = dynamic(
+  () => import("@/components/HomeFInal/DanceAcademies/DanceAcademies")
+);
 
-export default function HomePage(props: any) {
-  function addProductJsonLd() {
-    return {
-      __html: `{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "MedalloBaila",
-  "url": "http://medallobaila.com/",
-  "logo": "https://medallobaila.com/logo.png",
-  "description": "Descubre los mejores eventos y clases de baile en Medellín. Salsa, bachata, zouk y más.",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Servicios especiales",
-    "itemListElement": [
-      {
-        "@type": "OfferCatalog",
-        "name": "Clases de baile",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Clase de Salsa"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Clase de Bachata"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Clase de Zouk"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Clase de personalizadas"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "OfferCatalog",
-        "name": "Eventos de baile",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Event",
-              "name": "Noche de Salsa en Medellín",
-              "location": "Medellín",
-              "startDate": "2024-01-20T20:00",
-              "endDate": "2024-12-21T02:00"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Event",
-              "name": "Maratón de Bachata en Medellín",
-              "location": "Medellín",
-              "startDate": "2024-01-20T20:00",
-              "endDate": "2024-12-21T02:00"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Event",
-              "name": "Baila Zouk en Medellín",
-              "location": "Medellín",
-              "startDate": "2024-01-20T20:00",
-              "endDate": "2024-12-21T02:00"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "event": [
+function addProductJsonLd() {
+  return {
+    __html: `{
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "MedalloBaila",
+"url": "http://medallobaila.com/",
+"logo": "https://medallobaila.com/logo.png",
+"description": "Descubre los mejores eventos y clases de baile en Medellín. Salsa, bachata, zouk y más.",
+"hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Servicios especiales",
+  "itemListElement": [
     {
-      "@type": "Event",
-      "name": "Noche de bailar Salsa, Bachata y Zouk en Medellín",
-      "location": "Medellín",
-      "startDate": "2024-01-20T20:00",
-      "endDate": "2024-12-21T02:00",
-      "offers": {
-        "@type": "Offer",
-        "price": "10000",
-        "priceCurrency": "COP"
-      }
+      "@type": "OfferCatalog",
+      "name": "Clases de baile",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Clase de Salsa"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Clase de Bachata"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Clase de Zouk"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Clase de personalizadas"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Eventos de baile",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Event",
+            "name": "Noche de Salsa en Medellín",
+            "location": "Medellín",
+            "startDate": "2024-01-20T20:00",
+            "endDate": "2024-12-21T02:00"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Event",
+            "name": "Maratón de Bachata en Medellín",
+            "location": "Medellín",
+            "startDate": "2024-01-20T20:00",
+            "endDate": "2024-12-21T02:00"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Event",
+            "name": "Baila Zouk en Medellín",
+            "location": "Medellín",
+            "startDate": "2024-01-20T20:00",
+            "endDate": "2024-12-21T02:00"
+          }
+        }
+      ]
     }
   ]
-}
-  `,
-    };
+},
+"event": [
+  {
+    "@type": "Event",
+    "name": "Noche de bailar Salsa, Bachata y Zouk en Medellín",
+    "location": "Medellín",
+    "startDate": "2024-01-20T20:00",
+    "endDate": "2024-12-21T02:00",
+    "offers": {
+      "@type": "Offer",
+      "price": "10000",
+      "priceCurrency": "COP"
+    }
   }
+]
+}
+`,
+  };
+}
 
+export default function Home2({ title, keyWord, currentLocale }: any) {
   return (
     <>
       <Head>
-        <title>{props.title}</title>
-        <meta name="description" content={props.keyWord} />
-        <link
-          rel="alternate"
-          href={`https://medallobaila.com${
-            props.currentLocale === "en-US" ? "/" + props.currentLocale : ""
-          }`}
-          hrefLang={props.currentLocale.toLowerCase()}
-        />
+        <title>{title}</title>
+        <meta name="description" content={keyWord} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"
           href={`https://medallobaila.com${
-            props.currentLocale === "en-US" ? "/" + props.currentLocale : ""
+            currentLocale === "en-US" ? "/" + currentLocale : ""
           }`}
         />
-        .
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content={props.keyWord} />
-        <meta
-          property="og:locale"
-          content={props.currentLocale.toLowerCase()}
-        />
-        <meta property="og:title" content={props.title} />
-        <meta property="og:description" content={props.keyWord} />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:locale" content={currentLocale.toLowerCase()} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={keyWord} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={addProductJsonLd()}
@@ -145,7 +144,11 @@ export default function HomePage(props: any) {
         />
       </Head>
       <main>
-        <Home />
+        <HeroSection />
+        <UpcomingEvents />
+        <DanceEventsCalendar />
+        <PrivateDanceLessons />
+        <DanceAcademies />
       </main>
     </>
   );
@@ -169,7 +172,6 @@ export async function getStaticProps({ previewData, locale }: any) {
       ...(await serverSideTranslations(currentLocale, [
         "common",
         "footer",
-        "teachers",
         "home",
       ])),
       // Will be passed to the page component as props

@@ -7,7 +7,7 @@ import { Subtitle } from "../Subtitle";
 import SliceEventController from "@/core/infrastructure/controllers/SliceEventController";
 
 import style from "./style.module.sass";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const OPTIONS: EmblaOptionsType = {
   breakpoints: {

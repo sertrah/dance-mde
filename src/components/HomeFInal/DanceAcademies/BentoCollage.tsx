@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
@@ -6,12 +7,17 @@ import { useTranslation } from "next-i18next";
 import style from "./style.module.scss";
 
 const academies = [
-  { title: "Urbano", color: "orange", url: "urbano.png" },
-  { title: "Bachata", color: "purple", url: "bachata.webp" },
-  { title: "Zouk", color: "blue", url: "zouk.webp" },
-  { title: "Tango", color: "black", url: "tango.webp" },
-  { title: "Kizomba", color: "beige", url: "kiz.webp" },
-  { title: "Salsa", color: "red", url: "salsa.webp" },
+  { title: "Urbano", nextUrl: "urbano", color: "orange", url: "urbano.png" },
+  {
+    title: "Bachata",
+    nextUrl: "bachata",
+    color: "purple",
+    url: "bachata.webp",
+  },
+  { title: "Zouk", nextUrl: "zouk", color: "blue", url: "zouk.webp" },
+  { title: "Tango", nextUrl: "tango", color: "black", url: "tango.webp" },
+  { title: "Kizomba", nextUrl: "kizomba", color: "beige", url: "kiz.webp" },
+  { title: "Salsa", nextUrl: "salsa", color: "red", url: "salsa.webp" },
 ];
 
 const Bento: FC<{ color: string; title: string; url: string }> = ({
@@ -52,8 +58,10 @@ const BentoCollage = () => {
         <p>{t("bento_title")}</p>
       </div>
       <div className={style.bentoCollage__items}>
-        {academies.map(({ title, color, url }) => (
-          <Bento key={title} title={title} color={color} url={url} />
+        {academies.map(({ title, color, url, nextUrl }) => (
+          <Link key={title} href={`/academy/${nextUrl}`}>
+            <Bento title={title} color={color} url={url} />
+          </Link>
         ))}
       </div>
     </div>

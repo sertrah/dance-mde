@@ -24,7 +24,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 0.5rem;
+    & a {
+      text-decoration: none;
+      margin: 0;
+    }
   }
+
   @media (min-width: 850px) {
     flex-direction: row;
     margin-top: 5rem;

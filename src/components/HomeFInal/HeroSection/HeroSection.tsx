@@ -8,6 +8,8 @@ const HeroSection = () => {
 
   return (
     <section className={style.heroSection}>
+      <header className={`header small`}>MB</header>
+
       <div className={style.heroSection_content}>
         <h1>MedalloBaila</h1>
         <p>{t("hero_subtitle")}</p>

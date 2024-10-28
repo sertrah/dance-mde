@@ -358,7 +358,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 20;
   text-align: center;
   width: 100%;
   padding: 10px 0;
@@ -540,6 +540,7 @@ a {
   color: #fff;
   font-size: 1rem;
   margin: auto;
+  text-decoration: none;
 }
 
 // End new ----

@@ -48,7 +48,7 @@ const PrivateDanceLessons = () => {
             <div className={style.privateDanceLessons__containerDancers}>
               <Dancers />
             </div>
-            <Button>{t("private_button")}</Button>
+            <Button href={"/teachers"}>{t("private_button")}</Button>
           </div>
         </div>
       </div>
