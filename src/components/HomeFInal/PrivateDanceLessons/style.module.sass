@@ -43,6 +43,8 @@
         position: relative
         z-index: 1
         color: #000
+        flex-direction: column
+        display: flex
     &__text
         text-align: center
         margin-bottom: 2rem
@@ -62,6 +64,35 @@
         height: 100px
         clip-path: polygon(0 0, 100% 0, 100% 5%, 0 82%)
         transform: translateY(-1px)
+    &__wrapper
+        display: flex
+        flex-direction: column
+        &Dancers
+            display: none
+    @media (min-width: 850px)
+        &__internal_triangle
+            clip-path: polygon(0 0, 0 25%, 121% 100%, 0 100%)
+            transform: translateY(0)
+            top: -46px
+        &__aboveBg_triangle
+            clip-path: polygon(0 0, 0 0, 104% 100%, 0 100%)
+        &__container
+            padding: 2rem
+            &Dancers
+                display: none
+        &__wrapper
+            flex-direction: row
+            gap: 2rem
+            max-width: 85rem
+            width: 85%
+            margin: auto
+            &Dancers
+                display: flex
+                align-items: center
+                & > div
+                    max-width: 30rem
+            & > div
+                width: 50%
 
 .dancers
     position: relative

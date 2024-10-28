@@ -28,10 +28,12 @@ const EventCard: FC<{
   date,
 }) => {
   const { t } = useTranslation("common");
-
+  const dateMapped = date[0]?.text.split(" ") as string[];
   return (
     <div className={style.eventCard}>
-      <div className={style.eventCard__date}>{date[0]?.text}</div>
+      <div className={style.eventCard__date}>
+        {dateMapped[0]} <span>{dateMapped[1]}</span>
+      </div>
       <div className={style.eventCard__content}>
         <Image
           src={image.url as string}

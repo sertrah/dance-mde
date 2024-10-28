@@ -7,7 +7,9 @@
     flex-direction: column
     gap: 2rem
     padding-top: 4rem
-    padding-bottom: 5rem
+    padding-bottom: 6rem
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%)
+    margin-bottom: 2rem
     &__container
         width: 90%
         margin: auto
@@ -19,6 +21,9 @@
         overflow: hidden
         padding-left: 10%
         height: 37rem
+    @media (min-width: 850px)
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%)
+        padding-bottom: 10rem
 
 .eventCard
     position: relative
@@ -40,7 +45,7 @@
         flex-direction: column
         justify-content: center
         text-transform: uppercase
-        padding: 1rem
+        padding: 0.8rem
         word-break: break-all
     &__content
         position: relative

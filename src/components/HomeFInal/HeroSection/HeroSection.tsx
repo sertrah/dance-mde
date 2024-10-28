@@ -1,13 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import style from "./style.module.sass";
+import { useTranslation } from "next-i18next";
 
 const HeroSection = () => {
+  const { t } = useTranslation("home");
+
   return (
     <section className={style.heroSection}>
       <div className={style.heroSection_content}>
-        <h1>Medallo Baila</h1>
-        <p>La ciudad de la eterna Bailacion</p>
+        <h1>MedalloBaila</h1>
+        <p>{t("hero_subtitle")}</p>
       </div>
       <Image
         src="/bb.webp"

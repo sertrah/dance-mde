@@ -3,8 +3,11 @@
   margin: auto;
   --slide-height: 19rem;
   --slide-spacing: 1rem;
-  --slide-size: 90%;
+  --slide-size: auto;
   height: 220px;
+  @media (min-width: 850px) {
+    max-width: 60rem;
+  }
 }
 .embla__viewport {
   overflow: hidden;
@@ -19,6 +22,9 @@
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
+  @media (min-width: 850px) {
+    padding-left: 0;
+  }
 }
 .embla__slide__number {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
@@ -405,21 +411,22 @@ a {
     font-weight: 700;
     line-height: 0.8;
     flex-grow: 0;
-    flex-basis: 90%;
+    flex-basis: max-content;
     text-align: center;
 
     &__main {
       color: #440c0d;
       font-weight: 300;
       line-height: 1;
-      width: 70%;
+      width: 100%;
       position: absolute;
       z-index: 0;
-      top: 0;
+      top: 50%;
       left: 0;
       right: 0;
       margin: auto;
-      transform: translateY(0.1em);
+      transform: translateY(-50%);
+      padding: 2rem;
       font-size: 0.8em;
       text-align: center;
     }
@@ -431,6 +438,19 @@ a {
     &__flower-l {
       place-self: flex-end;
       transform: translateY(1rem) translateX(1rem);
+    }
+
+    @media (min-width: 850px) {
+      line-height: 2;
+
+      &__flower-r {
+        transform: translateY(0) translateX(-1rem);
+      }
+
+      &__flower-l {
+        place-self: flex-end;
+        transform: translateY(0) translateX(1rem);
+      }
     }
   }
   &--text-black {
@@ -450,7 +470,7 @@ a {
   margin: 0 auto;
   text-align: center;
   padding-bottom: 3rem;
-  z-index: 1;
+  z-index: 11;
   &__flower-l,
   &__flower-r {
     position: absolute;
@@ -499,7 +519,7 @@ a {
 
   &--text-black {
     & .dark-subtitle--title {
-      color: #e3e3e3;
+      color: #f6f6f6;
       &__main {
         color: #282828;
       }
@@ -512,13 +532,14 @@ a {
 }
 
 .button-large {
-  width: 100%;
+  width: fit-content;
   padding: 1rem 2rem;
   background: linear-gradient(to bottom, #96cfbe, #6db09c);
   border: none;
   border-radius: 50px;
   color: #fff;
   font-size: 1rem;
+  margin: auto;
 }
 
 // End new ----

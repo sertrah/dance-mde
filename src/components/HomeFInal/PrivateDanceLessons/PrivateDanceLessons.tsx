@@ -1,39 +1,58 @@
-import React from "react";
-import { DarkSubtitle } from "../Subtitle";
+import React, { FC } from "react";
+import { useTranslation } from "next-i18next";
+
 import Dancers from "./Dancers";
-import style from "./style.module.sass";
 import Button from "../Button";
+import { DarkSubtitle } from "../Subtitle";
+
+import style from "./style.module.sass";
+
+const PrivateDanceLessonsContainer: FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
+  <>
+    <div className={style.privateDanceLessons__aboveBg_triangle}></div>
+    <section className={style.privateDanceLessons}>
+      <div className={style.privateDanceLessons__internal_triangle}></div>
+      {children}
+      <div className={style.privateDanceLessons__underBg}></div>
+      <div className={style.privateDanceLessons__underBg_triangle}></div>
+    </section>
+    <div className={style.privateDanceLessons__triangleEnd}></div>
+  </>
+);
 
 const PrivateDanceLessons = () => {
-  return (
-    <>
-      <div className={style.privateDanceLessons__aboveBg_triangle}></div>
-      <section className={style.privateDanceLessons}>
-        <div className={style.privateDanceLessons__internal_triangle}></div>
+  const { t } = useTranslation("home");
 
-        <DarkSubtitle isTextColorBlack>
-          clases de baile particulares y personalizadas de bachata salsa
-        </DarkSubtitle>
-        <div className={style.privateDanceLessons__container}>
-          <p className={style.privateDanceLessons__text}>
-            Incrementa tu nivel de baile con los mejores profesores de baile en
-            Medellín. Aprovecha nuestras clases impartidas por expertos en los
-            generos Bachata, Salsa, Porro, Zouk & Kizomba Incrementa tu nivel de
-            baile con los mejores profesores de baile en Medellín. Aprovecha
-            nuestras clases impartidas por expertos en los generos Bachata,
-            Salsa, Porro, Zouk & KizombaIncrementa tu nivel de baile con los
-            mejores profesores de baile en Medellín. Aprovecha nuestras clases
-            impartidas por expertos en los generos Bachata, Salsa, Porro, Zouk &
-            Kizomba
-          </p>
+  return (
+    <PrivateDanceLessonsContainer>
+      <div className={style.privateDanceLessons__wrapper}>
+        <div className={style.privateDanceLessons__wrapperDancers}>
           <Dancers />
-          <Button>Quiero agendar una clase </Button>
         </div>
-        <div className={style.privateDanceLessons__underBg}></div>
-        <div className={style.privateDanceLessons__underBg_triangle}></div>
-      </section>
-      <div className={style.privateDanceLessons__triangleEnd}></div>
-    </>
+        <div>
+          <DarkSubtitle isTextColorBlack>
+            {t("private_dance_title")}
+          </DarkSubtitle>
+          <div className={style.privateDanceLessons__container}>
+            <p className={style.privateDanceLessons__text}>
+              {t("private_dance_description1")}
+            </p>
+            <p className={style.privateDanceLessons__text}>
+              {t("private_dance_description2")}
+            </p>
+            <p className={style.privateDanceLessons__text}>
+              {t("private_dance_description3")}
+            </p>
+            <div className={style.privateDanceLessons__containerDancers}>
+              <Dancers />
+            </div>
+            <Button>{t("private_button")}</Button>
+          </div>
+        </div>
+      </div>
+    </PrivateDanceLessonsContainer>
   );
 };
 

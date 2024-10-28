@@ -4,7 +4,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import HeroSection from "@/components/HomeFInal/HeroSection/HeroSection";
 
 const UpcomingEvents = dynamic(
-  () => import("@/components/HomeFInal/UpcomingEvents/UpcomingEvents")
+  () => import("@/components/HomeFInal/UpcomingEvents/UpcomingEvents"),
+  { ssr: false }
 );
 const DanceEventsCalendar = dynamic(
   () => import("@/components/HomeFInal/DanceEventsCalendar/DanceEventsCalendar")
@@ -16,15 +17,12 @@ const DanceAcademies = dynamic(
   () => import("@/components/HomeFInal/DanceAcademies/DanceAcademies")
 );
 
-export default function Home2({ page }: any) {
+export default function Home2({ title, keyWord }: any) {
   return (
     <>
       <Head>
-        <title>Home</title>
-        <meta
-          name="description"
-          content="Discutamos acerca del baile en medellin."
-        />
+        <title>{title}</title>
+        <meta name="description" content={keyWord} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

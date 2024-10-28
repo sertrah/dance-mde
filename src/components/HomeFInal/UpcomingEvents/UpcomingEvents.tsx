@@ -1,19 +1,22 @@
 import React from "react";
-import Image from "next/image";
-import style from "./style.module.sass";
-import { Subtitle } from "../Subtitle";
-import EventCard from "./EventCard";
+import { EmblaOptionsType } from "embla-carousel";
 import { useQuery } from "react-query";
+
 import EmblaCarousel from "./Carousel";
-
+import { Subtitle } from "../Subtitle";
 import SliceEventController from "@/core/infrastructure/controllers/SliceEventController";
-import { EventSliceItem } from "@/core/domain/interfaces/Event.repository";
 
-const OPTIONS = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+import style from "./style.module.sass";
+import { useTranslation } from "react-i18next";
+
+const OPTIONS: EmblaOptionsType = {
+  breakpoints: {
+    "(min-width: 850px)": { slidesToScroll: 3, active: false },
+  },
+};
 
 const UpcomingEvents = () => {
+  const { t } = useTranslation("home");
   const { data: SliceEvent } = useQuery(
     [`event-list`, "ZAX_whAAACgATCfT", "es-CO"],
     ({ queryKey: [, referenceId, lang] }) =>
@@ -27,14 +30,8 @@ const UpcomingEvents = () => {
   return (
     <section className={style.upcomingEvents}>
       <div className={style.upcomingEvents__container}>
-        <p>
-          Bienvenido a MedalloBaila, tu website definitivo para encontrar los
-          mejores eventos para bailar, tomar clases en Medellín. Nuestra
-          plataforma te mantiene al día con los eventos de baile social en
-          Medellín. No te pierdas las clases de baile en Medellín que se
-          destacan por su calidad y profesionalismo.
-        </p>
-        <Subtitle>Proixmos Eventos</Subtitle>
+        <p>{t("long_description")}</p>
+        <Subtitle>{t("event_title")}</Subtitle>
       </div>
 
       <div className={style.upcomingEvents__cards}>
