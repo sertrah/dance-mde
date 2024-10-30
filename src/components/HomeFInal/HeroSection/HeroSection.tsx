@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import style from "./style.module.sass";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import style from "./style.module.sass";
 
 const HeroSection = () => {
   const { t } = useTranslation("home");
@@ -27,11 +27,12 @@ const HeroSection = () => {
         <p>{t("hero_subtitle")}</p>
       </div>
       <Image
-        src="/bb.webp"
+        src="/bg.webp"
         alt="Gente de medellin bailando"
         fill
         style={{ objectFit: "cover" }}
       />
+      <div className={style.heroSection_overlay} />
     </section>
   );
 };

@@ -149,7 +149,9 @@ function WeekSchedule() {
 
   return (
     <section className={style.weekSchedule}>
-      <h3 className={style.weekSchedule__title}>Sociales de esta semana</h3>
+      <h3 className={style.weekSchedule__title}>
+        {t("weekend_schedule_title")}
+      </h3>
       <div className={style.schedule_container}>
         <div className={style.week_schedule}>
           <TabContext value={value}>
@@ -160,13 +162,13 @@ function WeekSchedule() {
                 scrollButtons="auto"
                 aria-label="Social Events tabs"
               >
-                <StyledTabLabel label="Monday" value="1" />
-                <StyledTabLabel label="Tuesday" value="2" />
-                <StyledTabLabel label="Wednesday" value="3" />
-                <StyledTabLabel label="Thursday" value="4" />
-                <StyledTabLabel label="Friday" value="5" />
-                <StyledTabLabel label="Saturday" value="6" />
-                <StyledTabLabel label="Sunday" value="0" />
+                <StyledTabLabel label={t("monday")} value="1" />
+                <StyledTabLabel label={t("tuesday")} value="2" />
+                <StyledTabLabel label={t("wednesday")} value="3" />
+                <StyledTabLabel label={t("thursday")} value="4" />
+                <StyledTabLabel label={t("friday")} value="5" />
+                <StyledTabLabel label={t("saturday")} value="6" />
+                <StyledTabLabel label={t("sunday")} value="0" />
               </StyledTabList>
             </Box>
             <StyledTabPanel value="1">
