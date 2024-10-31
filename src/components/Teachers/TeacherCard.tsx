@@ -23,6 +23,7 @@ const TeacherCard = ({
       <Image
         src={teacher.url}
         alt="Profesores de baile medellin"
+        className={style.card_image}
         width={150}
         height={180}
       />
@@ -32,7 +33,8 @@ const TeacherCard = ({
             {name}
           </Typography>
           <Typography variant="body2">{description}</Typography>
-
+        </CardContent>
+        <div className={style.card_actions}>
           <div className={style.card_chips}>
             {genres.map((genre) => (
               <Chip
@@ -43,12 +45,12 @@ const TeacherCard = ({
               />
             ))}
           </div>
-        </CardContent>
-        <CardActions>
-          <Link href={instagramUrl} className={style.card_link_in}>
-            <InstagramIcon />
-          </Link>
-        </CardActions>
+          <CardActions>
+            <Link href={instagramUrl} className={style.card_link_in}>
+              <InstagramIcon />
+            </Link>
+          </CardActions>
+        </div>
       </Card>
     </div>
   );

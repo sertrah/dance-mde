@@ -7,7 +7,7 @@ import style from '@/styles/Teachers.module.css'
 
 const TeachersBanner = ({ data }: any) => {
   const { t } = useTranslation('teachers');
-
+  console.log(data);
   return (
       <section className={style.teacher_banner}>
       <Image

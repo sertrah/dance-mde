@@ -2,15 +2,15 @@
   padding-top: 2rem;
 }
 
-.teacher_banner{
+.teacher_banner {
   position: relative;
   padding: 2rem 1.4rem;
 }
 
-.cover{
+.cover {
   background-color: rgba(11, 10, 10, 0.46);
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -18,20 +18,30 @@
   height: 100%;
 }
 
-.title{
+.title {
   margin-bottom: 1rem;
   z-index: 1;
 }
-.title span{
+.title span {
   font-weight: 500;
 }
-.description{
+.description {
   position: relative;
   z-index: 1;
 }
 
-.card{
-  background: linear-gradient(135deg, #3d3030 0%,#0a0808 100%);
+.card_actions {
+  padding: 0 1rem;
+}
+
+.card {
+  background: linear-gradient(135deg, #3d3030 0%, #0a0808 100%);
+  overflow: initial;
+  border-radius: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .secondary_title {
@@ -41,20 +51,15 @@
 .card_fake {
   position: relative;
   width: 85%;
-  margin: 0  auto  2rem auto;
+  margin: 0 auto 2rem auto;
   display: flex;
   flex-direction: column;
 }
 
 .card_fake img {
-  margin: auto;
+  margin: 0 auto;
   transform: translateY(40px);
   object-fit: contain;
-}
-
-.card {
-  overflow: initial;
-  border-radius: 1rem;
 }
 
 .card_content {
@@ -65,14 +70,29 @@
   margin-top: 2rem;
 }
 
-.card_chips{
+.card_chips {
   margin-top: 0.8rem;
 }
 
-.card_chips > div{
+.card_chips > div {
   margin: 0.4rem 0.2rem;
 }
 
-.card_link_in{
+.card_link_in {
   margin: auto;
+}
+
+.card_image {
+  border-radius: 150px 150px 0 0;
+}
+
+@media (min-width: 850px) {
+  .teacher_page_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 0.5rem;
+    max-width: 90rem;
+    width: 85%;
+    margin: auto;
+  }
 }
