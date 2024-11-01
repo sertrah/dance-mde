@@ -14,7 +14,7 @@ import { appWithTranslation } from "next-i18next";
 
 import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
-import TopBar from "@/components/UI-shared/TopBar";
+import { useRouter } from "next/router";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -125,6 +125,8 @@ const queryClient = new QueryClient({
 });
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+
   return (
     <>
       <Script
@@ -152,6 +154,16 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
         id="ga"
       />
+      <header className={`header small`}>
+        <Link href="/">MB</Link>
+        <Link
+          className={`header--locale`}
+          href="/"
+          locale={router.locale === "en-US" ? "es-CO" : "en-US"}
+        >
+          {router.locale === "en-US" ? "ES" : "EN"}
+        </Link>
+      </header>
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
         <div
           className={`${roboto.variable} ${libre_caslon.variable} ${noto_sans.variable}`}

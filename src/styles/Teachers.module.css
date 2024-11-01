@@ -7,6 +7,16 @@
   padding: 2rem 1.4rem;
 }
 
+.teacher_banner h1 {
+  margin-bottom: 2rem;
+}
+
+.teacher_banner p {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
 .cover {
   background-color: rgba(11, 10, 10, 0.46);
   position: absolute;

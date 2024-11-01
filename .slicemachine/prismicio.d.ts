@@ -436,6 +436,46 @@ type TeachersDocumentDataSlicesSlice = TeacherSliceSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type TeachersDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<TeachersDocumentData>, "teachers", Lang>;
+/** Content for urbano documents */
+interface UrbanoDocumentData {
+    /**
+     * title field in *urbano*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: urbano.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *urbano*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: urbano.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<UrbanoDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *urbano → Slice Zone*
+ *
+ */
+type UrbanoDocumentDataSlicesSlice = AcademiesSlice;
+/**
+ * urbano document from Prismic
+ *
+ * - **API ID**: `urbano`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type UrbanoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<UrbanoDocumentData>, "urbano", Lang>;
 /** Content for zouk documents */
 interface ZoukDocumentData {
     /**
@@ -476,7 +516,7 @@ type ZoukDocumentDataSlicesSlice = AcademiesSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type ZoukDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ZoukDocumentData>, "zouk", Lang>;
-export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | KizombaDocument | SalsaDocument | TangoDocument | TeachersDocument | ZoukDocument;
+export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | KizombaDocument | SalsaDocument | TangoDocument | TeachersDocument | UrbanoDocument | ZoukDocument;
 /**
  * Primary content in Academies → Primary
  *
@@ -870,6 +910,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, KizombaDocumentData, KizombaDocumentDataSlicesSlice, KizombaDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, TangoDocumentData, TangoDocumentDataSlicesSlice, TangoDocument, TeachersDocumentData, TeachersDocumentDataSlicesSlice, TeachersDocument, ZoukDocumentData, ZoukDocumentDataSlicesSlice, ZoukDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice, TeacherSliceSliceDefaultItem, TeacherSliceSliceDefault, TeacherSliceSliceVariation, TeacherSliceSlice };
+        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, KizombaDocumentData, KizombaDocumentDataSlicesSlice, KizombaDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, TangoDocumentData, TangoDocumentDataSlicesSlice, TangoDocument, TeachersDocumentData, TeachersDocumentDataSlicesSlice, TeachersDocument, UrbanoDocumentData, UrbanoDocumentDataSlicesSlice, UrbanoDocument, ZoukDocumentData, ZoukDocumentDataSlicesSlice, ZoukDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice, TeacherSliceSliceDefaultItem, TeacherSliceSliceDefault, TeacherSliceSliceVariation, TeacherSliceSlice };
     }
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 
-import style from "@/styles/Teachers.module.css";
 import TeacherCard from "./TeacherCard";
 import TeachersBanner from "./TeachersBanner";
 import { PrimaryTitle } from "../UI-shared/Typography";
+import style from "@/styles/Teachers.module.css";
 
 const Teachers = ({ data }: any) => {
   const { t } = useTranslation("teachers");

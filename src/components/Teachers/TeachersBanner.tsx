@@ -1,27 +1,23 @@
-import React from 'react'
-import { useTranslation } from 'next-i18next'
-import Typography from '@mui/material/Typography';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import { PrismicRichText } from "@prismicio/react";
 
-import style from '@/styles/Teachers.module.css'
+import style from "@/styles/Teachers.module.css";
 
 const TeachersBanner = ({ data }: any) => {
-  const { t } = useTranslation('teachers');
-  console.log(data);
   return (
-      <section className={style.teacher_banner}>
+    <section className={style.teacher_banner}>
       <Image
-          src="/bb.webp"
-          alt="Social Event Medellin"
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-        />
-        <div className={style.cover} />
-        <Typography variant="h1" className={style.title}>{t('title')} <span>{t('title_1')}</span></Typography>
-        <Typography variant="body1" className={style.description}>{t('description')}</Typography>
+        src="/bb.webp"
+        alt="Social Event Medellin"
+        fill
+        style={{ objectFit: "cover" }}
+        priority
+      />
+      <div className={style.cover} />
+      <PrismicRichText field={data.mainSection} />
     </section>
-  )
-}
+  );
+};
 
-export default TeachersBanner
+export default TeachersBanner;
