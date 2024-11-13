@@ -46,6 +46,107 @@ type BachataDocumentDataSlicesSlice = AcademiesSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type BachataDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BachataDocumentData>, "bachata", Lang>;
+/** Content for blog documents */
+interface BlogDocumentData {
+    /**
+     * og_title field in *blog*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.og_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_title: prismicT.KeyTextField;
+    /**
+     * og_keywords field in *blog*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.og_keywords
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_keywords: prismicT.KeyTextField;
+    /**
+     * og_description field in *blog*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.og_description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_description: prismicT.KeyTextField;
+    /**
+     * title field in *blog*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * thumbail field in *blog*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.thumbail
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    thumbail: prismicT.ImageField<never>;
+    /**
+     * banner field in *blog*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.banner
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    banner: prismicT.ImageField<never>;
+    /**
+     * video field in *blog*
+     *
+     * - **Field Type**: Embed
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.video
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/embed
+     *
+     */
+    video: prismicT.EmbedField;
+    /**
+     * article_content field in *blog*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.article_content
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    article_content: prismicT.RichTextField;
+}
+/**
+ * blog document from Prismic
+ *
+ * - **API ID**: `blog`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BlogDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
 /** Content for events documents */
 interface EventListDocumentData {
     /**
@@ -516,7 +617,7 @@ type ZoukDocumentDataSlicesSlice = AcademiesSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type ZoukDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ZoukDocumentData>, "zouk", Lang>;
-export type AllDocumentTypes = BachataDocument | EventListDocument | EventsDocument | HomeDocument | KizombaDocument | SalsaDocument | TangoDocument | TeachersDocument | UrbanoDocument | ZoukDocument;
+export type AllDocumentTypes = BachataDocument | BlogDocument | EventListDocument | EventsDocument | HomeDocument | KizombaDocument | SalsaDocument | TangoDocument | TeachersDocument | UrbanoDocument | ZoukDocument;
 /**
  * Primary content in Academies → Primary
  *
@@ -910,6 +1011,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, KizombaDocumentData, KizombaDocumentDataSlicesSlice, KizombaDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, TangoDocumentData, TangoDocumentDataSlicesSlice, TangoDocument, TeachersDocumentData, TeachersDocumentDataSlicesSlice, TeachersDocument, UrbanoDocumentData, UrbanoDocumentDataSlicesSlice, UrbanoDocument, ZoukDocumentData, ZoukDocumentDataSlicesSlice, ZoukDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice, TeacherSliceSliceDefaultItem, TeacherSliceSliceDefault, TeacherSliceSliceVariation, TeacherSliceSlice };
+        export type { BachataDocumentData, BachataDocumentDataSlicesSlice, BachataDocument, BlogDocumentData, BlogDocument, EventListDocumentData, EventListDocumentDataSlicesSlice, EventListDocument, EventsDocumentData, EventsDocumentDataSlicesSlice, EventsDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, KizombaDocumentData, KizombaDocumentDataSlicesSlice, KizombaDocument, SalsaDocumentData, SalsaDocumentDataSlicesSlice, SalsaDocument, TangoDocumentData, TangoDocumentDataSlicesSlice, TangoDocument, TeachersDocumentData, TeachersDocumentDataSlicesSlice, TeachersDocument, UrbanoDocumentData, UrbanoDocumentDataSlicesSlice, UrbanoDocument, ZoukDocumentData, ZoukDocumentDataSlicesSlice, ZoukDocument, AllDocumentTypes, AcademiesSliceDefaultPrimary, AcademiesSliceDefaultItem, AcademiesSliceDefault, AcademiesSliceVariation, AcademiesSlice, EventSliceDefaultItem, EventSliceDefault, EventSliceVariation, EventSlice, HomeGenreSliceDefaultPrimary, HomeGenreSliceDefaultItem, HomeGenreSliceDefault, HomeGenreSliceVariation, HomeGenreSlice, TeacherSliceSliceDefaultItem, TeacherSliceSliceDefault, TeacherSliceSliceVariation, TeacherSliceSlice };
     }
 }

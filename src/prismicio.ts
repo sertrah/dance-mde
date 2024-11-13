@@ -7,9 +7,7 @@ import sm from '../sm.json'
  */
 export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint)
 
-// Update the routes array to match your project's route structure
-/** @type {prismic.ClientConfig['routes']} **/
-const routes = [
+const routes: prismic.ClientConfig['routes'] = [
   {
     type: 'eventList',
     path: '/',
@@ -41,6 +39,10 @@ const routes = [
   {
     type: 'home',
     path: '/',
+  },
+  {
+    type: 'blog',
+    path: '/:uid',
   },
 ]
 

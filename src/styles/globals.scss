@@ -230,17 +230,18 @@ body > div > div > p {
 }
 
 h1 {
-  font-size: 2rem;
   color: var(--primary-color);
   position: relative;
   font-family: var(--libre-caslon-text-font);
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 h2 {
   font-size: 1.5rem;
   color: var(--primary-color);
   font-family: var(--noto_sans-font);
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .font-color-secondary {
@@ -270,7 +271,7 @@ li {
   line-height: 1.6;
   overflow-wrap: break-word;
   font-family: var(--noto_sans-font);
-  font-weight: 100;
+  font-weight: 200;
 }
 
 footer {
@@ -325,9 +326,14 @@ footer .mensajito span {
   p {
     font-size: 18px;
   }
+
+  h1 {
+    font-size: 3rem;
+  }
+
   h2 {
     font-weight: 500;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
   p.mensajito {
     max-width: 900px;

@@ -1,6 +1,6 @@
 import "@/styles/globals.scss";
 import Script from "next/script";
-import { Roboto, Noto_Sans, Libre_Caslon_Text } from "@next/font/google";
+import { Libre_Caslon_Text, Inter, Dynalight } from "@next/font/google";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,15 +16,7 @@ import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 
-const roboto = Roboto({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--roboto-font",
-  preload: true,
-  display: "swap",
-});
-
-const libre_caslon = Libre_Caslon_Text({
+const libre_caslon = Dynalight({
   weight: "400",
   subsets: ["latin"],
   variable: "--libre-caslon-text-font",
@@ -32,11 +24,11 @@ const libre_caslon = Libre_Caslon_Text({
   display: "swap",
 });
 
-const noto_sans = Noto_Sans({
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+const noto_sans = Inter({
+  weight: ["200", "400", "600"],
   style: ["normal"],
   subsets: ["latin"],
-  display: "optional",
+  display: "swap",
   variable: "--noto_sans-font",
 });
 const theme = createTheme({
@@ -165,22 +157,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         </Link>
       </header>
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-        <div
-          className={`${roboto.variable} ${libre_caslon.variable} ${noto_sans.variable}`}
-        >
-          <style jsx global>{`
-            @font-face {
-              font-family: ${libre_caslon.style.fontFamily};
-              font-display: swap;
-            }
-            @font-face {
-              font-family: ${noto_sans.style.fontFamily};
-            }
-            html {
-              font-family: ${roboto.style.fontFamily};
-              font-display: swap;
-            }
-          `}</style>
+        <div className={` ${libre_caslon.className} ${noto_sans.className}`}>
           <ThemeProvider theme={theme}>
             <QueryClientProvider client={queryClient}>
               <Component {...pageProps} />
