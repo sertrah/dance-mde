@@ -18,6 +18,10 @@ export default function AcademyPage({
         <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content={SEO} />
         <meta name="description" content={siteDescription} />
+        <meta property="og:site_name" content="Medallo Baila" />
+        <meta property="og:description" content={siteDescription} />
+        <meta property="og:image" content={data.thumbail.url} />
+        <meta property="og:title" content={title} />
       </Head>
       <main>
         <Article prismicData={data} />
