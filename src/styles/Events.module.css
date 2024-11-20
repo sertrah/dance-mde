@@ -1,5 +1,3 @@
-.event_page {
-}
 .event_page h1 {
   text-align: center;
 }
@@ -26,6 +24,12 @@
   border-radius: 4px;
 }
 
+.event_card_date {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.2em;
+}
+
 .event_card_container_img {
   position: relative;
 }
@@ -37,11 +41,6 @@
 
 .event_card_detail h2 {
   margin-bottom: 0.4em;
-}
-
-.event_card_detail p {
-  margin-bottom: 0.2em;
-  font-size: 0.8rem;
 }
 
 .event_card_description {
@@ -71,4 +70,14 @@
   margin: 0;
   color: #97dc8f;
   text-decoration: underline;
+}
+
+@media (min-width: 850px) {
+  .events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 93rem;
+    width: 100%;
+    margin: 0 auto;
+  }
 }

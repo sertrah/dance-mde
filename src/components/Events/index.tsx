@@ -13,11 +13,13 @@ import SliceEventDialog from "../UI-shared/SliceEventDialog";
 export default function Events({ page }: any) {
   const totalEntries = page.data.slices.length || 0;
   const [currentPage, setPage] = useState(1);
-  const [sliceEventSelected, setSliceEventSelected] = useState<EventSliceItem | null>(null);
+  const [sliceEventSelected, setSliceEventSelected] =
+    useState<EventSliceItem | null>(null);
 
   const { data: SliceEvent } = useQuery(
-    [`event-list`, page.data.reference.id, 'es-co'],
-    ({ queryKey: [, referenceId, lang] }) => SliceEventController.getSliceEventsFromPrismic(referenceId, lang),
+    [`event-list`, page.data.reference.id, "es-co"],
+    ({ queryKey: [, referenceId, lang] }) =>
+      SliceEventController.getSliceEventsFromPrismic(referenceId, lang),
     {
       retry: 1,
       retryDelay: 3000,
@@ -28,26 +30,33 @@ export default function Events({ page }: any) {
     setPage(value);
   };
 
-  const handleClose = ()=> {
+  const handleClose = () => {
     setSliceEventSelected(null);
-  }
+  };
   return (
     <section className={styles.event_page}>
       <Typography richContent={page.data.title} hasUnderline />
-      <Stack spacing={7}>
+      <Stack spacing={7} style={{ display: "flex", alignItems: "center" }}>
         <div className={styles.events}>
-          {SliceEvent?.list && SliceEvent?.list?.map(
-            (sliceEventData: EventSliceItem, index: number) => (
-              <EventCard
-                key={`event-card-${sliceEventData?.title[0]?.text} ${index}`}
-                openDialog={setSliceEventSelected}
-                {...sliceEventData}
-              />
-            )
-          )}
+          {SliceEvent?.list &&
+            SliceEvent?.list?.map(
+              (sliceEventData: EventSliceItem, index: number) => (
+                <EventCard
+                  key={`event-card-${sliceEventData?.title[0]?.text} ${index}`}
+                  openDialog={setSliceEventSelected}
+                  {...sliceEventData}
+                />
+              )
+            )}
         </div>
         {totalEntries > 0 && (
-          <Pagination count={totalEntries} page={currentPage} onChange={handleChange} shape="rounded" color="primary" />
+          <Pagination
+            count={totalEntries}
+            page={currentPage}
+            onChange={handleChange}
+            shape="rounded"
+            color="primary"
+          />
         )}
       </Stack>
 

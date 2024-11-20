@@ -9,82 +9,92 @@
 
 <url>
   <loc>https://medallobaila.com</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-03-19T14:19:28+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/academy/bachata</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-03-19T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/academy/salsa</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-03-19T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/academy/kizomba</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-03-19T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/academy/zouk</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-03-19T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/academy/tango</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-03-19T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/events</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-03-19T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
     <loc>https://medallobaila.com/en-US</loc>
-    <lastmod>2023-03-23T22:07:16+01:00</lastmod>
+    <lastmod>2024-03-19T22:07:16+01:00</lastmod>
     <priority>1.0</priority>
 </url>
 <url>
     <loc>https://medallobaila.com/en-US/academy/bachata</loc>
-    <lastmod>2023-03-23T22:07:16+01:00</lastmod>
+    <lastmod>2024-11-19T22:07:16+01:00</lastmod>
     <priority>0.6</priority>
 </url>
 <url>
     <loc>https://medallobaila.com/en-US/academy/salsa</loc>
-    <lastmod>2023-03-23T22:07:16+01:00</lastmod>
+    <lastmod>2024-11-19T22:07:16+01:00</lastmod>
     <priority>0.6</priority>
 </url>
 <url>
     <loc>https://medallobaila.com/en-US/academy/kizomba</loc>
-    <lastmod>2023-03-23T22:07:16+01:00</lastmod>
+    <lastmod>2024-11-19T22:07:16+01:00</lastmod>
     <priority>0.6</priority>
 </url>
 <url>
     <loc>https://medallobaila.com/en-US/academy/zouk</loc>
-    <lastmod>2023-03-23T22:07:16+01:00</lastmod>
+    <lastmod>2024-11-19T22:07:16+01:00</lastmod>
     <priority>0.6</priority>
 </url>
 <url>
     <loc>https://medallobaila.com/en-US/academy/tango</loc>
-    <lastmod>2023-03-23T22:07:16+01:00</lastmod>
+    <lastmod>2024-11-19T22:07:16+01:00</lastmod>
     <priority>0.6</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/en-US/events</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-11-19T14:19:28+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/en-US/teachers</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-11-19T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://medallobaila.com/teachers</loc>
-  <lastmod>2023-03-23T14:19:28+00:00</lastmod>
+  <lastmod>2024-11-19T14:19:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medallobaila.com/blogs/the-grand-social</loc>
+  <lastmod>2024-11-11T14:19:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medallobaila.com/en-US/blogs/the-grand-social</loc>
+  <lastmod>2024-11-11T14:19:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 </urlset>

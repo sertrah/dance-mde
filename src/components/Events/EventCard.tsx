@@ -15,7 +15,9 @@ const components = {
 };
 
 const EventCard: FC<
-  EventSliceItem & { openDialog: Dispatch<SetStateAction<EventSliceItem | null>> }
+  EventSliceItem & {
+    openDialog: Dispatch<SetStateAction<EventSliceItem | null>>;
+  }
 > = (props) => {
   const {
     title,
@@ -27,7 +29,7 @@ const EventCard: FC<
     urlLocation,
     openDialog,
   } = props;
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   const handleOnClickEvent = () => {
     openDialog(props);
@@ -50,7 +52,10 @@ const EventCard: FC<
       </div>
       <div className={styles.event_card_detail} onClick={handleOnClickEvent}>
         <PrismicRichText field={title} components={components} />
-        <Typography richContent={date} />
+        <Typography
+          className={styles.event_card_date}
+          richContent={date}
+        />
         <Typography
           richContent={description}
           className={styles.event_card_description}
@@ -61,12 +66,17 @@ const EventCard: FC<
           href={locationLinks?.[locationId]?.link ?? urlLocation}
           passHref
           target="_blank"
-          rel="nofollow" 
+          rel="nofollow"
         >
-          {t('location')}
+          {t("location")}
         </CustomLink>
-        <CustomLink  rel="nofollow"  href={urlEvent ?? ""} passHref target="_blank">
-         {t('see_more')}
+        <CustomLink
+          rel="nofollow"
+          href={urlEvent ?? ""}
+          passHref
+          target="_blank"
+        >
+          {t("see_more")}
         </CustomLink>
       </div>
     </div>
