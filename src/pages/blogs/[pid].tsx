@@ -22,6 +22,10 @@ export default function AcademyPage({
         <meta property="og:description" content={siteDescription} />
         <meta property="og:image" content={data.thumbail.url} />
         <meta property="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={siteDescription} />
+        <meta name="twitter:image" content={data.thumbail.url} />
+        <meta name="twitter:card" content={data.thumbail.url} />
       </Head>
       <main>
         <Article prismicData={data} />
@@ -33,7 +37,7 @@ export default function AcademyPage({
 export async function getStaticPaths() {
   return {
     paths: [
-      /* { params: { pid: "the-grand-social" }, locale: "en-US" }, */
+      { params: { pid: "the-grand-social" }, locale: "en-US" },
       { params: { pid: "the-grand-social" }, locale: "es-CO" },
       /* { params: { pid: "theGrandSocial" }, locale: "en-US" }, */
     ],

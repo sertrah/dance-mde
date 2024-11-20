@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Image from "next/image";
 
 import { PrismicNextImage } from "@prismicio/next";
 import type * as prismicT from "@prismicio/types";
@@ -22,22 +23,37 @@ const Article: FC<{
   prismicData: {
     title: any;
     thumbail: prismicT.ImageFieldImage;
+    logo: prismicT.ImageFieldImage;
     banner: prismicT.ImageFieldImage;
     article_content: prismicT.RichTextField;
     video: prismicT.EmbedField;
   };
 }> = ({ prismicData }) => {
+
   return (
     <main className={styles.article}>
+      <div className={styles.article_hero}>
+        <PrismicNextImage
+          field={prismicData.banner}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <h1>{prismicData.title}</h1>
+      </div>
       <section className={styles.article_content}>
-        <div className={styles.article_hero}>
-          <PrismicNextImage
-            field={prismicData.banner}
-            fill
-            style={{ objectFit: "cover" }}
-          />
-          <h1>{prismicData.title}</h1>
-        </div>
+        <Image
+          src={prismicData.logo.url as string}
+          alt={prismicData.logo.alt as string}
+          width={200}
+          height={200}
+          style={{
+            objectFit: "cover",
+            margin: "2rem auto",
+            display: "block",
+            transform: "translateY(-88px)",
+            borderRadius: "50%",
+          }}
+        />
         <div
           className={styles.article_video}
           dangerouslySetInnerHTML={{ __html: prismicData.video.html as string }}
@@ -48,6 +64,13 @@ const Article: FC<{
             field={prismicData.article_content}
           />
         </div>
+        <Image
+          src={prismicData.logo.url as string}
+          alt={prismicData.logo.alt as string}
+          width={200}
+          height={200}
+          style={{ objectFit: "cover", margin: "2rem auto", display: "block" }}
+        />
       </section>
     </main>
   );

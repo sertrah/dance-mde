@@ -15,6 +15,7 @@ import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
+import NavMenu from "@/components/NavMenu";
 
 const libre_caslon = Dynalight({
   weight: "400",
@@ -146,18 +147,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
         id="ga"
       />
-      <header className={`header small`}>
-        <Link href="/">MB</Link>
-        <Link
-          className={`header--locale`}
-          href="/"
-          locale={router.locale === "en-US" ? "es-CO" : "en-US"}
-        >
-          {router.locale === "en-US" ? "ES" : "EN"}
-        </Link>
-      </header>
+
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
         <div className={` ${libre_caslon.className} ${noto_sans.className}`}>
+          <NavMenu />
+
           <ThemeProvider theme={theme}>
             <QueryClientProvider client={queryClient}>
               <Component {...pageProps} />

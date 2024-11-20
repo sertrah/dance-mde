@@ -104,6 +104,17 @@ interface BlogDocumentData {
      */
     thumbail: prismicT.ImageField<never>;
     /**
+     * logo field in *blog*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
      * banner field in *blog*
      *
      * - **Field Type**: Image
