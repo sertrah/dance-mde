@@ -149,7 +149,7 @@ export default function Home2({
           key="product-jsonld"
         />
       </Head>
-      <main style={{ minHeight: "6363px" }}>
+      <main>
         <HeroSection />
         <UpcomingEvents />
         <DanceEventsCalendar />
