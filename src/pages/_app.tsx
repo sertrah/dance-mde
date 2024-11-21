@@ -1,11 +1,6 @@
 import "@/styles/globals.scss";
 import Script from "next/script";
-import { Libre_Caslon_Text, Inter, Dynalight } from "@next/font/google";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import { QueryClientProvider, QueryClient } from "react-query";
+import { Inter, Dynalight } from "@next/font/google";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { common, red } from "@mui/material/colors";
 import Link from "next/link";
@@ -14,7 +9,6 @@ import { appWithTranslation } from "next-i18next";
 
 import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
-import { useRouter } from "next/router";
 import NavMenu from "@/components/NavMenu";
 
 const libre_caslon = Dynalight({
@@ -109,17 +103,7 @@ const theme = createTheme({
   },
 });
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-});
-
 const App = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter();
-
   return (
     <>
       <Script
@@ -151,12 +135,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
         <div className={` ${libre_caslon.className} ${noto_sans.className}`}>
           <NavMenu />
-
           <ThemeProvider theme={theme}>
-            <QueryClientProvider client={queryClient}>
-              <Component {...pageProps} />
-            </QueryClientProvider>
-
+            <Component {...pageProps} />
             <Footer />
           </ThemeProvider>
         </div>

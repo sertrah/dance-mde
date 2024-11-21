@@ -54,15 +54,13 @@ export async function getStaticProps({ previewData, params, locale }: any) {
   const page = await client.getByUID(documentType, prismicUID, {
     lang: currentLocale,
   });
-  console.log(page);
-  const title = "page.data.title[0].text";
 
   return {
     props: {
       data: page.data,
       title: page.data.og_title,
-      SEO: "page.data.slices[0].primary.keyPhrases",
-      siteDescription: "page.data.slices[0].primary.site_description",
+      SEO: page.data.og_keywords,
+      siteDescription: page.data.og_description,
       ...(await serverSideTranslations(currentLocale, ["common", "footer"])),
     },
   };

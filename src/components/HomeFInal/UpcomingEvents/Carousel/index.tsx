@@ -57,7 +57,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
 
-        <div className="embla__dots">
+        {/*   <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
@@ -67,7 +67,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               )}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

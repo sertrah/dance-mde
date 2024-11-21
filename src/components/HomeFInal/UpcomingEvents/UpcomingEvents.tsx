@@ -5,6 +5,7 @@ import { useQuery } from "react-query";
 import EmblaCarousel from "./Carousel";
 import { Subtitle } from "../Subtitle";
 import SliceEventController from "@/core/infrastructure/controllers/SliceEventController";
+import { QueryClientProvider, QueryClient } from "react-query";
 
 import style from "./style.module.sass";
 import { useTranslation } from "next-i18next";
@@ -48,4 +49,19 @@ const UpcomingEvents = () => {
   );
 };
 
-export default UpcomingEvents;
+const WrappedUpcomingEvents = () => {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
+  return (
+    <QueryClientProvider client={queryClient}>
+      <UpcomingEvents />
+    </QueryClientProvider>
+  );
+};
+
+export default WrappedUpcomingEvents;

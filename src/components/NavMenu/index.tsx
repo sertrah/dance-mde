@@ -17,6 +17,7 @@ const NavButton: React.FC<{ onClick: () => void; isOpen: boolean }> = ({
   return (
     <div
       role="button"
+      aria-label="abrir menu"
       onClick={onClick}
       className={classNames(styles.navButton, {
         [styles.navButton__open]: isOpen,

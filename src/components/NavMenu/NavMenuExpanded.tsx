@@ -73,7 +73,7 @@ const NavMenuExpaned: React.FC<{
   }, [isOpen]);
 
   const onClickMenuItem = (path: string) => {
-    router.push(path);
+    router.push(path, path, { locale: router.locale});
     setTimeout(() => {
       onCloseNavExpanded();
     }, 1000);
