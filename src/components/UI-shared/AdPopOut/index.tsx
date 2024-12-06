@@ -32,6 +32,8 @@ export default function AdPopOut() {
   return (
     <dialog id="dialog" modal-mode="mega" ref={dialog}>
       <form method="dialog">
+        <button className="dialog__close-icon">x</button>
+
         <h2>{t("modal_title")}</h2>
         <p>{t("modal_text")}</p>
         <div className="dialog__img">
@@ -47,11 +49,11 @@ export default function AdPopOut() {
         </p>
         <p>
           {t("modal_call_to_action")}
-          <Link href={"https://bit.ly/4fl0Ktr"} target="_blank">
+          <Link href={"https://bit.ly/4fl0Ktr"} target="_blank" tabIndex={-1}>
             {t("modal_buy_tickets")}
           </Link>
         </p>
-        <button>{t("modal_close")}</button>
+        <button className="dialog__close">{t("modal_close")}</button>
       </form>
     </dialog>
   );
