@@ -47,12 +47,7 @@ export default function AdPopOut() {
         </p>
         <p>
           {t("modal_call_to_action")}
-          <Link
-            href={
-              "https://wa.me/573014233760/?text=Queiro%20comprar%20una%20entrada"
-            }
-            target="_blank"
-          >
+          <Link href={"https://bit.ly/4fl0Ktr"} target="_blank">
             {t("modal_buy_tickets")}
           </Link>
         </p>
