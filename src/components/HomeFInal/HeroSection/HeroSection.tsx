@@ -16,6 +16,7 @@ const HeroSection = () => {
         src="/bg.webp"
         alt="Gente de medellin bailando"
         fill
+        priority
         style={{ objectFit: "cover" }}
       />
       <div className={style.heroSection_overlay} />

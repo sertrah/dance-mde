@@ -3,6 +3,10 @@ import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import HeroSection from "@/components/HomeFInal/HeroSection/HeroSection";
 
+const AdPopOut = dynamic(() => import("@/components/UI-shared/AdPopOut"), {
+  ssr: false,
+});
+
 const UpcomingEvents = dynamic(
   () => import("@/components/HomeFInal/UpcomingEvents/UpcomingEvents")
 );
@@ -150,6 +154,7 @@ export default function Home2({
         />
       </Head>
       <main>
+        <AdPopOut />
         <HeroSection />
         <UpcomingEvents />
         <DanceEventsCalendar />

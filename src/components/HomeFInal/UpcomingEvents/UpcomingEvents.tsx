@@ -9,6 +9,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 
 import style from "./style.module.sass";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 const OPTIONS: EmblaOptionsType = {
   breakpoints: {
@@ -45,6 +46,7 @@ const UpcomingEvents = () => {
           />
         )}
       </div>
+      <Link href={"/events"}> Ver todos los eventos</Link>
     </section>
   );
 };

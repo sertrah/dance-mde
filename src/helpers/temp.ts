@@ -151,11 +151,11 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     label: "📍 La House Provenza"
   },
   majao: {
-    link: "https://maps.app.goo.gl/gJCyLU9WTcdN1jVX8",
+    link: "https://maps.app.goo.gl/aEWhyj3MPcdG9iUZ8",
     instagramLink: "https://www.instagram.com/majaobachata",
     name: 'Majao',
     genres: ["Bachata", "Salsa", "Zouk"],
-    label: "📍 Barbaran (Laureles)"
+    label: "📍 Barcelona (Laureles)"
   },
   danceFree: {
     link: "https://maps.app.goo.gl/gJCyLU9WTcdN1jVX8",
