@@ -3,9 +3,9 @@ import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import HeroSection from "@/components/HomeFInal/HeroSection/HeroSection";
 
-const AdPopOut = dynamic(() => import("@/components/UI-shared/AdPopOut"), {
+/* const AdPopOut = dynamic(() => import("@/components/UI-shared/AdPopOut"), {
   ssr: false,
-});
+}); */
 
 const UpcomingEvents = dynamic(
   () => import("@/components/HomeFInal/UpcomingEvents/UpcomingEvents")
@@ -20,15 +20,15 @@ const DanceAcademies = dynamic(
   () => import("@/components/HomeFInal/DanceAcademies/DanceAcademies")
 );
 
-function addProductJsonLd() {
+function addProductJsonLd(title: string, description: string = "") {
   return {
     __html: `{
 "@context": "https://schema.org",
 "@type": "Organization",
-"name": "MedalloBaila",
+"name": "${title}",
 "url": "http://medallobaila.com/",
 "logo": "https://medallobaila.com/logo.png",
-"description": "Descubre los mejores eventos y clases de baile en Medellín. Salsa, bachata, zouk y más.",
+"description": "${description}",
 "hasOfferCatalog": {
   "@type": "OfferCatalog",
   "name": "Servicios especiales",
@@ -146,15 +146,18 @@ export default function Home2({
         />
         <meta property="og:locale" content={currentLocale.toLowerCase()} />
         <meta property="og:title" content={title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MedalloBaila" />
         <meta property="og:description" content={keyWord} />
+        <meta property="og:image" content="https://medallobaila.com/logo.png" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={addProductJsonLd()}
+          dangerouslySetInnerHTML={addProductJsonLd(title, keyWord)}
           key="product-jsonld"
         />
       </Head>
       <main>
-        <AdPopOut />
+        {/*  <AdPopOut /> */}
         <HeroSection />
         <UpcomingEvents />
         <DanceEventsCalendar />
@@ -169,12 +172,12 @@ export async function getStaticProps({ previewData, locale }: any) {
   const currentLocale = locale ?? "es-CO";
   const title =
     currentLocale === "en-US"
-      ? "Dance classes in Medellín - Social Dancing in Medellín"
-      : "Clases de baile en Medellín - Sociales en Medellín";
+      ? "MedalloBaila | Dance classes | Social Dancing | Medellín"
+      : "MedalloBaila | Clases de baile | Sociales-bailar | Medellín";
   const keyWordEN =
-    "Explore the best selection of dance academies, events, classes and socials in Medellín. Discover salsa, bachata, zouk and more.";
+    "Explore the best selection of dance academies, events, classes and socials in Medellín. Salsa, bachata, zouk lessons and more for children and adults";
   const keyWordES =
-    "Explora la mejor selección de academias de baile, eventos, clases y sociales en Medellín. Descubre clases de salsa, bachata, zouk y más.";
+    "Explora la mejor selección de academias de baile, eventos, clases y sociales en Medellín. Clases de salsa, bachata, zouk y más para niños y adultos";
 
   const keywordsEN =
     "dancing classes near me, dance classes for adults near me, salsa dance, bachata dance, dance studio dance, private dancing class	";

@@ -103,7 +103,7 @@ const NavMenuExpaned: React.FC<{
           </li>
           <li
             className={styles.navMenu__menu_item}
-            onClick={() => onClickMenuItem("/blogs/the-grand-social")}
+            onClick={() => onClickMenuItem("/blogs")}
           >
             {t("nav_blog")}
           </li>
