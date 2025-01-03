@@ -31,8 +31,8 @@
     &__date
         background: #88010A
         color: #FFFFFF
-        min-width: 90px
-        width: 90px
+        min-width: 100px
+        width: 100px
         height: 5.75rem
         right: 0
         position: absolute
@@ -46,6 +46,13 @@
         text-transform: uppercase
         padding: 0.8rem
         word-break: break-all
+        & span
+            font-size: 0.8em
+            width: 110%
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
     &__content
         position: relative
         z-index: 1
