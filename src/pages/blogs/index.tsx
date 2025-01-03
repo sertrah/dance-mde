@@ -18,7 +18,7 @@ export default function TeachersPage({
         <title>Blogs</title>
         <meta
           name="description"
-          content="Discutamos acerca del baile en medellin."
+          content="Creando una comunidad  unida, tu opción #1 cuando necesitas  bailar en Medellín. Articulos, Eventos y más."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Blogs" />
@@ -76,7 +76,6 @@ export async function getStaticProps({ previewData, params, locale }: any) {
   try {
     page = await client.getAllByType("blog", { lang: currentLocale });
   } catch (e: unknown) {
-    console.log("---", e);
     page = [] as PrismicDocument<Record<string, any>, string, string>[];
   }
   return {
