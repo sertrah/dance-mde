@@ -46,7 +46,20 @@ const UpcomingEvents = () => {
           />
         )}
       </div>
-      <Link href={"/events"}> Ver todos los eventos</Link>
+      <Link
+        href={"/events"}
+        style={{
+          background: "#e8bc58",
+          width: "fit-content",
+          alignSelf: "center",
+          color: "#000",
+          padding: "0.5rem 1.5rem",
+          textDecoration: "none",
+          borderRadius: "29px",
+        }}
+      >
+        {t("see_all_events")}
+      </Link>
     </section>
   );
 };
