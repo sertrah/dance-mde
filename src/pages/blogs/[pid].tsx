@@ -39,8 +39,8 @@ export async function getStaticPaths() {
     paths: [
       { params: { pid: "the-grand-social" }, locale: "en-US" },
       { params: { pid: "the-grand-social" }, locale: "es-CO" },
+      { params: { pid: "majao" }, locale: "en-US" },
       { params: { pid: "majao" }, locale: "es-CO" },
-      /* { params: { pid: "theGrandSocial" }, locale: "en-US" }, */
     ],
     fallback: false, // can also be true or 'blocking'
   };

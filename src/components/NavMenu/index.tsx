@@ -48,7 +48,7 @@ const NavMenu = () => {
         <div className={styles.navBar__actions}>
           <Link
             className={styles.navBar__language}
-            href="/"
+            href={router.pathname}
             locale={router.locale === "en-US" ? "es-CO" : "en-US"}
           >
             {router.locale === "en-US" ? "ES" : "EN"}
