@@ -43,12 +43,12 @@ const NavMenu = () => {
         className={classNames(styles.navBar, { [styles.navBar__open]: open })}
       >
         <Link href={"/"} className={styles.navBar__logo}>
-          Medallo Baila
+          MedalloBaila
         </Link>
         <div className={styles.navBar__actions}>
           <Link
             className={styles.navBar__language}
-            href={router.pathname}
+            href={router.asPath}
             locale={router.locale === "en-US" ? "es-CO" : "en-US"}
           >
             {router.locale === "en-US" ? "ES" : "EN"}
