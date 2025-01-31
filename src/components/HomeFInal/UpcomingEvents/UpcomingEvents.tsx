@@ -32,9 +32,13 @@ const UpcomingEvents = () => {
   return (
     <section className={style.upcomingEvents}>
       <div className={style.upcomingEvents__container}>
-        <p>{t("long_description")}</p>
-        <Subtitle>{t("event_title")}</Subtitle>
+        <p>{t("long_description_0")}</p>
+        <p>{t("long_description_1")}</p>
+        <p>{t("long_description_2")}</p>
+        <p>{t("long_description_3")}</p>
+        <p>{t("long_description_4")}</p>
       </div>
+      <Subtitle>{t("event_title")}</Subtitle>
 
       <div className={style.upcomingEvents__cards}>
         {!SliceEvent?.list ? (
