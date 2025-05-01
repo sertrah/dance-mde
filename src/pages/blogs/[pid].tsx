@@ -39,6 +39,8 @@ export async function getStaticPaths() {
     paths: [
       { params: { pid: "the-grand-social" }, locale: "en-US" },
       { params: { pid: "the-grand-social" }, locale: "es-CO" },
+      { params: { pid: "top-13-academias-baile-colombia-aprender-salsa-bachata-mas" }, locale: "es-CO" },
+      { params: { pid: "top-13-dance-academies-colombia-learn-salsa-bachata-more" }, locale: "en-US" },
       { params: { pid: "majao" }, locale: "en-US" },
       { params: { pid: "majao" }, locale: "es-CO" },
     ],
