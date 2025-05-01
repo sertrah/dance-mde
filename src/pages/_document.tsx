@@ -18,6 +18,12 @@ export default function MyDocument() {
         <noscript>
           <link rel="stylesheet" href="styles.css" />
         </noscript> */}
+
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1751201806991863"
+          crossOrigin="anonymous"
+        />
       </Head>
       <body>
         <Main />
