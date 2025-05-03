@@ -31,7 +31,7 @@ const Article: FC<{
 }> = ({ prismicData }) => {
 
   return (
-    <main className={styles.article}>
+    <main className={styles.article} id="article">
       <div className={styles.article_hero}>
         <PrismicNextImage
           field={prismicData.banner}

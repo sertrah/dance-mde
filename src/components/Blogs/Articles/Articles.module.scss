@@ -60,6 +60,8 @@
   margin: 0 auto;
   width: 90%;
   max-width: 34rem;
+  z-index: 3;
+  position: relative;
 }
 
 @media (min-width: 850px) {

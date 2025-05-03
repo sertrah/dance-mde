@@ -39,8 +39,10 @@ export async function getStaticPaths() {
     paths: [
       { params: { pid: "the-grand-social" }, locale: "en-US" },
       { params: { pid: "the-grand-social" }, locale: "es-CO" },
-      { params: { pid: "top-13-academias-baile-colombia-aprender-salsa-bachata-mas" }, locale: "es-CO" },
-      { params: { pid: "top-13-academias-baile-colombia-aprender-salsa-bachata-mas" }, locale: "en-US" },
+      { params: { pid: "el-sueno-roto-de-elite-festival-pereira" }, locale: "es-CO" },
+      { params: { pid: "el-sueno-roto-de-elite-festival-pereira" }, locale: "en-US" },
+      { params: { pid: "top-15-academias-baile-colombia-aprender-salsa-bachata-mas" }, locale: "es-CO" },
+      { params: { pid: "top-15-academias-baile-colombia-aprender-salsa-bachata-mas" }, locale: "en-US" },
       { params: { pid: "majao" }, locale: "en-US" },
       { params: { pid: "majao" }, locale: "es-CO" },
     ],
