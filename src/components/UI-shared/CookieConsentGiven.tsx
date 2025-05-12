@@ -1,7 +1,8 @@
 // app/banner.js
 "use client";
 import { useEffect, useState } from "react";
-import Link from 'next/link'
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 export function cookieConsentGiven(): string | null {
   if (!localStorage.getItem("cookie_consent")) {
@@ -10,7 +11,9 @@ export function cookieConsentGiven(): string | null {
   return localStorage.getItem("cookie_consent");
 }
 
-export default function Banner() {
+export default function CookieConsentGiven() {
+  const { t } = useTranslation("common");
+
   const [consentGiven, setConsentGiven] = useState<null | string>(null);
 
   useEffect(() => {
@@ -34,12 +37,11 @@ export default function Banner() {
       {consentGiven === null && (
         <div className="cookie-consent">
           <p>
-            We use tracking cookies to understand how you use the product and
-            help us improve it. Please accept cookies to help us improve.
-            <Link href="/cookie">Know more</Link>
+            {t("cookie_consent_given")}
+            <Link href="/cookie">{t("see_more")}</Link>
           </p>
           <button type="button" onClick={handleAcceptCookies}>
-            Accept cookies
+            {t("cookie_accept")}
           </button>
           <span> </span>
         </div>

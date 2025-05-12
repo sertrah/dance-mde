@@ -48,6 +48,9 @@ const Bottom = () => {
           </svg>
         </Link>
       </div>
+      <div className="legal_links">
+        <Link href="/cookie">{t("cookie_policy")}</Link>
+      </div>
       <p className="copy">Copyright © 2023 </p>
       <p>built with NextJs and Prismic</p>
     </footer>

@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import style from "./style.module.sass";
-import AdBanner from "./adBanner";
-
+/* import AdBanner from "./adBanner";
+ */
 const HeroSection = () => {
   const { t } = useTranslation("home");
 
@@ -24,7 +24,7 @@ const HeroSection = () => {
         />
         <div className={style.heroSection_overlay} />
       </section>
-      <AdBanner />
+      {/* <AdBanner /> */}
     </>
   );
 };

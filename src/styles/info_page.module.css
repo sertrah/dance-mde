@@ -1,0 +1,18 @@
+.section {
+  max-width: 90rem;
+  width: 90%;
+  margin: 6rem auto;
+}
+
+.section ul {
+  padding-left: 2.5rem;
+}
+
+.section a {
+  display: inline;
+}
+
+.section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

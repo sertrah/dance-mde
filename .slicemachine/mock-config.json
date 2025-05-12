@@ -10,7 +10,8 @@
     "tango": {},
     "teachers": {},
     "urbano": {},
-    "blog": {}
+    "blog": {},
+    "info_page": {}
   },
   "slices": {
     "Event": {

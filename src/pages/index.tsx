@@ -2,6 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import HeroSection from "@/components/HomeFInal/HeroSection/HeroSection";
+import BlogSection from "@/components/HomeFInal/BlogSection/BlogSection";
 
 /* const AdPopOut = dynamic(() => import("@/components/UI-shared/AdPopOut"), {
   ssr: false,
@@ -163,6 +164,7 @@ export default function Home2({
         <DanceEventsCalendar />
         <PrivateDanceLessons />
         <DanceAcademies />
+        <BlogSection lang={currentLocale} />
       </main>
     </>
   );

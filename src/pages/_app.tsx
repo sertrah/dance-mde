@@ -11,6 +11,7 @@ import type { AppProps } from "next/app";
 import Footer from "@/components/Footer";
 import NavMenu from "@/components/NavMenu";
 import { Analytics } from "@vercel/analytics/react";
+import CookieConsentGiven from "@/components/UI-shared/CookieConsentGiven";
 
 const libre_caslon = Dynalight({
   weight: "400",
@@ -132,6 +133,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <NavMenu />
           <ThemeProvider theme={theme}>
             <Component {...pageProps} />
+            <CookieConsentGiven />
             <Footer />
           </ThemeProvider>
         </div>

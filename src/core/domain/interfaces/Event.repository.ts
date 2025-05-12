@@ -3,8 +3,8 @@ import Event from "../entities/Event";
 import type * as prismicT from "@prismicio/types";
 
 export interface EventRepository {
-  getList(): Promise<Event>; // TODO: the example
   getSliceOfEvents(referenceId: string, lang: string): Promise<Event>;
+  getItemsByType(type: string, lang: string): Promise<any[]>;
   getByName?(name: string): Promise<Event>;
   getImageByEvent?(event: string): Promise<string>;
   getBySubEvent?(name: string): Promise<Event[]>;

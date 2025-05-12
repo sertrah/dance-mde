@@ -14,5 +14,7 @@
   "modal_call_to_action": "👉 Limited spots, don't let your little ones miss this unique experience!",
   "modal_date": "Date: December 21 3:00 PM. At the Gabriel García Márquez Library Theater",
   "modal_buy_tickets": "Book now!",
-  "modal_close": "Close"
+  "modal_close": "Close",
+  "cookie_consent_given": "We use tracking cookies to understand how you use the product and help us improve it. Please accept cookies to help us improve.",
+  "cookie_accept": "I understand and wish to continue.",
 }
