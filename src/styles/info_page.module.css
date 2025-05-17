@@ -1,7 +1,14 @@
 .section {
-  max-width: 90rem;
+  max-width: 70rem;
   width: 90%;
-  margin: 6rem auto;
+  margin: 0rem auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.section h1 {
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 .section ul {

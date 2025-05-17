@@ -73,7 +73,7 @@ const NavMenuExpaned: React.FC<{
   }, [isOpen]);
 
   const onClickMenuItem = (path: string) => {
-    router.push(path, path, { locale: router.locale});
+    router.push(path, path, { locale: router.locale });
     setTimeout(() => {
       onCloseNavExpanded();
     }, 1000);
@@ -97,15 +97,27 @@ const NavMenuExpaned: React.FC<{
           </li>
           <li
             className={styles.navMenu__menu_item}
+            onClick={() => onClickMenuItem("/blogs")}
+          >
+            {t("nav_blog")}
+          </li>
+          <li
+            className={styles.navMenu__menu_item}
+            onClick={() => onClickMenuItem("/contact")}
+          >
+            {t("contact_title")}
+          </li>
+          <li
+            className={styles.navMenu__menu_item}
             onClick={() => onClickMenuItem("/teachers")}
           >
             {t("nav_private_lessons")}
           </li>
           <li
             className={styles.navMenu__menu_item}
-            onClick={() => onClickMenuItem("/blogs")}
+            onClick={() => onClickMenuItem("/about-us")}
           >
-            {t("nav_blog")}
+            {t("nav_about_us")}
           </li>
         </ul>
       </div>

@@ -5,15 +5,16 @@ import { useTranslation } from "next-i18next";
 
 const Bottom = () => {
   const { t } = useTranslation("footer");
+  const { t: tn } = useTranslation("common");
 
   return (
     <footer>
-      <p className="mensajito">
-        {t("footer_1")}
-        <span>{t("footer_2")} </span>
-        {t("footer_3")}
-        <br /> <br /> {t("footer_4")}
-      </p>
+      <div className="legal_links">
+        <Link href="/contact">{tn("contact_title")}</Link>
+        <Link href="/cookie">{t("cookie_policy")}</Link>
+        <Link href="/about-us">{tn("nav_about_us")}</Link>
+        <Link href="/politica-de-privacidad">{t("privacy_policy")}</Link>
+      </div>
       <div className="social-media">
         <Link
           rel="nofollow"
@@ -48,9 +49,12 @@ const Bottom = () => {
           </svg>
         </Link>
       </div>
-      <div className="legal_links">
-        <Link href="/cookie">{t("cookie_policy")}</Link>
-      </div>
+      <p className="mensajito">
+        {t("footer_1")}
+        <span>{t("footer_2")} </span>
+        {t("footer_3")}
+        <br /> <br /> {t("footer_4")}
+      </p>
       <p className="copy">Copyright © 2023 </p>
       <p>built with NextJs and Prismic</p>
     </footer>

@@ -15,10 +15,10 @@ export default function EventsPage(props: any) {
   return (
     <>
       <Head>
-        <title>Events</title>
+        <title>Eventos</title>
         <meta
           name="description"
-          content="Descubrir los eventos de baile, socailes y talleres en Medellín."
+          content="Descubre los mejores eventos de baile en Medellín. Calendario actualizado con clases, workshops, sociales y festivales de salsa, bachata, zouk y más. Conéctate con la comunidad de baile local."
         />
         <meta
           name="keywords"

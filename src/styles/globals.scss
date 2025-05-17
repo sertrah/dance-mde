@@ -695,9 +695,20 @@ dialog {
   }
 }
 
-.legal_links{
-  display: inline-flex;
+.legal_links {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 850px) {
+    flex-direction: row;
+  }
+}
+
+button.Mui-disabled {
+  background-color: #bababa !important;
 }

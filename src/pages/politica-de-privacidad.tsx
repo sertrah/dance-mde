@@ -21,11 +21,11 @@ const aboutUs = ({ content, title }: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.section}>
+      <div className={styles.section}>
         <div>
           <BasePrismicRichText linkResolver={linkResolver} field={content} />
         </div>
-      </main>
+      </div>
     </>
   );
 };
@@ -34,7 +34,7 @@ export async function getStaticProps({ previewData, locale }: any) {
   const client = createClient({ previewData });
   const currentLocale = locale ?? "es-CO";
 
-  const { results } = await client.getByTag("about-us", {
+  const { results } = await client.getByTag("politica-de-privacidad", {
     lang: currentLocale,
   });
 

@@ -1,12 +1,14 @@
 {
   "home_event_button": "See all events",
-  "contact_title": "Contact me",
+  "contact_title": "Contact us",
+  "contact_description": "Do you have any questions about dance events, teachers, or academies in Medellín? Would you like to be featured on our platform? We're here to help you.",
   "social_title": "where to dance today?",
   "see_more": "See more",
   "location": "Location",
   "nav_home": "Home",
   "nav_events": "Events",
   "nav_blog": "Blog",
+  "nav_about_us": "About us",
   "nav_private_lessons": "Private lessons",
   "nav_text": "Need help or can't find what you're looking for? Don't worry! I'm here to assist you. Contact me through my social networks where I actively respond",
   "modal_title": "Lights, Camera, Christmas: An Explosion of Rhythm and Childhood Magic! ✨🎄",
@@ -16,5 +18,5 @@
   "modal_buy_tickets": "Book now!",
   "modal_close": "Close",
   "cookie_consent_given": "We use tracking cookies to understand how you use the product and help us improve it. Please accept cookies to help us improve.",
-  "cookie_accept": "I understand and wish to continue.",
+  "cookie_accept": "I understand and wish to continue."
 }
