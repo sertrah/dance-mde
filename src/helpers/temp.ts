@@ -17,7 +17,6 @@ export type socialPlace = {
   nuevaGuardia: socialPlaceData;
   grandSocial: socialPlaceData;
   saborymasna: socialPlaceData;
-  majao: socialPlaceData;
   danceFree: socialPlaceData;
   bachataAlparque: socialPlaceData;
   barcelona: socialPlaceData;
@@ -27,6 +26,8 @@ export type socialPlace = {
   selinamedellin: socialPlaceData;
   aPuroTango: socialPlaceData;
   bloodDanceLaureles: socialPlaceData;
+  bachataHouse: socialPlaceData;
+  siembraladanza: socialPlaceData;
 };
 export type socialPlaceKeys = keyof socialPlace
 
@@ -150,13 +151,6 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     genres: ["Bachata", "Salsa"],
     label: "📍 La House Provenza"
   },
-  majao: {
-    link: "https://maps.app.goo.gl/aEWhyj3MPcdG9iUZ8",
-    instagramLink: "https://www.instagram.com/majaobachata",
-    name: 'Majao',
-    genres: ["Bachata", "Salsa", "Zouk"],
-    label: "📍 Barcelona (Laureles)"
-  },
   danceFree: {
     link: "https://maps.app.goo.gl/gJCyLU9WTcdN1jVX8",
     instagramLink: "https://www.instagram.com/dancefreeco/",
@@ -213,6 +207,18 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     genres: ["Salsa"],
     label: "📍 Laureles"
   },
+  bachataHouse: {
+    link: "https://maps.app.goo.gl/buRLfm2QTG3FS3QB8",
+    instagramLink: "https://www.instagram.com/bachatahousemedellin/",
+    name: "Bachata House",
+    genres: ["Bachata", "Zouk", "Salsa"],
+    label: "📍 Laureles"
+  },
+  siembraladanza: {
+    link: "https://maps.app.goo.gl/dvxhDc46wniadyH89",
+    instagramLink: "https://www.instagram.com/siembraladanza/",
+    name: "Siembrala academia de danza",
+    genres: ["Salsa"],
+    label: "📍 Laureles"
+  },
 };
-
-

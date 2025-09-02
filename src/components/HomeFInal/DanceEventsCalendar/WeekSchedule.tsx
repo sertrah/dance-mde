@@ -100,10 +100,10 @@ const sociales: Record<string, { places: socialPlaceData[] }> = {
     ],
   }, // Monday
   wednesday: {
-    places: [locationLinks.majao],
+    places: [locationLinks.bachataHouse, locationLinks.grandSocial],
   }, // Thursday
   thursday: {
-    places: [locationLinks.grandSocial, locationLinks.danceFree],
+    places: [ { ...locationLinks.grandSocial, genres: ["Bachata"] },  { ...locationLinks.nuevaGuardia, genres: ["Salsa"] }, locationLinks.danceFree],
   },
   friday: {
     places: [
