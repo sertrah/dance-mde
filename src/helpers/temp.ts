@@ -27,6 +27,7 @@ export type socialPlace = {
   aPuroTango: socialPlaceData;
   bloodDanceLaureles: socialPlaceData;
   bachataHouse: socialPlaceData;
+  brutal: socialPlaceData;
   siembraladanza: socialPlaceData;
 };
 export type socialPlaceKeys = keyof socialPlace
@@ -208,10 +209,17 @@ export const locationLinks: Record<socialPlaceKeys, socialPlaceData> = {
     label: "📍 Laureles"
   },
   bachataHouse: {
-    link: "https://maps.app.goo.gl/buRLfm2QTG3FS3QB8",
+    link: "https://maps.app.goo.gl/7BctS3rev9cpjRda6",
     instagramLink: "https://www.instagram.com/bachatahousemedellin/",
-    name: "Bachata House",
-    genres: ["Bachata", "Zouk", "Salsa"],
+    name: "Bachata House Dance Studio",
+    genres: ["Salsa", "Bachata", "Zouk"],
+    label: "📍 Laureles"
+  },
+  brutal: {
+    link: "https://www.instagram.com/restaurantebrutal/?hl=en",
+    instagramLink: "https://www.instagram.com/discotecabrutal/?hl=en",
+    name: "Brutal",
+    genres: ["Bachata", "Zouk", "Regueton"],
     label: "📍 Laureles"
   },
   siembraladanza: {

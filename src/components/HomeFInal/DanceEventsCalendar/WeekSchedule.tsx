@@ -94,20 +94,26 @@ const sociales: Record<string, { places: socialPlaceData[] }> = {
     places: [locationLinks.bachataAlparque, locationLinks.bloodDanceLaureles],
   }, // Sunday
   tuesday: {
-    places: [
-      { ...locationLinks.nuevaGuardia, genres: ["Bachata"] },
-      locationLinks.saborymasna,
-    ],
+    places: [{ ...locationLinks.nuevaGuardia, genres: ["Bachata"] }],
   }, // Monday
   wednesday: {
-    places: [locationLinks.bachataHouse, locationLinks.grandSocial],
+    places: [
+      locationLinks.brutal,
+      locationLinks.bachataHouse,
+      locationLinks.saborymasna,
+    ],
   }, // Thursday
   thursday: {
-    places: [ { ...locationLinks.grandSocial, genres: ["Bachata"] },  { ...locationLinks.nuevaGuardia, genres: ["Salsa"] }, locationLinks.danceFree],
+    places: [
+      { ...locationLinks.grandSocial, genres: ["Bachata"] },
+      { ...locationLinks.nuevaGuardia, genres: ["Salsa", "Bachata"] },
+      locationLinks.danceFree,
+    ],
   },
   friday: {
     places: [
       locationLinks.madera,
+      locationLinks.nuevaGuardia,
       locationLinks.socialclub,
       locationLinks.danceFree,
     ],
