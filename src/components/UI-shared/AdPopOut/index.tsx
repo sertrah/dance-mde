@@ -15,19 +15,19 @@ export default function AdPopOut() {
 
   const { t } = useTranslation("common");
 
+  const handleOutsideClick = React.useCallback((e: any) => {
+    if (e.target && e.target?.id === "dialog") {
+      dialog.current!.close();
+      dialog.current!.removeEventListener("click", handleOutsideClick);
+    }
+  }, []);
+
   React.useLayoutEffect(() => {
     if (dialog && dialog.current) {
       dialog.current.addEventListener("click", handleOutsideClick);
       dialog.current.showModal();
     }
-  }, [dialog]);
-
-  const handleOutsideClick = (e: any) => {
-    if (e.target && e.target?.id === "dialog") {
-      dialog.current!.close();
-      dialog.current!.removeEventListener("click", handleOutsideClick);
-    }
-  };
+  }, [handleOutsideClick]);
 
   return (
     <dialog id="dialog" modal-mode="mega" ref={dialog}>

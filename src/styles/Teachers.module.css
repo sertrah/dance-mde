@@ -58,6 +58,20 @@
   text-align: center;
 }
 
+.filter_container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.genre_filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
 .card_fake {
   position: relative;
   width: 85%;
